@@ -5,6 +5,7 @@ import ProgramOverview from '@/components/home/ProgramOverview';
 import BenefitsSection from '@/components/home/BenefitsSection';
 import TargetAudience from '@/components/home/TargetAudience';
 import OutcomesSection from '@/components/home/OutcomesSection';
+import DailySchedule from '@/components/home/DailySchedule';
 import TeachingMethodology from '@/components/home/TeachingMethodology';
 import FAQSection from '@/components/home/FAQSection';
 import FinalCTA from '@/components/home/FinalCTA';
@@ -17,6 +18,7 @@ const Index = () => {
       <BenefitsSection />
       <TargetAudience />
       <OutcomesSection />
+      <DailySchedule />
       <TeachingMethodology />
       <FAQSection />
       <FinalCTA />
