@@ -14,7 +14,9 @@ import {
   Palette,
   Smartphone,
   TrendingUp,
-  CheckCircle
+  CheckCircle,
+  Search,
+  ExternalLink
 } from 'lucide-react';
 import Layout from '@/components/Layout';
 
@@ -26,21 +28,9 @@ const Program = () => {
       color: "bg-camp-blue-500",
       icon: <Lightbulb className="w-6 h-6" />,
       activities: [
-        {
-          time: "09:00-10:15",
-          title: "היכרות ומבוא ליזמות דיגיטלית",
-          description: "היכרות עם המשתתפים, הכרת עולם היזמות הדיגיטלית ועקרונות בסיסיים"
-        },
-        {
-          time: "10:30-11:45", 
-          title: "זיהוי בעיות יומיומיות עם Base44",
-          description: "למידה של תהליך זיהוי בעיות וחיפוש הזדמנויות עסקיות בעזרת AI"
-        },
-        {
-          time: "12:00-13:00",
-          title: "מחקר שוק פשוט ובניית פרופיל לקוח",
-          description: "שימוש ב-MagicSchool AI לביצוע מחקר שוק אוטומטי ובניית דמויות לקוח"
-        }
+        "היכרות ומבוא ליזמות דיגיטלית",
+        "זיהוי בעיות יומיומיות עם Base44",
+        "מחקר שוק עם ChatGPT ו-Perplexity"
       ]
     },
     {
@@ -49,21 +39,9 @@ const Program = () => {
       color: "bg-camp-purple-500",
       icon: <Palette className="w-6 h-6" />,
       activities: [
-        {
-          time: "09:00-10:15",
-          title: "עקרונות עיצוב UI/UX והכרת Canva AI",
-          description: "למידת עקרונות עיצוב משתמש וחוויית משתמש עם כלי AI מתקדמים"
-        },
-        {
-          time: "10:30-11:45",
-          title: "בניית wireframes ויצירת תוכן ויזואלי",
-          description: "עיצוב ממשקי המשתמש הראשונים וליחת חומרים גרפיים עם Canva AI"
-        },
-        {
-          time: "12:00-13:00",
-          title: "תכנון חוויית משתמש עם Websim",
-          description: "בניית מסע המשתמש וחוויות אינטראקטיביות"
-        }
+        "עקרונות עיצוב UI/UX עם Canva AI",
+        "בניית wireframes ויצירת תוכן ויזואלי",
+        "תכנון חוויית משתמש עם Websim"
       ]
     },
     {
@@ -72,21 +50,9 @@ const Program = () => {
       color: "bg-camp-teal-500",
       icon: <Smartphone className="w-6 h-6" />,
       activities: [
-        {
-          time: "09:00-10:15",
-          title: "הכרת Bubble ובניית אפליקציה בסיסית",
-          description: "צעדים ראשונים בפלטפורמת Bubble לבניית אפליקציות ללא קוד"
-        },
-        {
-          time: "10:30-11:45",
-          title: "הוספת תוכן ופיצ'רים עם Firebase Studio",
-          description: "שילוב מסד נתונים ותכונות מתקדמות באפליקציה"
-        },
-        {
-          time: "12:00-13:00",
-          title: "בדיקה ושיפור האפליקציה",
-          description: "בדיקת האפליקציה, איתור בעיות ושיפורים נדרשים"
-        }
+        "הכרת Bubble ובניית אפליקציה בסיסית",
+        "הוספת תוכן ופיצ'רים עם Firebase Studio",
+        "בדיקה ושיפור האפליקציה"
       ]
     },
     {
@@ -95,21 +61,9 @@ const Program = () => {
       color: "bg-camp-blue-600",
       icon: <Brain className="w-6 h-6" />,
       activities: [
-        {
-          time: "09:00-10:15",
-          title: "שילוב Lovable.dev ו-Replit Ghostwriter",
-          description: "שימוש בכלי AI מתקדמים לכתיבת קוד ופתרון בעיות טכניות"
-        },
-        {
-          time: "10:30-11:45",
-          title: "יצירת תוכן דינמי עם Rosebud AI",
-          description: "הוספת תוכן גנרטיבי ויצירת חוויות אינטראקטיביות"
-        },
-        {
-          time: "12:00-13:00",
-          title: "ניסויים עם Google AI Studio ומודל עסקי",
-          description: "יצירת מודלי AI מותאמים אישית ועדכון המודל העסקי"
-        }
+        "שילוב Lovable.dev בפיתוח",
+        "יצירת תוכן דינמי עם Rosebud AI",
+        "ניסויים עם Google AI Studio"
       ]
     },
     {
@@ -118,61 +72,58 @@ const Program = () => {
       color: "bg-camp-purple-600",
       icon: <Presentation className="w-6 h-6" />,
       activities: [
-        {
-          time: "09:00-10:15",
-          title: "הכנת מצגת מכירה (Pitch Deck)",
-          description: "יצירת מצגת מקצועית עם Canva AI להצגת הפרויקט"
-        },
-        {
-          time: "10:30-11:45",
-          title: "חזרות והכנה להצגה",
-          description: "שימוש ב-Diffit לכתיבה ברורה ותרגול הצגה"
-        },
-        {
-          time: "12:00-13:00",
-          title: "הצגת פרויקטים וחגיגת סיום",
-          description: "ערב פיצ'ינג בסגנון 'הכרישים' בפני הורים וחגיגת הישגים"
-        }
+        "הכנת מצגת מכירה עם Gamma AI",
+        "חזרות והכנה להצגה עם Claude",
+        "הצגת פרויקטים וחגיגת סיום"
       ]
     }
   ];
 
-  const tools = [
+  const platformCategories = [
     {
-      category: "יצירת תוכן ועיצוב",
+      category: "מנועי שפה טבעית ומחקר",
+      icon: <Search className="w-5 h-5" />,
+      color: "bg-blue-500",
       items: [
-        { name: "Canva AI Assistant", description: "עוזר עיצוב מבוסס AI ליצירת תוכן ויזואלי מקצועי" },
-        { name: "Rosebud AI", description: "יצירת מדיה גנרטיבית לתמונות, וידאו ותוכן אינטראקטיבי" }
+        { name: "ChatGPT", description: "מנוע השפה הטבעית המתקדם של OpenAI" },
+        { name: "Claude", description: "עוזר בינה מלאכותית לחשיבה אנליטית" },
+        { name: "Perplexity", description: "מנוע חיפוש מבוסס בינה מלאכותית" }
       ]
     },
     {
-      category: "פיתוח ותכנות",
+      category: "עיצוב ויצירת תוכן ויזואלי",
+      icon: <Palette className="w-5 h-5" />,
+      color: "bg-purple-500",
       items: [
-        { name: "Bubble", description: "פלטפורמת no-code לבניית אפליקציות אינטרנט עם יכולות AI" },
-        { name: "Lovable.dev", description: "סיוע תכנות מבוסס AI עם הצעות קוד חכמות" },
-        { name: "Firebase Studio", description: "שירותי backend ומסדי נתונים בזמן אמת" },
-        { name: "Replit Ghostwriter", description: "כלי תכנות זוגי מבוסס AI" }
+        { name: "Gamma AI", description: "יצירת מצגות אינטראקטיביות מתקדמות" },
+        { name: "Canva AI", description: "עיצוב מקצועי עם בינה מלאכותית" },
+        { name: "Rosebud AI", description: "יצירת מדיה גנרטיבית ותוכן ויזואלי" }
       ]
     },
     {
-      category: "הוראה ותכנון",
+      category: "פלטפורמות ללא-קוד וסימולציות",
+      icon: <Brain className="w-5 h-5" />,
+      color: "bg-teal-500",
       items: [
-        { name: "MagicSchool AI", description: "כלים מקיפים לתכנון ויצירת תוכן חינוכי" },
-        { name: "Diffit", description: "התאמה אוטומטית של טקסטים לרמות הבנה שונות" }
+        { name: "Lovable.dev", description: "סיוע תכנות מבוסס בינה מלאכותית" },
+        { name: "Base44", description: "למידה מותאמת אישית עם AI" },
+        { name: "Websim", description: "סימולציות אינטרנט אינטראקטיביות" }
       ]
     },
     {
-      category: "למידה וסימולציה",
+      category: "פיתוח ותכנות מתקדם",
+      icon: <Code className="w-5 h-5" />,
+      color: "bg-blue-600",
       items: [
-        { name: "Base44", description: "חוויות למידה מותאמות אישית מבוססות AI" },
-        { name: "Websim", description: "סימולציות אינטרנט אינטראקטיביות" },
-        { name: "Google AI Studio", description: "פלטפורמה ליצירת אבות טיפוס עם מודלי AI" }
+        { name: "Bubble", description: "פיתוח אפליקציות ללא קוד" },
+        { name: "Firebase Studio", description: "תשתית אחורית ומסדי נתונים" },
+        { name: "Google AI Studio", description: "יצירת מודלי בינה מלאכותית" }
       ]
     }
   ];
 
   const outcomes = [
-    { icon: Smartphone, title: "1-2 אפליקציות פועלות", description: "מובייל (Glide) וווב (Bubble)" },
+    { icon: Smartphone, title: "1-2 אפליקציות פועלות", description: "מובייל וווב מלאות" },
     { icon: Target, title: "מודל עסקי בסיסי", description: "זיהוי בעיה ופתרון עסקי" },
     { icon: TrendingUp, title: "אסטרטגיית שיווק דיגיטלי", description: "כולל חומרי שיווק מקצועיים" },
     { icon: Presentation, title: "מצגת מכירה", description: "Pitch Deck מקצועי של 5 דקות" },
@@ -202,44 +153,40 @@ const Program = () => {
             </Badge>
             <Badge className="bg-white/20 text-white border-white/30">
               <Brain className="w-4 h-4 mr-2" />
-              10+ כלי AI
+              12+ פלטפורמות AI
             </Badge>
           </div>
         </div>
       </section>
 
-      {/* Daily Schedule */}
+      {/* Daily Schedule Summary */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
-            מבנה יומי מפורט
+            מבנה יומי מתוכנן
           </h2>
-          <div className="space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {dailySchedule.map((day) => (
-              <Card key={day.day} className="overflow-hidden">
-                <CardHeader className={`${day.color} text-white`}>
-                  <CardTitle className="flex items-center space-x-3 rtl:space-x-reverse text-xl">
-                    <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+              <Card key={day.day} className="text-center hover:shadow-lg transition-shadow">
+                <CardHeader className={`${day.color} text-white rounded-t-lg`}>
+                  <CardTitle className="flex flex-col items-center space-y-2">
+                    <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
                       {day.icon}
                     </div>
                     <div>
-                      <span className="text-white/80">יום {day.day}</span>
-                      <h3 className="text-xl font-bold">{day.title}</h3>
+                      <span className="text-white/80 text-sm">יום {day.day}</span>
+                      <h3 className="text-lg font-bold">{day.title}</h3>
                     </div>
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
-                  <div className="space-y-4">
+                  <ul className="space-y-2 text-sm">
                     {day.activities.map((activity, index) => (
-                      <div key={index} className="border-r-4 border-gray-200 pr-4">
-                        <div className="flex items-center space-x-2 rtl:space-x-reverse mb-2">
-                          <Badge variant="outline">{activity.time}</Badge>
-                          <h4 className="font-semibold">{activity.title}</h4>
-                        </div>
-                        <p className="text-gray-600 text-sm">{activity.description}</p>
-                      </div>
+                      <li key={index} className="text-gray-600">
+                        • {activity}
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </CardContent>
               </Card>
             ))}
@@ -247,33 +194,46 @@ const Program = () => {
         </div>
       </section>
 
-      {/* Tools and Technologies */}
+      {/* Updated Tools and Technologies */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
-            כלים וטכנולוגיות מרכזיים
+            פלטפורמות AI מתקדמות בקורס
           </h2>
           <p className="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
-            למרות שנשתמש באפליקציות נוספות רבות במהלך הקייטנה, אלו הן הפלטפורמות המרכזיות שנתמקד בהן:
+            נכיר למעלה מ-12 פלטפורמות AI מובילות ונלמד לרתום את כוחן ליצירת אפליקציות מקצועיות
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {tools.map((category, categoryIndex) => (
-              <Card key={categoryIndex}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            {platformCategories.map((category, categoryIndex) => (
+              <Card key={categoryIndex} className="hover:shadow-lg transition-shadow">
                 <CardHeader>
-                  <CardTitle className="text-xl gradient-text">{category.category}</CardTitle>
+                  <CardTitle className="flex items-center space-x-3 rtl:space-x-reverse">
+                    <div className={`w-10 h-10 ${category.color} rounded-lg flex items-center justify-center text-white`}>
+                      {category.icon}
+                    </div>
+                    <span className="gradient-text">{category.category}</span>
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-4">
+                  <div className="space-y-3">
                     {category.items.map((tool, toolIndex) => (
-                      <div key={toolIndex} className="border-b border-gray-100 pb-3 last:border-b-0">
-                        <h4 className="font-semibold text-camp-blue-600 mb-1">{tool.name}</h4>
-                        <p className="text-sm text-gray-600">{tool.description}</p>
+                      <div key={toolIndex} className="border-b border-gray-100 pb-2 last:border-b-0">
+                        <h4 className="font-semibold text-camp-blue-600 text-sm">{tool.name}</h4>
+                        <p className="text-xs text-gray-600">{tool.description}</p>
                       </div>
                     ))}
                   </div>
                 </CardContent>
               </Card>
             ))}
+          </div>
+          <div className="text-center">
+            <Link to="/platforms">
+              <Button size="lg" className="gradient-bg text-white hover:opacity-90">
+                <ExternalLink className="w-5 h-5 mr-2" />
+                צפה בפירוט מלא של הפלטפורמות
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
