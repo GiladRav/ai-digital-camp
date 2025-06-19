@@ -1,16 +1,31 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { Link } from 'react-router-dom';
-import { ExternalLink, Brain, Palette, Code, Search } from 'lucide-react';
+import { ExternalLink, Brain, Palette, Code, Search, ChevronDown } from 'lucide-react';
+import { useState } from 'react';
 import Layout from '@/components/Layout';
 
 const Platforms = () => {
+  const [openCards, setOpenCards] = useState<string[]>([]);
+
+  const toggleCard = (platformName: string) => {
+    setOpenCards(prev => 
+      prev.includes(platformName) 
+        ? prev.filter(name => name !== platformName)
+        : [...prev, platformName]
+    );
+  };
+
   const platformCategories = [
     {
       title: "מנועי שפה טבעית ומחקר",
       icon: <Search className="w-6 h-6" />,
       color: "bg-blue-500",
+      textColor: "text-blue-700",
+      borderColor: "border-blue-200",
       platforms: [
         {
           name: "ChatGPT",
@@ -33,6 +48,8 @@ const Platforms = () => {
       title: "עיצוב ויצירת תוכן ויזואלי",
       icon: <Palette className="w-6 h-6" />,
       color: "bg-purple-500",
+      textColor: "text-purple-700",
+      borderColor: "border-purple-200",
       platforms: [
         {
           name: "Gamma AI",
@@ -55,6 +72,8 @@ const Platforms = () => {
       title: "פלטפורמות ללא-קוד וסימולציות",
       icon: <Brain className="w-6 h-6" />,
       color: "bg-teal-500",
+      textColor: "text-teal-700",
+      borderColor: "border-teal-200",
       platforms: [
         {
           name: "Lovable.dev",
@@ -77,6 +96,8 @@ const Platforms = () => {
       title: "פיתוח ותכנות מתקדם",
       icon: <Code className="w-6 h-6" />,
       color: "bg-blue-600",
+      textColor: "text-blue-800",
+      borderColor: "border-blue-300",
       platforms: [
         {
           name: "Bubble",
@@ -111,6 +132,51 @@ const Platforms = () => {
         </div>
       </section>
 
+      {/* Summary Table */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 gradient-text">
+            סקירת פלטפורמות לפי קטגוריות
+          </h2>
+          <div className="max-w-4xl mx-auto">
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="text-right font-bold text-lg">קטגוריה</TableHead>
+                  <TableHead className="text-right font-bold text-lg">פלטפורמות</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {platformCategories.map((category, index) => (
+                  <TableRow key={index} className={`${category.borderColor} border-r-4`}>
+                    <TableCell className={`font-semibold ${category.textColor} text-lg`}>
+                      <div className="flex items-center gap-2">
+                        <div className={`w-8 h-8 ${category.color} rounded-full flex items-center justify-center text-white`}>
+                          {category.icon}
+                        </div>
+                        {category.title}
+                      </div>
+                    </TableCell>
+                    <TableCell>
+                      <div className="flex flex-wrap gap-2">
+                        {category.platforms.map((platform, platformIndex) => (
+                          <span 
+                            key={platformIndex}
+                            className={`px-3 py-1 rounded-full text-sm font-medium ${category.color} text-white`}
+                          >
+                            {platform.name}
+                          </span>
+                        ))}
+                      </div>
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </div>
+        </div>
+      </section>
+
       {/* Platform Categories */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -121,43 +187,60 @@ const Platforms = () => {
                   <div className={`w-16 h-16 ${category.color} rounded-full flex items-center justify-center mx-auto mb-4 text-white`}>
                     {category.icon}
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-bold gradient-text">
+                  <h2 className={`text-3xl md:text-4xl font-bold ${category.textColor}`}>
                     {category.title}
                   </h2>
                 </div>
                 
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                   {category.platforms.map((platform, platformIndex) => (
-                    <Card key={platformIndex} className="h-full hover:shadow-lg transition-shadow">
-                      <CardHeader>
-                        <CardTitle className="flex items-center justify-between">
-                          <span className="text-xl gradient-text">{platform.name}</span>
-                          <a 
-                            href={platform.link} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="text-gray-400 hover:text-camp-blue-600 transition-colors"
-                          >
-                            <ExternalLink className="w-5 h-5" />
-                          </a>
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-gray-600 leading-relaxed mb-4">
-                          {platform.description}
-                        </p>
-                        <a 
-                          href={platform.link} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
+                    <Collapsible key={platformIndex}>
+                      <Card className={`h-full hover:shadow-lg transition-shadow ${category.borderColor} border-r-4`}>
+                        <CollapsibleTrigger 
+                          className="w-full"
+                          onClick={() => toggleCard(`${categoryIndex}-${platformIndex}`)}
                         >
-                          <Button variant="outline" size="sm" className="w-full">
-                            <ExternalLink className="w-4 h-4 mr-2" />
-                            לאתר הפלטפורמה
-                          </Button>
-                        </a>
-                      </CardContent>
-                    </Card>
+                          <CardHeader>
+                            <CardTitle className="flex items-center justify-between">
+                              <span className={`text-xl ${category.textColor} text-right`}>{platform.name}</span>
+                              <div className="flex items-center gap-2">
+                                <a 
+                                  href={platform.link} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="text-gray-400 hover:text-camp-blue-600 transition-colors"
+                                  onClick={(e) => e.stopPropagation()}
+                                >
+                                  <ExternalLink className="w-5 h-5" />
+                                </a>
+                                <ChevronDown 
+                                  className={`w-5 h-5 transition-transform ${
+                                    openCards.includes(`${categoryIndex}-${platformIndex}`) ? 'rotate-180' : ''
+                                  }`} 
+                                />
+                              </div>
+                            </CardTitle>
+                          </CardHeader>
+                        </CollapsibleTrigger>
+                        <CollapsibleContent>
+                          <CardContent>
+                            <p className="text-gray-600 leading-relaxed mb-4 text-right">
+                              {platform.description}
+                            </p>
+                            <a 
+                              href={platform.link} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                            >
+                              <Button variant="outline" size="sm" className="w-full">
+                                <ExternalLink className="w-4 h-4 mr-2" />
+                                לאתר הפלטפורמה
+                              </Button>
+                            </a>
+                          </CardContent>
+                        </CollapsibleContent>
+                      </Card>
+                    </Collapsible>
                   ))}
                 </div>
               </div>

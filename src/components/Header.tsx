@@ -11,6 +11,7 @@ const Header = () => {
   const navItems = [
     { name: 'דף הבית', path: '/' },
     { name: 'מה בתכנית', path: '/program' },
+    { name: 'פלטפורמות בקורס', path: '/platforms' },
     { name: 'שאלות נפוצות', path: '/faq' },
     { name: 'אודות', path: '/about' },
   ];
