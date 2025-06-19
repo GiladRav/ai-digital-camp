@@ -3,69 +3,122 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, Clock, Users, MessageSquare, Calendar, Heart } from 'lucide-react';
+import { Phone, Mail, Clock, Users, MessageSquare, Calendar, Heart, Brain, Target, Code, Lightbulb, Star } from 'lucide-react';
 import Layout from '@/components/Layout';
 
 const FAQ = () => {
-  const technicalFAQs = [
+  const generalFAQs = [
     {
-      question: "באיזה פורמט מתקיימת הקייטנה?",
-      answer: "הקייטנה מתקיימת במפגשים בזום עם מדריך מומחה. 5 ימים מרוכזים בין השעות 09:00-13:00. כל יום כולל 4 שעות למידה עם הפסקות מתוכננות."
+      question: "מהי קייטנת יזמות דיגיטלית ופיתוח אפליקציות AI?",
+      answer: "זוהי תכנית חדשנית המשלבת יזמות דיגיטלית ופיתוח אפליקציות בדרך מעשית וחווייתית, תוך שימוש בכלי בינה מלאכותית מתקדמים. המשתתפים ילמדו להכיר הזדמנויות עסקיות, לפתח רעיונות יצירתיים ולהפוך אותם לאפליקציות פועלות."
     },
     {
-      question: "מה משך הקייטנה?",
-      answer: "הקייטנה נמשכת 5 ימים רצופים (א'-ה') עם סך של 20 שעות למידה. כל יום כולל 4 שעות עם הפסקות. ביום החמישי יתקיים ערב הצגת פרויקטים משותף עם ההורים."
+      question: "למי מיועדת הקייטנה?",
+      answer: "הקייטנה מיועדת לתלמידי כיתות ו'-ח' (גילאי 11–14)."
     },
     {
-      question: "איזה גילאים מתאימים לקייטנה?",
-      answer: "הקייטנה מיועדת לתלמידי כיתות ו'-ח' (גילאי 11-14). הקייטנה מותאמת במיוחד לגיל הזה ולא דורשת ידע טכני קודם."
+      question: "האם נדרש רקע טכני קודם?",
+      answer: "לא נדרש כל רקע טכני או עסקי קודם. התכנית מעוצבת כך שתתאים גם לתלמידים ללא ניסיון בתכנות או בפיתוח."
     },
     {
-      question: "באיזו פלטפורמה מתקיימים המפגשים?",
-      answer: "המפגשים מתקיימים בזום. נשלח לכם קישור למפגש לפני תחילת הקייטנה. יש לוודא שיש לכם חיבור אינטרנט יציב, מצלמה, מיקרופון ואוזניות."
+      question: "אילו כישורים נדרשים מהמשתתפים?",
+      answer: "נדרשת סקרנות טכנולוגית, חשיבה יצירתית, עניין ביזמות ופתרון בעיות. התכנית גם מעודדת חשיבה יצירתית, פתרון בעיות, עבודת צוות ומנהיגות."
     },
     {
-      question: "כמה משתתפים יש בכל קבוצה?",
-      answer: "מקסימום 15 משתתפים בקבוצה כדי להבטיח ליווי אישי וקשב מקסימלי לכל משתתף. זה מאפשר למדריך לתת תשומת לב אישית לכל אחד."
-    },
-    {
-      question: "איזה ציוד טכנולוגי נדרש?",
-      answer: "נדרש מחשב נייד או מחשב שולחני עם חיבור לאינטרנט יציב, מצלמה, מיקרופון ואוזניות איכותיות. דפדפן מעודכן (Chrome/Firefox/Safari). כל התוכנות שנשתמש בהן מבוססות ווב ואין צורך לרכוש תוכנה."
-    },
-    {
-      question: "האם יש צורך לרכוש תוכנות?",
-      answer: "לא! כל הכלים שנשתמש בהם מבוססי ווב וחינמיים. נעזור ליצור חשבונות בפלטפורמות השונות במהלך הקייטנה עצמה בהדרכת המדריך."
+      question: "מה העלות למשתתף?",
+      answer: "עלות הקייטנה למשתתף היא 1,800 ₪."
     }
   ];
 
-  const emotionalFAQs = [
+  const technicalFAQs = [
     {
-      question: "האם הקייטנה מתאימה לילדים ללא ידע טכני?",
-      answer: "בהחלט! הקייטנה בנויה במיוחד עבור מתחילים מוחלטים. נשתמש בכלי no-code ובינה מלאכותית שמאפשרים ליצור אפליקציות ללא צורך בתכנות. כל מה שנדרש הוא סקרנות וחשיבה יצירתית."
+      question: "באיזה פורמט מתקיימת הקייטנה?",
+      answer: "הקייטנה מתקיימת כמפגשים בזום עם מדריך מומחה."
     },
     {
-      question: "איך אתם מתמודדים עם רמות שונות של ילדים?",
-      answer: "המדריך מותאם את הפעילויות לכל משתתף בנפרד. הפרויקטים גמישים ומאפשרים לכל אחד להתקדם בקצב שלו ולפי תחומי העניין שלו. נשתמש בכלי AI שעוזרים להתאים את התוכן לרמה של כל משתתף."
+      question: "מהו משך הקייטנה?",
+      answer: "הקייטנה נמשכת 5 ימים מרוכזים."
     },
     {
-      question: "מה קורה אם הילד שלי מתקשה לעקוב?",
-      answer: "המדריך שלנו מנוסה בעבודה עם ילדים ויודע לזהות כשמישהו נתקל בקושי. יש ליווי אישי, הפסקות לשאלות, וגם אפשרות ליצור קשר עם המדריך בין המפגשים. אנחנו מתחייבים שכל ילד יגיע לסוף עם הרגשת הצלחה."
+      question: "מהן שעות הפעילות היומיות?",
+      answer: "הפעילות מתקיימת בין השעות 10:00–14:00, ואורך מפגש יומי הוא 4 שעות (כולל הפסקות)."
     },
     {
-      question: "איך אתם שומרים על המוטיבציה לאורך השבוע?",
-      answer: "השיטה שלנו מבוססת על פרויקטים מעניינים שהילדים בוחרים בעצמם. כל יום יש הישגים קטנים שנותנים הרגשת הצלחה. בנוסף, העבודה עם כלי AI מרגשת ומעוררת סקרנות טבעית."
+      question: "כמה שעות למידה פעילה יש בקייטנה?",
+      answer: "סך הכל יש 20 שעות הוראה."
     },
     {
-      question: "מה לגבי ביטחון אישי וביישנות?",
-      answer: "אנחנו יוצרים סביבה בטוחה ותומכת. ההצגות בסוף הן אופציונליות ואנחנו עוזרים לכל ילד להרגיש בנוח. המדריך מנוסה בעבודה עם ילדים ויודע איך לחזק ביטחון עצמי."
+      question: "מה גודל הקבוצה בקייטנה?",
+      answer: "גודל הקבוצה נע בין 12 ל-15 משתתפים."
     },
     {
-      question: "איך ההורים יכולים לעקוב אחרי ההתקדמות?",
-      answer: "אנחנו שולחים עדכון יומי לקבוצת וואטסאפ של ההורים עם סיכום של הפעילויות וההתקדמות. בסוף השבוע כל הורה מקבל דוח אישי על הילד שלו כולל תוצרים והמלצות להמשך."
+      question: "מהן הדרישות הטכנולוגיות להשתתפות?",
+      answer: "נדרש מחשב נייד או שולחני עם חיבור אינטרנט יציב, מצלמה, מיקרופון ואוזניות. מומלץ להשתמש בדפדפן מעודכן (Chrome/Firefox/Safari). טאבלט או סמארטפון הם אופציונליים לבדיקת אפליקציות מובייל."
     },
     {
-      question: "מה קורה אם הילד חסר במפגש?",
-      answer: "אנחנו מקליטים את המפגשים (באישור ההורים) ושולחים חומר משלים. המדריך גם יכול לתת הדרכה אישית קצרה לפני המפגש הבא כדי להשלים על החסר."
+      question: "האם צריך לרכוש תוכנות או ציוד מיוחד?",
+      answer: "אין צורך ברכישת תוכנה. כל הכלים מבוססי ווב, וחשבונות לפלטפורמות ייווצרו בהדרכת המדריך."
+    }
+  ];
+
+  const programFAQs = [
+    {
+      question: "אילו סוגי אפליקציות יבנו המשתתפים?",
+      answer: "המשתתפים יבנו 1-2 אפליקציות פועלות, שיכולות להיות אפליקציות מובייל או ווב."
+    },
+    {
+      question: "מה המשמעות של \"פיתוח באמצעות כלים ללא קוד\" (No-Code)?",
+      answer: "הפיתוח מתבצע באמצעות כלים המאפשרים בניית אפליקציות ורכיבים דיגיטליים ללא צורך בכתיבת קוד. זה מאפשר לילדים לפתח אפליקציות שלמות במהירות ובקלות, גם ללא ידע בתכנות."
+    },
+    {
+      question: "כיצד משולבת בינה מלאכותית (AI) בתכנית?",
+      answer: "התכנית מאפשרת למשתתפים לרתום את כוחה של בינה מלאכותית ליצירת תוכן ועיצוב אפליקציות, אפיון ומחקר, כתיבת תוכן ופיתוח טכנולוגי. הם יכירו עקרונות יזמות דיגיטלית מודרנית מבוססת AI, ילמדו על מחקר שוק אוטומטי, בניית מודל עסקי חכם, ועיצוב חוויית משתמש עם AI."
+    },
+    {
+      question: "אילו כלים ופלטפורמות מרכזיות ישמשו בקייטנה?",
+      answer: "המשתתפים יתמקדו בפלטפורמות כמו Canva AI Assistant, Rosebud AI, Bubble, Lovable.dev, Firebase Studio, Replit Ghostwriter, MagicSchool AI, Diffit, Base44, Websim, ו-Google AI Studio."
+    },
+    {
+      question: "מהם יעדי הלמידה העיקריים של הקייטנה?",
+      answer: "יזמות דיגיטלית: פיתוח חשיבה יזמית, זיהוי הזדמנויות עסקיות, למידת עקרונות מחקר שוק, בניית מודל עסקי והצגת פרויקטים עסקיים. פיתוח אפליקציות: שימוש בכלי AI ליצירת אפליקציות פועלות, הבנת עקרונות עיצוב UI/UX, ולמידת תהליכי בדיקה ושיפור מוצר. מיומנויות דיגיטליות: היכרות עם למעלה מ-10 פלטפורמות AI, פיתוח כישורי פתרון בעיות, חשיבה אלגוריתמית, עבודת צוות ומנהיגות."
+    },
+    {
+      question: "מהי גישת ההדרכה בקייטנה?",
+      answer: "הגישה היא למידה מבוססת פרויקטים, שבה כל מפגש כולל פיתוח מעשי של אפליקציה או רכיב עסקי. הפרויקטים מותאמים לתחומי עניין ויכולות אישיות, תוך עידוד ניסוי, טעייה ולמידה מכשלונות בסביבה בטוחה."
+    }
+  ];
+
+  const outcomesFAQs = [
+    {
+      question: "מהם התוצרים הצפויים בסיום הקייטנה?",
+      answer: "המשתתפים יסיימו עם 1-2 אפליקציות פועלות, מודל עסקי בסיסי, אסטרטגיית שיווק דיגיטלי, מצגת מכירה מקצועית (Pitch Deck), ותיק עבודות דיגיטלי המציג את כל הפרויקטים."
+    },
+    {
+      question: "מהו \"ערב הפיצ'ינג\" המוזכר?",
+      answer: "הקייטנה מסתיימת בערב פיצ'ינג מרגש בסגנון \"הכרישים\", בו המשתתפים יציגו את הפרויקטים שלהם בפני קהל, כולל הוריהם. זוהי חוויה של התנסות ב-pitching ובאמנות המכירה."
+    },
+    {
+      question: "כיצד מתבצע מעקב אחר התקדמות המשתתפים?",
+      answer: "התהליך כולל משוב מתמיד (ביקורות קוד ועיצוב, הנחיה אישית, דיונים קבוצתיים), מצגת סיום של הפרויקט הגמור, ורפלקציה אישית באמצעות יומן למידה יומי."
+    },
+    {
+      question: "מה תפקידו של המדריך בקייטנה?",
+      answer: "המדריך הוא מומחה שתפקידו להנחות טכנית, ללוות בתהליך החשיבה היזמית, לתת הכוונה עסקית ומשוב, ולעודד יצירתיות, חדשנות ומנהיגות, תוך יצירת סביבה של למידת עמיתים."
+    },
+    {
+      question: "מהם יעדי הלמידה לטווח הארוך?",
+      answer: "הקייטנה מכוונת לפתח מנטליות של יזמות מבוססת AI, להקנות מיומנויות טכנולוגיות (פיתוח, עיצוב ומחקר משתמשים עם סיוע AI), לפתח אוריינות בינה מלאכותית (הבנה, שימוש והערכה ביקורתית של כלי AI), לצבור ניסיון במנהיגות דיגיטלית ועבודת צוות, ולהבין יסודות עסקיים בעידן ה-AI."
+    }
+  ];
+
+  const specialFAQs = [
+    {
+      question: "כיצד מתבצעת התקשורת עם ההורים?",
+      answer: "תתקיים מפגש הכנה לפני תחילת הקייטנה. יהיו עדכונים יומיים בקבוצת וואטסאפ, וכן מצגת סיום משפחתית ביום החמישי. בסיום, יוגש דוח סיכום אישי לכל משתתף."
+    },
+    {
+      question: "האם הקייטנה מתאימה לילדים עם קשיי למידה או צרכים מיוחדים?",
+      answer: "התכנית מתמקדת בלומד וכי הפרויקטים מותאמים לתחומי עניין ויכולות אישיות, וכן מתבצעת התאמה אישית של תוכן לכישורים ותחומי עניין ייחודיים. אנו ממליצים לפנות אלינו באופן פרטני על מנת לבדוק התאמה ולדון בצרכים ספציפיים."
     }
   ];
 
@@ -133,16 +186,22 @@ const FAQ = () => {
         </div>
       </section>
 
-      {/* Technical FAQs */}
+      {/* General FAQs */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
-            שאלות טכניות
-          </h2>
+          <div className="text-center mb-12">
+            <div className="flex justify-center items-center space-x-2 rtl:space-x-reverse mb-4">
+              <Star className="w-8 h-8 text-yellow-500" />
+              <Lightbulb className="w-8 h-8 text-orange-500" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
+              מידע כללי על הקייטנה
+            </h2>
+          </div>
           <div className="max-w-4xl mx-auto">
             <Accordion type="single" collapsible className="space-y-4">
-              {technicalFAQs.map((faq, index) => (
-                <AccordionItem key={index} value={`technical-${index}`} className="border rounded-lg px-6">
+              {generalFAQs.map((faq, index) => (
+                <AccordionItem key={index} value={`general-${index}`} className="border rounded-lg px-6 bg-white">
                   <AccordionTrigger className="text-right hover:no-underline">
                     <span className="font-semibold text-lg">{faq.question}</span>
                   </AccordionTrigger>
@@ -156,16 +215,109 @@ const FAQ = () => {
         </div>
       </section>
 
-      {/* Emotional/Pedagogical FAQs */}
+      {/* Technical FAQs */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
-            שאלות רגשיות ופדגוגיות
-          </h2>
+          <div className="text-center mb-12">
+            <div className="flex justify-center items-center space-x-2 rtl:space-x-reverse mb-4">
+              <Brain className="w-8 h-8 text-purple-600" />
+              <Code className="w-8 h-8 text-blue-600" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
+              שאלות טכניות ולוגיסטיות
+            </h2>
+          </div>
           <div className="max-w-4xl mx-auto">
             <Accordion type="single" collapsible className="space-y-4">
-              {emotionalFAQs.map((faq, index) => (
-                <AccordionItem key={index} value={`emotional-${index}`} className="border rounded-lg px-6 bg-white">
+              {technicalFAQs.map((faq, index) => (
+                <AccordionItem key={index} value={`technical-${index}`} className="border rounded-lg px-6 bg-white">
+                  <AccordionTrigger className="text-right hover:no-underline">
+                    <span className="font-semibold text-lg">{faq.question}</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-600 leading-relaxed">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
+      {/* Program Content FAQs */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="flex justify-center items-center space-x-2 rtl:space-x-reverse mb-4">
+              <Target className="w-8 h-8 text-green-600" />
+              <Brain className="w-8 h-8 text-purple-600" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
+              תוכן הקייטנה ושיטות לימוד
+            </h2>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              {programFAQs.map((faq, index) => (
+                <AccordionItem key={index} value={`program-${index}`} className="border rounded-lg px-6 bg-white">
+                  <AccordionTrigger className="text-right hover:no-underline">
+                    <span className="font-semibold text-lg">{faq.question}</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-600 leading-relaxed">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
+      {/* Outcomes FAQs */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="flex justify-center items-center space-x-2 rtl:space-x-reverse mb-4">
+              <Star className="w-8 h-8 text-yellow-500" />
+              <Target className="w-8 h-8 text-green-600" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
+              תוצאות ומעקב הישגים
+            </h2>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              {outcomesFAQs.map((faq, index) => (
+                <AccordionItem key={index} value={`outcomes-${index}`} className="border rounded-lg px-6 bg-white">
+                  <AccordionTrigger className="text-right hover:no-underline">
+                    <span className="font-semibold text-lg">{faq.question}</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-600 leading-relaxed">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
+      {/* Special Needs FAQs */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="flex justify-center items-center space-x-2 rtl:space-x-reverse mb-4">
+              <Heart className="w-8 h-8 text-red-500" />
+              <Users className="w-8 h-8 text-blue-500" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
+              נושאים מיוחדים
+            </h2>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              {specialFAQs.map((faq, index) => (
+                <AccordionItem key={index} value={`special-${index}`} className="border rounded-lg px-6 bg-white">
                   <AccordionTrigger className="text-right hover:no-underline">
                     <span className="font-semibold text-lg">{faq.question}</span>
                   </AccordionTrigger>
@@ -180,7 +332,7 @@ const FAQ = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
             עדיין יש שאלות?
