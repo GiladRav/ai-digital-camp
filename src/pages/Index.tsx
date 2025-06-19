@@ -50,12 +50,12 @@ const Index = () => {
   ];
 
   const outcomes = [
-    { icon: <Code />, text: "1-2 אפליקציות פועלות" },
-    { icon: <Target />, text: "מודל עסקי בסיסי" },
-    { icon: <Lightbulb />, text: "אסטרטגיית שיווק דיגיטלי" },
-    { icon: <Presentation />, text: "מצגת מכירה מקצועית" },
-    { icon: <CheckCircle />, text: "תיק עבודות דיגיטלי" },
-    { icon: <Trophy />, text: "ניסיון מעשי מרוכז" }
+    { icon: Code, text: "1-2 אפליקציות פועלות" },
+    { icon: Target, text: "מודל עסקי בסיסי" },
+    { icon: Lightbulb, text: "אסטרטגיית שיווק דיגיטלי" },
+    { icon: Presentation, text: "מצגת מכירה מקצועית" },
+    { icon: CheckCircle, text: "תיק עבודות דיגיטלי" },
+    { icon: Trophy, text: "ניסיון מעשי מרוכז" }
   ];
 
   const targetAudience = [
@@ -200,14 +200,17 @@ const Index = () => {
             מה מקבלים מהקייטנה?
           </h2>
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {outcomes.map((outcome, index) => (
-              <div key={index} className="flex items-center space-x-3 rtl:space-x-reverse p-4 bg-white rounded-lg border hover:shadow-md transition-shadow">
-                <div className="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center text-white">
-                  <outcome.icon size={20} />
+            {outcomes.map((outcome, index) => {
+              const IconComponent = outcome.icon;
+              return (
+                <div key={index} className="flex items-center space-x-3 rtl:space-x-reverse p-4 bg-white rounded-lg border hover:shadow-md transition-shadow">
+                  <div className="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center text-white">
+                    <IconComponent size={20} />
+                  </div>
+                  <span className="font-medium">{outcome.text}</span>
                 </div>
-                <span className="font-medium">{outcome.text}</span>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

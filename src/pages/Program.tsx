@@ -172,12 +172,12 @@ const Program = () => {
   ];
 
   const outcomes = [
-    { icon: <Smartphone />, title: "1-2 אפליקציות פועלות", description: "מובייל (Glide) וווב (Bubble)" },
-    { icon: <Target />, title: "מודל עסקי בסיסי", description: "זיהוי בעיה ופתרון עסקי" },
-    { icon: <TrendingUp />, title: "אסטרטגיית שיווק דיגיטלי", description: "כולל חומרי שיווק מקצועיים" },
-    { icon: <Presentation />, title: "מצגת מכירה", description: "Pitch Deck מקצועי של 5 דקות" },
-    { icon: <Code />, title: "תיק עבודות דיגיטלי", description: "מציג את כל הפרויקטים" },
-    { icon: <CheckCircle />, title: "ניסיון מעשי", description: "מרעיון ועד מימוש מלא" }
+    { icon: Smartphone, title: "1-2 אפליקציות פועלות", description: "מובייל (Glide) וווב (Bubble)" },
+    { icon: Target, title: "מודל עסקי בסיסי", description: "זיהוי בעיה ופתרון עסקי" },
+    { icon: TrendingUp, title: "אסטרטגיית שיווק דיגיטלי", description: "כולל חומרי שיווק מקצועיים" },
+    { icon: Presentation, title: "מצגת מכירה", description: "Pitch Deck מקצועי של 5 דקות" },
+    { icon: Code, title: "תיק עבודות דיגיטלי", description: "מציג את כל הפרויקטים" },
+    { icon: CheckCircle, title: "ניסיון מעשי", description: "מרעיון ועד מימוש מלא" }
   ];
 
   return (
@@ -285,17 +285,20 @@ const Program = () => {
             תוצרים צפויים
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {outcomes.map((outcome, index) => (
-              <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
-                <CardContent className="p-0">
-                  <div className="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4 text-white">
-                    <outcome.icon size={24} />
-                  </div>
-                  <h3 className="font-semibold text-lg mb-2">{outcome.title}</h3>
-                  <p className="text-gray-600 text-sm">{outcome.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+            {outcomes.map((outcome, index) => {
+              const IconComponent = outcome.icon;
+              return (
+                <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
+                  <CardContent className="p-0">
+                    <div className="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4 text-white">
+                      <IconComponent size={24} />
+                    </div>
+                    <h3 className="font-semibold text-lg mb-2">{outcome.title}</h3>
+                    <p className="text-gray-600 text-sm">{outcome.description}</p>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
