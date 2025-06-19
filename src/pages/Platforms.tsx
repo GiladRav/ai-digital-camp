@@ -2,30 +2,19 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { Link } from 'react-router-dom';
-import { ExternalLink, Brain, Palette, Code, Search, ChevronDown } from 'lucide-react';
-import { useState } from 'react';
+import { ExternalLink, Brain, Palette, Code, Search } from 'lucide-react';
 import Layout from '@/components/Layout';
 
 const Platforms = () => {
-  const [openCards, setOpenCards] = useState<string[]>([]);
-
-  const toggleCard = (platformName: string) => {
-    setOpenCards(prev => 
-      prev.includes(platformName) 
-        ? prev.filter(name => name !== platformName)
-        : [...prev, platformName]
-    );
-  };
-
   const platformCategories = [
     {
       title: "מנועי שפה טבעית ומחקר",
       icon: <Search className="w-6 h-6" />,
-      color: "bg-blue-500",
-      textColor: "text-blue-700",
-      borderColor: "border-blue-200",
+      color: "bg-emerald-500",
+      textColor: "text-emerald-700",
+      borderColor: "border-emerald-300",
+      bgLight: "bg-emerald-50",
       platforms: [
         {
           name: "ChatGPT",
@@ -47,9 +36,10 @@ const Platforms = () => {
     {
       title: "עיצוב ויצירת תוכן ויזואלי",
       icon: <Palette className="w-6 h-6" />,
-      color: "bg-purple-500",
-      textColor: "text-purple-700",
-      borderColor: "border-purple-200",
+      color: "bg-rose-500",
+      textColor: "text-rose-700",
+      borderColor: "border-rose-300",
+      bgLight: "bg-rose-50",
       platforms: [
         {
           name: "Gamma AI",
@@ -71,9 +61,10 @@ const Platforms = () => {
     {
       title: "פלטפורמות ללא-קוד וסימולציות",
       icon: <Brain className="w-6 h-6" />,
-      color: "bg-teal-500",
-      textColor: "text-teal-700",
-      borderColor: "border-teal-200",
+      color: "bg-amber-500",
+      textColor: "text-amber-700",
+      borderColor: "border-amber-300",
+      bgLight: "bg-amber-50",
       platforms: [
         {
           name: "Lovable.dev",
@@ -95,9 +86,10 @@ const Platforms = () => {
     {
       title: "פיתוח ותכנות מתקדם",
       icon: <Code className="w-6 h-6" />,
-      color: "bg-blue-600",
-      textColor: "text-blue-800",
-      borderColor: "border-blue-300",
+      color: "bg-indigo-500",
+      textColor: "text-indigo-700",
+      borderColor: "border-indigo-300",
+      bgLight: "bg-indigo-50",
       platforms: [
         {
           name: "Bubble",
@@ -133,25 +125,25 @@ const Platforms = () => {
       </section>
 
       {/* Summary Table */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 gradient-text">
-            סקירת פלטפורמות לפי קטגוריות
+            מה נלמד?
           </h2>
           <div className="max-w-4xl mx-auto">
             <Table>
               <TableHeader>
-                <TableRow>
-                  <TableHead className="text-right font-bold text-lg">קטגוריה</TableHead>
-                  <TableHead className="text-right font-bold text-lg">פלטפורמות</TableHead>
+                <TableRow className="bg-white">
+                  <TableHead className="text-right font-bold text-lg text-gray-800">קטגוריה</TableHead>
+                  <TableHead className="text-right font-bold text-lg text-gray-800">פלטפורמות</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {platformCategories.map((category, index) => (
-                  <TableRow key={index} className={`${category.borderColor} border-r-4`}>
+                  <TableRow key={index} className={`${category.borderColor} border-r-4 ${category.bgLight}`}>
                     <TableCell className={`font-semibold ${category.textColor} text-lg`}>
-                      <div className="flex items-center gap-2">
-                        <div className={`w-8 h-8 ${category.color} rounded-full flex items-center justify-center text-white`}>
+                      <div className="flex items-center gap-3">
+                        <div className={`w-10 h-10 ${category.color} rounded-full flex items-center justify-center text-white shadow-md`}>
                           {category.icon}
                         </div>
                         {category.title}
@@ -162,7 +154,7 @@ const Platforms = () => {
                         {category.platforms.map((platform, platformIndex) => (
                           <span 
                             key={platformIndex}
-                            className={`px-3 py-1 rounded-full text-sm font-medium ${category.color} text-white`}
+                            className={`px-4 py-2 rounded-full text-sm font-medium ${category.color} text-white shadow-sm`}
                           >
                             {platform.name}
                           </span>
@@ -182,65 +174,43 @@ const Platforms = () => {
         <div className="container mx-auto px-4">
           <div className="space-y-16">
             {platformCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex}>
+              <div key={categoryIndex} className={`${category.bgLight} rounded-3xl p-8`}>
                 <div className="text-center mb-12">
-                  <div className={`w-16 h-16 ${category.color} rounded-full flex items-center justify-center mx-auto mb-4 text-white`}>
+                  <div className={`w-20 h-20 ${category.color} rounded-full flex items-center justify-center mx-auto mb-6 text-white shadow-lg`}>
                     {category.icon}
                   </div>
-                  <h2 className={`text-3xl md:text-4xl font-bold ${category.textColor}`}>
+                  <h2 className={`text-3xl md:text-4xl font-bold ${category.textColor} mb-4`}>
                     {category.title}
                   </h2>
+                  <div className={`w-24 h-1 ${category.color} mx-auto rounded-full`}></div>
                 </div>
                 
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                   {category.platforms.map((platform, platformIndex) => (
-                    <Collapsible key={platformIndex}>
-                      <Card className={`h-full hover:shadow-lg transition-shadow ${category.borderColor} border-r-4`}>
-                        <CollapsibleTrigger 
-                          className="w-full"
-                          onClick={() => toggleCard(`${categoryIndex}-${platformIndex}`)}
+                    <Card key={platformIndex} className={`h-full hover:shadow-xl transition-all duration-300 ${category.borderColor} border-r-4 border-l-4 bg-white/80 backdrop-blur-sm transform hover:-translate-y-1`}>
+                      <CardHeader className="text-center pb-4">
+                        <CardTitle className={`text-2xl ${category.textColor} font-bold`}>
+                          {platform.name}
+                        </CardTitle>
+                        <div className={`w-16 h-1 ${category.color} mx-auto rounded-full`}></div>
+                      </CardHeader>
+                      <CardContent className="pt-0">
+                        <p className="text-gray-700 leading-relaxed mb-6 text-right text-sm">
+                          {platform.description}
+                        </p>
+                        <a 
+                          href={platform.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="block"
                         >
-                          <CardHeader>
-                            <CardTitle className="flex items-center justify-between">
-                              <span className={`text-xl ${category.textColor} text-right`}>{platform.name}</span>
-                              <div className="flex items-center gap-2">
-                                <a 
-                                  href={platform.link} 
-                                  target="_blank" 
-                                  rel="noopener noreferrer"
-                                  className="text-gray-400 hover:text-camp-blue-600 transition-colors"
-                                  onClick={(e) => e.stopPropagation()}
-                                >
-                                  <ExternalLink className="w-5 h-5" />
-                                </a>
-                                <ChevronDown 
-                                  className={`w-5 h-5 transition-transform ${
-                                    openCards.includes(`${categoryIndex}-${platformIndex}`) ? 'rotate-180' : ''
-                                  }`} 
-                                />
-                              </div>
-                            </CardTitle>
-                          </CardHeader>
-                        </CollapsibleTrigger>
-                        <CollapsibleContent>
-                          <CardContent>
-                            <p className="text-gray-600 leading-relaxed mb-4 text-right">
-                              {platform.description}
-                            </p>
-                            <a 
-                              href={platform.link} 
-                              target="_blank" 
-                              rel="noopener noreferrer"
-                            >
-                              <Button variant="outline" size="sm" className="w-full">
-                                <ExternalLink className="w-4 h-4 mr-2" />
-                                לאתר הפלטפורמה
-                              </Button>
-                            </a>
-                          </CardContent>
-                        </CollapsibleContent>
-                      </Card>
-                    </Collapsible>
+                          <Button className={`w-full ${category.color} hover:opacity-90 text-white shadow-md transition-all duration-300 hover:shadow-lg`}>
+                            <ExternalLink className="w-4 h-4 mr-2" />
+                            בקר באתר הפלטפורמה
+                          </Button>
+                        </a>
+                      </CardContent>
+                    </Card>
                   ))}
                 </div>
               </div>
