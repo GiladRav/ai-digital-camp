@@ -10,8 +10,8 @@ const Header = () => {
 
   const navItems = [
     { name: 'דף הבית', path: '/' },
-    { name: 'מה בתכנית', path: '/program' },
-    { name: 'פלטפורמות בקורס', path: '/platforms' },
+    { name: 'על הקייטנה', path: '/about-camp' },
+    { name: 'הפילוסופיה שלנו', path: '/philosophy' },
     { name: 'שאלות נפוצות', path: '/faq' },
     { name: 'אודות', path: '/about' },
   ];

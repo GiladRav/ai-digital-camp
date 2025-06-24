@@ -13,10 +13,10 @@ const Footer = () => {
               <div className="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">AI</span>
               </div>
-              <span className="font-bold text-xl">קייטנת יזמות דיגיטלית AI</span>
+              <span className="font-bold text-xl">קייטנת יזמות דיגיטלית בינה מלאכותית</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              קייטנה דיגיטלית פורצת דרך לתלמידי חטיבת ביניים שממנפת כלי בינה מלאכותית מתקדמים 
+              מחנה קיץ דיגיטלי פורץ דרך לבני נוער שממנף כלי בינה מלאכותית מתקדמים 
               להפיכת רעיונות לאפליקציות פועלות.
             </p>
             <Link to="/register">
@@ -36,8 +36,13 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/program" className="text-gray-300 hover:text-white transition-colors">
-                  מה בתכנית
+                <Link to="/about-camp" className="text-gray-300 hover:text-white transition-colors">
+                  על הקייטנה
+                </Link>
+              </li>
+              <li>
+                <Link to="/philosophy" className="text-gray-300 hover:text-white transition-colors">
+                  הפילוסופיה שלנו
                 </Link>
               </li>
               <li>
@@ -65,7 +70,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} קייטנת יזמות דיגיטלית AI. כל הזכויות שמורות.</p>
+          <p>&copy; {new Date().getFullYear()} קייטנת יזמות דיגיטלית בינה מלאכותית. כל הזכויות שמורות.</p>
         </div>
       </div>
     </footer>

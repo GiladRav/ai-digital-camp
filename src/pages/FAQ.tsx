@@ -1,15 +1,14 @@
-
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, Clock, Users, MessageSquare, Calendar, Heart, Brain, Target, Code, Lightbulb, Star } from 'lucide-react';
+import { Phone, Mail, Clock, Users, Brain, Target, Code, Lightbulb, Star } from 'lucide-react';
 import Layout from '@/components/Layout';
 
 const FAQ = () => {
   const generalFAQs = [
     {
-      question: "מהי קייטנת יזמות דיגיטלית ופיתוח אפליקציות AI?",
+      question: "מהי קייטנת יזמות דיגיטלית ופיתוח אפליקציות בינה מלאכותית?",
       answer: "זוהי תכנית חדשנית המשלבת יזמות דיגיטלית ופיתוח אפליקציות בדרך מעשית וחווייתית, תוך שימוש בכלי בינה מלאכותית מתקדמים. המשתתפים ילמדו להכיר הזדמנויות עסקיות, לפתח רעיונות יצירתיים ולהפוך אותם לאפליקציות פועלות."
     },
     {
@@ -131,8 +130,8 @@ const FAQ = () => {
             שאלות נפוצות
           </h1>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            כאן תוכלו למצוא תשובות לשאלות הנפוצות ביותר על הקייטנה. 
-            לא מצאתם מה שחיפשתם? צרו קשר ונשמח לעזור!
+            מצאו כאן תשובות מקיפות לכל השאלות החשובות על הקייטנה. 
+            המידע מאורגן בקטגוריות ברורות לנוחותכם.
           </p>
         </div>
       </section>
