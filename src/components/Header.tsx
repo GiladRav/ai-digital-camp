@@ -10,8 +10,8 @@ const Header = () => {
 
   const navItems = [
     { name: 'דף הבית', path: '/' },
-    { name: 'מה בתכנית', path: '/program' },
-    { name: 'פלטפורמות בקורס', path: '/platforms' },
+    { name: 'על הקייטנה', path: '/about-camp' },
+    { name: 'הפילוסופיה שלנו', path: '/philosophy' },
     { name: 'שאלות נפוצות', path: '/faq' },
     { name: 'אודות', path: '/about' },
   ];
@@ -27,9 +27,9 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 rtl:space-x-reverse">
             <div className="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">AI</span>
+              <span className="text-white font-bold text-sm">בינה מלאכותית</span>
             </div>
-            <span className="font-bold text-xl gradient-text">קייטנת AI</span>
+            <span className="font-bold text-xl gradient-text">קייטנת בינה מלאכותית</span>
           </Link>
 
           {/* Desktop Navigation */}
