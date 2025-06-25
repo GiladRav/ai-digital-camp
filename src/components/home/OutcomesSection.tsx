@@ -2,50 +2,37 @@
 import { 
   Brain, 
   Smartphone, 
-  Zap,
+  Code,
   Presentation,
-  Shield
+  Target,
+  CheckCircle
 } from 'lucide-react';
 
 const OutcomesSection = () => {
   const outcomes = [
-    { 
-      icon: Brain, 
-      text: "חשיבה יזמית: יכולת לזהות בעיות בסביבה ולחשוב על פתרונות דיגיטליים יצירתיים ומעשיים" 
-    },
-    { 
-      icon: Smartphone, 
-      text: "אפליקציה פועלת: פרויקט דיגיטלי מוגמר שעובד באמת ומספק פתרון לבעיה אמיתית" 
-    },
-    { 
-      icon: Zap, 
-      text: "אוריינות דיגיטלית מתקדמת: ידע מעשי בכלי בינה מלאכותית ופלטפורמות פיתוח שיסייעו בלמידה ויצירה לכל החיים" 
-    },
-    { 
-      icon: Presentation, 
-      text: "כישורי הצגה ותקשורת: יכולת להציג רעיונות בצורה משכנעת ומקצועית כמו יזמים אמיתיים" 
-    },
-    { 
-      icon: Shield, 
-      text: "ביטחון עצמי טכנולוגי: תחושת מסוגלות ועצמאות בעולם הדיגיטלי ויכולת להמשיך ללמוד לבד" 
-    }
+    { icon: Brain, text: "מפת חשיבה אישית לרעיון דיגיטלי" },
+    { icon: Smartphone, text: "אפליקציה פעילה ותפקודית" },
+    { icon: Code, text: "שליטה בכלי AI ופלטפורמות מתקדמות" },
+    { icon: Presentation, text: "פיץ' אישי בסגנון סטארטאפ" },
+    { icon: Target, text: "זהות אישית ולוגו למיזם" },
+    { icon: CheckCircle, text: "ביטחון עצמי טכנולוגי" }
   ];
 
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
-          תוצרי הקייטנה – מה המשתתפים יוצרים?
+          תוצרי הקייטנה - מה המשתתפים יוצרים?
         </h2>
-        <div className="max-w-4xl mx-auto space-y-6">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {outcomes.map((outcome, index) => {
             const IconComponent = outcome.icon;
             return (
-              <div key={index} className="flex items-start space-x-4 rtl:space-x-reverse p-6 bg-white rounded-lg border hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center text-white flex-shrink-0">
-                  <IconComponent size={24} />
+              <div key={index} className="flex items-center space-x-3 rtl:space-x-reverse p-4 bg-white rounded-lg border hover:shadow-md transition-shadow">
+                <div className="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center text-white">
+                  <IconComponent size={20} />
                 </div>
-                <p className="text-lg text-gray-700 leading-relaxed">{outcome.text}</p>
+                <span className="font-medium">{outcome.text}</span>
               </div>
             );
           })}
