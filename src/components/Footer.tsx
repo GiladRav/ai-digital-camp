@@ -1,6 +1,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { Phone, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -13,7 +14,7 @@ const Footer = () => {
               <div className="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">AI</span>
               </div>
-              <span className="font-bold text-xl">קייטנת יזמות דיגיטלית AI</span>
+              <span className="font-bold text-xl">קייטנת יזמות דיגיטלית בינה מלאכותית</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
               קייטנה דיגיטלית פורצת דרך לתלמידי חטיבת ביניים שממנפת כלי בינה מלאכותית מתקדמים 
@@ -21,7 +22,7 @@ const Footer = () => {
             </p>
             <Link to="/register">
               <Button className="gradient-bg text-white hover:opacity-90">
-                הרשמה עכשיו
+                הרשמה עכשיו - 1,400₪
               </Button>
             </Link>
           </div>
@@ -56,16 +57,25 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h3 className="font-semibold text-lg mb-4">יצירת קשר</h3>
-            <div className="space-y-2 text-gray-300">
-              <p>טלפון: 050-123-4567</p>
-              <p>אימייל: info@aicamp.co.il</p>
-              <p>זמני מענה: א'-ה' 9:00-17:00</p>
+            <div className="space-y-3">
+              <p className="font-medium">גלעד רביד</p>
+              <div className="space-y-2 text-gray-300">
+                <a href="tel:052-2998444" className="flex items-center space-x-2 rtl:space-x-reverse hover:text-white transition-colors">
+                  <Phone className="w-4 h-4" />
+                  <span>052-2998444</span>
+                </a>
+                <a href="mailto:Gilad84@gmail.com" className="flex items-center space-x-2 rtl:space-x-reverse hover:text-white transition-colors">
+                  <Mail className="w-4 h-4" />
+                  <span>Gilad84@gmail.com</span>
+                </a>
+              </div>
+              <p className="text-sm text-gray-400">זמני מענה: א'-ה' 9:00-17:00</p>
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} קייטנת יזמות דיגיטלית AI. כל הזכויות שמורות.</p>
+          <p>&copy; {new Date().getFullYear()} קייטנת יזמות דיגיטלית בינה מלאכותית. כל הזכויות שמורות.</p>
         </div>
       </div>
     </footer>

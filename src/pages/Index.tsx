@@ -1,26 +1,32 @@
 
 import Layout from '@/components/Layout';
 import HeroSection from '@/components/home/HeroSection';
-import ProgramOverview from '@/components/home/ProgramOverview';
-import BenefitsSection from '@/components/home/BenefitsSection';
-import DailySchedule from '@/components/home/DailySchedule';
-import OutcomesSection from '@/components/home/OutcomesSection';
+import VisionSection from '@/components/home/VisionSection';
+import NeedSolutionApproach from '@/components/home/NeedSolutionApproach';
+import WhyDifferent from '@/components/home/WhyDifferent';
 import TargetAudience from '@/components/home/TargetAudience';
+import ProgramGoals from '@/components/home/ProgramGoals';
+import OutcomesSection from '@/components/home/OutcomesSection';
 import TeachingMethodology from '@/components/home/TeachingMethodology';
-import FAQSection from '@/components/home/FAQSection';
+import DailySchedule from '@/components/home/DailySchedule';
+import ParentCommunication from '@/components/home/ParentCommunication';
+import CostAndSafety from '@/components/home/CostAndSafety';
 import FinalCTA from '@/components/home/FinalCTA';
 
 const Index = () => {
   return (
     <Layout>
       <HeroSection />
-      <ProgramOverview />
-      <BenefitsSection />
-      <DailySchedule />
-      <OutcomesSection />
+      <VisionSection />
+      <NeedSolutionApproach />
+      <WhyDifferent />
       <TargetAudience />
+      <ProgramGoals />
+      <OutcomesSection />
       <TeachingMethodology />
-      <FAQSection />
+      <DailySchedule />
+      <ParentCommunication />
+      <CostAndSafety />
       <FinalCTA />
     </Layout>
   );

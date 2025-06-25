@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -80,11 +79,12 @@ const Register = () => {
   };
 
   const campDetails = {
-    price: "1,600₪",
+    price: "1,400₪",
     duration: "5 ימים",
     hours: "20 שעות",
-    groupSize: "עד 15 משתתפים",
-    schedule: "א'-ה' 09:00-13:00"
+    groupSize: "בין 10-15 משתתפים",
+    schedule: "ראשון-חמישי 10:00-14:00",
+    dates: "13.7.2025 – 17.7.2025"
   };
 
   return (
@@ -263,8 +263,8 @@ const Register = () => {
                 <div className="flex items-center space-x-3 rtl:space-x-reverse">
                   <Calendar className="w-5 h-5 text-camp-purple-500" />
                   <div>
-                    <p className="font-semibold">משך</p>
-                    <p className="text-gray-600">{campDetails.duration}</p>
+                    <p className="font-semibold">תאריכים</p>
+                    <p className="text-gray-600">{campDetails.dates}</p>
                   </div>
                 </div>
 
@@ -331,13 +331,21 @@ const Register = () => {
             {/* Contact Info */}
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">צריכים עזרה?</CardTitle>
+                <CardTitle className="text-lg">מפעיל הקייטנה</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-2 text-sm">
-                  <p><strong>טלפון:</strong> 050-123-4567</p>
-                  <p><strong>אימייל:</strong> info@aicamp.co.il</p>
-                  <p><strong>שעות מענה:</strong> א'-ה' 9:00-17:00</p>
+                <div className="space-y-3">
+                  <p className="font-semibold">גלעד רביד</p>
+                  <div className="space-y-2 text-sm">
+                    <a href="tel:052-2998444" className="flex items-center space-x-2 rtl:space-x-reverse hover:text-camp-blue-600 transition-colors">
+                      <Phone className="w-4 h-4" />
+                      <span>052-2998444</span>
+                    </a>
+                    <a href="mailto:Gilad84@gmail.com" className="flex items-center space-x-2 rtl:space-x-reverse hover:text-camp-blue-600 transition-colors">
+                      <Mail className="w-4 h-4" />
+                      <span>Gilad84@gmail.com</span>
+                    </a>
+                  </div>
                 </div>
               </CardContent>
             </Card>

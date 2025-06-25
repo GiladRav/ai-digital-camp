@@ -143,7 +143,9 @@ const FAQ = () => {
                   <Phone className="w-8 h-8" />
                 </div>
                 <h3 className="font-semibold text-lg mb-2">טלפון</h3>
-                <p className="text-gray-600 mb-3">050-123-4567</p>
+                <a href="tel:052-2998444" className="text-gray-600 mb-3 hover:text-camp-blue-600 transition-colors">
+                  052-2998444
+                </a>
                 <p className="text-sm text-gray-500">זמינים א'-ה' 9:00-17:00</p>
               </CardContent>
             </Card>
@@ -154,7 +156,9 @@ const FAQ = () => {
                   <Mail className="w-8 h-8" />
                 </div>
                 <h3 className="font-semibold text-lg mb-2">אימייל</h3>
-                <p className="text-gray-600 mb-3">info@aicamp.co.il</p>
+                <a href="mailto:Gilad84@gmail.com" className="text-gray-600 mb-3 hover:text-camp-blue-600 transition-colors">
+                  Gilad84@gmail.com
+                </a>
                 <p className="text-sm text-gray-500">מענה תוך 24 שעות</p>
               </CardContent>
             </Card>
@@ -169,6 +173,23 @@ const FAQ = () => {
                 <p className="text-sm text-gray-500">מענה מהיר בווטסאפ</p>
               </CardContent>
             </Card>
+          </div>
+          
+          {/* Course Details */}
+          <div className="max-w-2xl mx-auto mt-12 bg-gray-50 rounded-lg p-6">
+            <h3 className="text-xl font-semibold mb-4 text-center">פרטי הקייטנה</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <p><strong>מפעיל:</strong> גלעד רביד</p>
+                <p><strong>תאריכים:</strong> 13.7.2025 – 17.7.2025</p>
+                <p><strong>ימים:</strong> ראשון – חמישי</p>
+              </div>
+              <div>
+                <p><strong>שעות:</strong> 10:00–14:00</p>
+                <p><strong>עלות:</strong> 1,400₪</p>
+                <p><strong>משתתפים:</strong> בין 10-15</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -185,7 +206,7 @@ const FAQ = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link to="/register">
               <Button size="lg" className="bg-white text-camp-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
-                הרשמה לקייטנה - 1,600₪
+                הרשמה לקייטנה - 1,400₪
               </Button>
             </Link>
             <Link to="/program">
