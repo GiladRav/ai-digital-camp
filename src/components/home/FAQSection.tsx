@@ -14,7 +14,7 @@ const FAQSection = () => {
           <Card className="p-6">
             <CardContent className="p-0">
               <h3 className="font-semibold text-lg mb-3">איך מתקיימים המפגשים?</h3>
-              <p className="text-gray-600">מחנה קיץ דיגיטלי אינטנסיבי בזום עם מדריך מומחה, 5 ימים מרוכזים בין השעות 10:00-14:00.</p>
+              <p className="text-gray-600">מחנה קיץ דיגיטלי אינטנסיבי בזום עם מדריך מומחה, 5 ימים מרוכזים בין השעות 09:00-13:00.</p>
             </CardContent>
           </Card>
           <Card className="p-6">

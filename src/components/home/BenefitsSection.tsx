@@ -1,50 +1,51 @@
 
 import { Card, CardContent } from '@/components/ui/card';
-import { Lightbulb, Palette, Users, Shield } from 'lucide-react';
+import { 
+  Brain, 
+  Smartphone, 
+  Zap,
+  Heart
+} from 'lucide-react';
 
 const BenefitsSection = () => {
   const benefits = [
     {
-      icon: <Lightbulb className="w-8 h-8" />,
-      title: "למה הקייטנה שונה?",
-      description: "שילוב יחודי של יזמות, טכנולוגיה ובינה מלאכותית",
-      color: "bg-blue-500"
+      icon: <Brain className="w-8 h-8" />,
+      title: "חשיבה יזמית מערכתית",
+      description: "פיתוח יכולות פתרון בעיות מורכבות וחשיבה מערכתית"
     },
     {
-      icon: <Palette className="w-8 h-8" />,
-      title: "למידה חווייתית",
-      description: "יצירת אפליקציות אמיתיות עם כלי AI מתקדמים",
-      color: "bg-purple-500"
+      icon: <Zap className="w-8 h-8" />,
+      title: "אוריינות AI מתקדמת",
+      description: "שימוש יצירתי ב-10+ פלטפורמות בינה מלאכותית מובילות"
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title: "עבודת צוות",
-      description: "פיתוח מיומנויות חברתיות ומנהיגות דיגיטלית",
-      color: "bg-teal-500"
+      icon: <Smartphone className="w-8 h-8" />,
+      title: "פיתוח אפליקציות פועלות",
+      description: "בניית אפליקציות אמיתיות עם כלי No-Code/Low-Code"
     },
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: "אתיקה דיגיטלית",
-      description: "שימוש אחראי בטכנולוגיה ובינה מלאכותית",
-      color: "bg-green-500"
+      icon: <Heart className="w-8 h-8" />,
+      title: "מיומנויות חברתיות-רגשיות",
+      description: "בניית ביטחון עצמי, מנהיגות דיגיטלית ועבודת צוות"
     }
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
-          למה הקייטנה שונה?
+          מטרות התכנית
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {benefits.map((benefit, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <div className={`w-12 h-12 ${benefit.color} rounded-lg flex items-center justify-center text-white mb-4`}>
+            <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
+              <CardContent className="p-0">
+                <div className="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4 text-white">
                   {benefit.icon}
                 </div>
-                <h3 className="font-semibold text-xl mb-3 text-camp-blue-700">{benefit.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
+                <h3 className="font-semibold text-lg mb-2">{benefit.title}</h3>
+                <p className="text-gray-600">{benefit.description}</p>
               </CardContent>
             </Card>
           ))}

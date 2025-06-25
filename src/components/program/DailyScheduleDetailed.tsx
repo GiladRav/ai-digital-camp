@@ -116,6 +116,41 @@ const DailyScheduleDetailed = () => {
             </Card>
           ))}
         </div>
+        
+        {/* Daily Structure */}
+        <div className="bg-white p-8 rounded-lg shadow-lg mt-12">
+          <h3 className="font-bold text-xl mb-6 text-center gradient-text">מבנה יומי מובנה</h3>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-camp-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Clock className="w-8 h-8 text-camp-blue-600" />
+              </div>
+              <h4 className="font-semibold text-camp-blue-600">09:00-09:15</h4>
+              <p className="text-sm text-gray-600">צ'ק-אין ומיקוד</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-camp-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                <BookOpen className="w-8 h-8 text-camp-purple-600" />
+              </div>
+              <h4 className="font-semibold text-camp-purple-600">09:15-10:15</h4>
+              <p className="text-sm text-gray-600">למידה חדשה</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-camp-teal-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Users className="w-8 h-8 text-camp-teal-600" />
+              </div>
+              <h4 className="font-semibold text-camp-teal-600">10:30-11:45</h4>
+              <p className="text-sm text-gray-600">תרגול מונחה</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-camp-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Target className="w-8 h-8 text-camp-blue-600" />
+              </div>
+              <h4 className="font-semibold text-camp-blue-600">12:00-13:00</h4>
+              <p className="text-sm text-gray-600">יישום עצמאי</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
