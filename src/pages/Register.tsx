@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -15,7 +16,9 @@ import {
   Shield, 
   CheckCircle,
   Star,
-  AlertCircle
+  AlertCircle,
+  Phone,
+  Mail
 } from 'lucide-react';
 import Layout from '@/components/Layout';
 
