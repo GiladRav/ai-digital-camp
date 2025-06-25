@@ -1,6 +1,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { Phone, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -19,6 +20,10 @@ const Footer = () => {
               קייטנה דיגיטלית פורצת דרך לתלמידי חטיבת ביניים שממנפת כלי בינה מלאכותית מתקדמים 
               להפיכת רעיונות לאפליקציות פועלות.
             </p>
+            <div className="mb-4">
+              <p className="text-lg font-semibold text-yellow-300 mb-2">13.7.2025 – 17.7.2025 • 10:00–14:00</p>
+              <p className="text-2xl font-bold text-white">1,400₪</p>
+            </div>
             <Link to="/register">
               <Button className="gradient-bg text-white hover:opacity-90">
                 הרשמה עכשיו
@@ -56,10 +61,25 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h3 className="font-semibold text-lg mb-4">יצירת קשר</h3>
-            <div className="space-y-2 text-gray-300">
-              <p>טלפון: 050-123-4567</p>
-              <p>אימייל: info@aicamp.co.il</p>
-              <p>זמני מענה: א'-ה' 9:00-17:00</p>
+            <div className="space-y-3">
+              <p className="font-medium">גלעד רביד</p>
+              <div className="space-y-2 text-gray-300">
+                <a 
+                  href="tel:052-2998444" 
+                  className="flex items-center space-x-2 rtl:space-x-reverse hover:text-white transition-colors"
+                >
+                  <Phone className="w-4 h-4" />
+                  <span>052-2998444</span>
+                </a>
+                <a 
+                  href="mailto:Gilad84@gmail.com" 
+                  className="flex items-center space-x-2 rtl:space-x-reverse hover:text-white transition-colors"
+                >
+                  <Mail className="w-4 h-4" />
+                  <span>Gilad84@gmail.com</span>
+                </a>
+                <p className="text-sm">זמני מענה: א'-ה' 9:00-17:00</p>
+              </div>
             </div>
           </div>
         </div>

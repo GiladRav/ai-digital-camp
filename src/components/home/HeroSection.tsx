@@ -9,7 +9,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 text-center">
         <div className="animate-fade-in">
           <Badge className="mb-6 bg-white/20 text-white border-white/30">
-            מחנה קיץ דיגיטלי אינטנסיבי - קיץ 2024
+            מחנה קיץ דיגיטלי אינטנסיבי - 13.7.2025 – 17.7.2025
           </Badge>
           <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
             יזמות דיגיטלית ופיתוח
@@ -23,7 +23,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link to="/register">
               <Button size="lg" className="bg-white text-camp-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
-                הרשמה לקייטנה - 1,800₪
+                הרשמה לקייטנה - 1,400₪
               </Button>
             </Link>
             <Link to="/program">

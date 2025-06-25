@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -16,7 +15,10 @@ import {
   Shield, 
   CheckCircle,
   Star,
-  AlertCircle
+  AlertCircle,
+  Phone,
+  Mail,
+  MapPin
 } from 'lucide-react';
 import Layout from '@/components/Layout';
 
@@ -80,11 +82,12 @@ const Register = () => {
   };
 
   const campDetails = {
-    price: "1,600₪",
-    duration: "5 ימים",
-    hours: "20 שעות",
-    groupSize: "עד 15 משתתפים",
-    schedule: "א'-ה' 09:00-13:00"
+    price: "1,400₪",
+    dates: "13.7.2025 – 17.7.2025",
+    days: "ראשון – חמישי", 
+    hours: "10:00–14:00",
+    format: "מפגשים בזום עם מדריך מומחה",
+    groupSize: "עד 15 משתתפים"
   };
 
   return (
@@ -253,26 +256,27 @@ const Register = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center space-x-3 rtl:space-x-reverse">
-                  <CreditCard className="w-5 h-5 text-camp-blue-500" />
+                  <Calendar className="w-5 h-5 text-camp-blue-500" />
                   <div>
-                    <p className="font-semibold">מחיר</p>
-                    <p className="text-2xl font-bold text-camp-blue-600">{campDetails.price}</p>
+                    <p className="font-semibold">תאריכים</p>
+                    <p className="text-gray-600">{campDetails.dates}</p>
+                    <p className="text-sm text-gray-500">{campDetails.days}</p>
                   </div>
                 </div>
 
                 <div className="flex items-center space-x-3 rtl:space-x-reverse">
-                  <Calendar className="w-5 h-5 text-camp-purple-500" />
-                  <div>
-                    <p className="font-semibold">משך</p>
-                    <p className="text-gray-600">{campDetails.duration}</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-3 rtl:space-x-reverse">
-                  <Clock className="w-5 h-5 text-camp-teal-500" />
+                  <Clock className="w-5 h-5 text-camp-purple-500" />
                   <div>
                     <p className="font-semibold">שעות</p>
-                    <p className="text-gray-600">{campDetails.hours} • {campDetails.schedule}</p>
+                    <p className="text-gray-600">{campDetails.hours}</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-3 rtl:space-x-reverse">
+                  <MapPin className="w-5 h-5 text-camp-teal-500" />
+                  <div>
+                    <p className="font-semibold">פורמט</p>
+                    <p className="text-gray-600">{campDetails.format}</p>
                   </div>
                 </div>
 
@@ -281,6 +285,42 @@ const Register = () => {
                   <div>
                     <p className="font-semibold">גודל קבוצה</p>
                     <p className="text-gray-600">{campDetails.groupSize}</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-3 rtl:space-x-reverse">
+                  <CreditCard className="w-5 h-5 text-camp-blue-500" />
+                  <div>
+                    <p className="font-semibold">מחיר</p>
+                    <p className="text-2xl font-bold text-camp-blue-600">{campDetails.price}</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Operator Details */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">מפעיל הקייטנה</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="text-center space-y-3">
+                  <p className="font-semibold text-lg">גלעד רביד</p>
+                  <div className="space-y-2">
+                    <a 
+                      href="tel:052-2998444" 
+                      className="flex items-center justify-center space-x-2 rtl:space-x-reverse text-camp-blue-600 hover:text-camp-blue-700 transition-colors"
+                    >
+                      <Phone className="w-4 h-4" />
+                      <span>052-2998444</span>
+                    </a>
+                    <a 
+                      href="mailto:Gilad84@gmail.com" 
+                      className="flex items-center justify-center space-x-2 rtl:space-x-reverse text-camp-blue-600 hover:text-camp-blue-700 transition-colors"
+                    >
+                      <Mail className="w-4 h-4" />
+                      <span>Gilad84@gmail.com</span>
+                    </a>
                   </div>
                 </div>
               </CardContent>

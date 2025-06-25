@@ -9,6 +9,7 @@ import TargetAudience from '@/components/home/TargetAudience';
 import TeachingMethodology from '@/components/home/TeachingMethodology';
 import FAQSection from '@/components/home/FAQSection';
 import FinalCTA from '@/components/home/FinalCTA';
+import CampDetailsSection from '@/components/home/CampDetailsSection';
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
       <TeachingMethodology />
       <FAQSection />
       <FinalCTA />
+      <CampDetailsSection />
     </Layout>
   );
 };

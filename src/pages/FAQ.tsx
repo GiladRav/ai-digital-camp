@@ -1,4 +1,3 @@
-
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -10,11 +9,11 @@ const FAQ = () => {
   const technicalFAQs = [
     {
       question: "באיזה פורמט מתקיימת הקייטנה?",
-      answer: "הקייטנה מתקיימת במפגשים בזום עם מדריך מומחה. 5 ימים מרוכזים בין השעות 09:00-13:00. כל יום כולל 4 שעות למידה עם הפסקות מתוכננות."
+      answer: "הקייטנה מתקיימת במפגשים בזום עם מדריך מומחה. 5 ימים מרוכזים בין השעות 10:00-14:00. כל יום כולל 4 שעות למידה עם הפסקות מתוכננות."
     },
     {
       question: "מה משך הקייטנה?",
-      answer: "הקייטנה נמשכת 5 ימים רצופים (א'-ה') עם סך של 20 שעות למידה. כל יום כולל 4 שעות עם הפסקות. ביום החמישי יתקיים ערב הצגת פרויקטים משותף עם ההורים."
+      answer: "הקייטנה נמשכת 5 ימים רצופים (13.7.2025 – 17.7.2025, ימים ראשון-חמישי) עם סך של 20 שעות למידה. כל יום כולל 4 שעות עם הפסקות. ביום החמישי יתקיים ערב הצגת פרויקטים משותף עם ההורים."
     },
     {
       question: "איזה גילאים מתאימים לקייטנה?",
@@ -130,7 +129,7 @@ const FAQ = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact Section - Updated with operator details */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
@@ -143,8 +142,13 @@ const FAQ = () => {
                   <Phone className="w-8 h-8" />
                 </div>
                 <h3 className="font-semibold text-lg mb-2">טלפון</h3>
-                <p className="text-gray-600 mb-3">050-123-4567</p>
-                <p className="text-sm text-gray-500">זמינים א'-ה' 9:00-17:00</p>
+                <a 
+                  href="tel:052-2998444" 
+                  className="text-camp-blue-600 hover:text-camp-blue-700 transition-colors font-medium"
+                >
+                  052-2998444
+                </a>
+                <p className="text-sm text-gray-500 mt-2">זמינים א'-ה' 9:00-17:00</p>
               </CardContent>
             </Card>
 
@@ -154,8 +158,13 @@ const FAQ = () => {
                   <Mail className="w-8 h-8" />
                 </div>
                 <h3 className="font-semibold text-lg mb-2">אימייל</h3>
-                <p className="text-gray-600 mb-3">info@aicamp.co.il</p>
-                <p className="text-sm text-gray-500">מענה תוך 24 שעות</p>
+                <a 
+                  href="mailto:Gilad84@gmail.com" 
+                  className="text-camp-blue-600 hover:text-camp-blue-700 transition-colors font-medium"
+                >
+                  Gilad84@gmail.com
+                </a>
+                <p className="text-sm text-gray-500 mt-2">מענה תוך 24 שעות</p>
               </CardContent>
             </Card>
 
@@ -164,8 +173,8 @@ const FAQ = () => {
                 <div className="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4 text-white">
                   <Clock className="w-8 h-8" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2">שעות פעילות</h3>
-                <p className="text-gray-600 mb-3">א'-ה' 9:00-17:00</p>
+                <h3 className="font-semibold text-lg mb-2">מפעיל הקייטנה</h3>
+                <p className="text-gray-600 mb-1 font-medium">גלעד רביד</p>
                 <p className="text-sm text-gray-500">מענה מהיר בווטסאפ</p>
               </CardContent>
             </Card>
@@ -185,7 +194,7 @@ const FAQ = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link to="/register">
               <Button size="lg" className="bg-white text-camp-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
-                הרשמה לקייטנה - 1,600₪
+                הרשמה לקייטנה - 1,400₪
               </Button>
             </Link>
             <Link to="/program">

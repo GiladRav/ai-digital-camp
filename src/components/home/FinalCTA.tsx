@@ -15,11 +15,12 @@ const FinalCTA = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link to="/register">
             <Button size="lg" className="bg-white text-camp-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
-              הרשמה לקייטנה - 1,800₪
+              הרשמה לקייטנה - 1,400₪
             </Button>
           </Link>
           <div className="text-white/80">
             <p className="text-sm">מקומות מוגבלים • הרשמה מוקדמת חובה</p>
+            <p className="text-sm">13.7.2025 – 17.7.2025 • 10:00–14:00</p>
           </div>
         </div>
       </div>
