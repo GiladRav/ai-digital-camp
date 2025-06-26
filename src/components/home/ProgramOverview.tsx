@@ -18,8 +18,21 @@ const ProgramOverview = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 gradient-text">
-            למה התכנית שלנו שונה?
+            סקירת התכנית
           </h2>
+          
+          {/* Vision Section */}
+          <div className="bg-white p-8 rounded-lg shadow-md mb-8">
+            <h3 className="text-2xl font-bold mb-4 text-camp-blue-600">חזון</h3>
+            <p className="text-lg text-gray-700 mb-6">
+              תכנית חינוכית חדשנית המכינה את דור העתיד לעולם שבו 80% מהמקצועות בשנות ה-2030 
+              עדיין לא קיימים היום. שילוב יזמות, טכנולוגיה ובינה מלאכותית בגישה פדגוגית מתקדמת.
+            </p>
+          </div>
+
+          <h3 className="text-2xl font-bold mb-6 gradient-text">
+            למה התכנית שלנו שונה?
+          </h3>
           <div className="bg-white p-8 rounded-lg shadow-md mb-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
               <div className="text-center">

@@ -3,13 +3,13 @@ import Layout from '@/components/Layout';
 import HeroSection from '@/components/home/HeroSection';
 import ProgramOverview from '@/components/home/ProgramOverview';
 import BenefitsSection from '@/components/home/BenefitsSection';
+import CampDetailsSection from '@/components/home/CampDetailsSection';
+import TargetAudience from '@/components/home/TargetAudience';
 import DailySchedule from '@/components/home/DailySchedule';
 import OutcomesSection from '@/components/home/OutcomesSection';
-import TargetAudience from '@/components/home/TargetAudience';
 import TeachingMethodology from '@/components/home/TeachingMethodology';
-import FAQSection from '@/components/home/FAQSection';
+import ParentCommunication from '@/components/home/ParentCommunication';
 import FinalCTA from '@/components/home/FinalCTA';
-import CampDetailsSection from '@/components/home/CampDetailsSection';
 
 const Index = () => {
   return (
@@ -17,13 +17,13 @@ const Index = () => {
       <HeroSection />
       <ProgramOverview />
       <BenefitsSection />
+      <CampDetailsSection />
+      <TargetAudience />
       <DailySchedule />
       <OutcomesSection />
-      <TargetAudience />
       <TeachingMethodology />
-      <FAQSection />
+      <ParentCommunication />
       <FinalCTA />
-      <CampDetailsSection />
     </Layout>
   );
 };
