@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -5,11 +6,9 @@ import { Link } from 'react-router-dom';
 import { 
   GraduationCap, 
   Code, 
-  Heart, 
   Target, 
   Users, 
   Award,
-  Lightbulb,
   TrendingUp,
   Calendar,
   Clock,
@@ -18,29 +17,6 @@ import {
 import Layout from '@/components/Layout';
 
 const About = () => {
-  const values = [
-    {
-      icon: <Heart className="w-8 h-8" />,
-      title: "למידה מתוך תשוקה",
-      description: "אנחנו מאמינים שלמידה טובה ביותר מגיעה כשהילדים לומדים על נושאים שמעניינים אותם באמת"
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "ליווי אישי",
-      description: "כל ילד הוא עולם ומלואו. אנחנו מתאימים את הלמידה לכל משתתף בנפרד"
-    },
-    {
-      icon: <Lightbulb className="w-8 h-8" />,
-      title: "חדשנות ויצירתיות",
-      description: "אנחנו מעודדים חשיבה מחוץ לקופסה ופתרונות יצירתיים לבעיות אמיתיות"
-    },
-    {
-      icon: <Target className="w-8 h-8" />,
-      title: "למידה מעשית",
-      description: "התיאוריה חשובה, אבל הכי חשוב הוא שהילדים יכלו ליישם את מה שלמדו בפועל"
-    }
-  ];
-
   const goals = [
     {
       icon: <GraduationCap className="w-6 h-6" />,
@@ -124,8 +100,18 @@ const About = () => {
             <Button 
               asChild 
               size="lg" 
-              variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-blue-600 font-semibold text-lg px-8 py-3"
+              className="font-semibold text-lg px-8 py-3"
+              style={{ 
+                backgroundColor: '#FFD84C',
+                color: '#1A1A1A',
+                border: 'none'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#EAB100';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#FFD84C';
+              }}
             >
               <Link to="/program">
                 מידע נוסף
@@ -152,88 +138,6 @@ const About = () => {
                 </p>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Values */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
-            הערכים שלנו
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, index) => (
-              <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
-                <CardContent className="p-0">
-                  <div className="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4 text-white">
-                    {value.icon}
-                  </div>
-                  <h3 className="font-semibold text-lg mb-3">{value.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why This Program */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
-              למה נוצרה התכנית?
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card className="p-6">
-                <CardContent className="p-0">
-                  <h3 className="font-semibold text-xl mb-4 text-camp-blue-600">המצב היום</h3>
-                  <ul className="space-y-3 text-gray-600">
-                    <li className="flex items-start">
-                      <div className="w-2 h-2 bg-camp-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      הטכנולוגיה משתנה בקצב מסחרר
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-2 h-2 bg-camp-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      מיומנויות של היום לא יהיו רלוונטיות מחר
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-2 h-2 bg-camp-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      בינה מלאכותית משנה את חוקי המשחק
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-2 h-2 bg-camp-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      ילדים צריכים להיות יוצרים, לא רק צרכנים
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="p-6">
-                <CardContent className="p-0">
-                  <h3 className="font-semibold text-xl mb-4 text-camp-purple-600">הפתרון שלנו</h3>
-                  <ul className="space-y-3 text-gray-600">
-                    <li className="flex items-start">
-                      <div className="w-2 h-2 bg-camp-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      למידה מעשית של כלי AI מתקדמים
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-2 h-2 bg-camp-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      פיתוח אפליקציות אמיתיות ללא תכנות
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-2 h-2 bg-camp-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      בניית חשיבה יזמית ופתרון בעיות
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-2 h-2 bg-camp-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      הכנה לעתיד הטכנולוגי
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
           </div>
         </div>
       </section>
@@ -358,16 +262,46 @@ const About = () => {
             הצטרפו אלינו במסע מרגש להכנת הדור הבא של יזמי הטכנולוגיה הישראלית
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link to="/register">
-              <Button size="lg" className="bg-white text-camp-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
-                הרשמה לקייטנה - 1,600₪
-              </Button>
-            </Link>
-            <Link to="/faq">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 text-lg px-8 py-3">
+            <Button 
+              asChild 
+              size="lg" 
+              className="font-semibold text-lg px-8 py-3"
+              style={{ 
+                backgroundColor: '#FFD84C',
+                color: '#1A1A1A',
+                border: 'none'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#EAB100';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#FFD84C';
+              }}
+            >
+              <Link to="/register">
+                הרשמה לקייטנה - 1,400₪
+              </Link>
+            </Button>
+            <Button 
+              asChild 
+              size="lg" 
+              className="font-semibold text-lg px-8 py-3"
+              style={{ 
+                backgroundColor: '#FFD84C',
+                color: '#1A1A1A',
+                border: 'none'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#EAB100';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#FFD84C';
+              }}
+            >
+              <Link to="/faq">
                 יש לי שאלות
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
