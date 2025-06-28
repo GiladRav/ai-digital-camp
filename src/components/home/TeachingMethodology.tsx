@@ -34,27 +34,27 @@ const TeachingMethodology = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-12 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             גישת הדרכה
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {methodologies.map((methodology, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className={`mx-auto w-16 h-16 ${methodology.bgColor} rounded-full flex items-center justify-center mb-4`}>
-                  <methodology.icon className={`w-8 h-8 ${methodology.color}`} />
+              <CardHeader className="pb-3">
+                <div className={`mx-auto w-14 h-14 ${methodology.bgColor} rounded-full flex items-center justify-center mb-3`}>
+                  <methodology.icon className={`w-7 h-7 ${methodology.color}`} />
                 </div>
-                <CardTitle className={`text-center ${methodology.color}`}>
+                <CardTitle className={`text-center ${methodology.color} text-lg`}>
                   {methodology.title}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 text-center">
+                <p className="text-gray-600 text-center text-sm leading-relaxed">
                   {methodology.description}
                 </p>
               </CardContent>

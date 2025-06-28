@@ -34,27 +34,27 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-50">
+    <section className="py-12 bg-gradient-to-br from-blue-50 to-indigo-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             למה להרשם?
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className={`mx-auto w-16 h-16 ${benefit.bgColor} rounded-full flex items-center justify-center mb-4`}>
-                  <benefit.icon className={`w-8 h-8 ${benefit.color}`} />
+              <CardHeader className="pb-3">
+                <div className={`mx-auto w-14 h-14 ${benefit.bgColor} rounded-full flex items-center justify-center mb-3`}>
+                  <benefit.icon className={`w-7 h-7 ${benefit.color}`} />
                 </div>
-                <CardTitle className={`text-center ${benefit.color}`}>
+                <CardTitle className={`text-center ${benefit.color} text-lg`}>
                   {benefit.title}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 text-center">
+                <p className="text-gray-600 text-center text-sm">
                   {benefit.description}
                 </p>
               </CardContent>

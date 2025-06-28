@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { 
   Clock, 
@@ -10,146 +9,85 @@ import {
   Palette,
   Smartphone,
   CheckCircle,
-  BookOpen
+  BookOpen,
+  Code
 } from 'lucide-react';
 
 const DailyScheduleDetailed = () => {
-  const dailySchedule = [
+  const days = [
     {
-      day: 1,
+      day: "יום 1",
       title: "חושבים כמו יזמים",
-      color: "bg-camp-blue-500",
-      icon: <Lightbulb className="w-6 h-6" />,
-      description: "מתחילים להכיר, משתפים רעיונות, ולומדים איך לזהות בעיות אמיתיות מהעולם שסביבנו",
-      activities: [
-        "היכרות ובניית אמון בקבוצה",
-        "זיהוי בעיות אמיתיות מהחיים שמעניינות",
-        "בחירת נושא אישי וכיוון למיזם דיגיטלי",
-        "מחקר שוק עם ChatGPT ו-Perplexity"
-      ]
+      description: "מתחילים להכיר, משתפים רעיונות, ולומדים איך לזהות בעיות אמיתיות מהעולם שסביבנו. כל משתתף.ת בוחר.ת נושא שקרוב אליו ומתחיל לפתח כיוון למיזם דיגיטלי אישי.",
+      icon: Lightbulb,
+      color: "text-yellow-600",
+      bgColor: "bg-yellow-100"
     },
     {
-      day: 2,
+      day: "יום 2",
       title: "יוצרים חוויה דיגיטלית",
-      color: "bg-camp-purple-500",
-      icon: <Palette className="w-6 h-6" />,
-      description: "לומדים איך לחשוב כמו משתמשים - מה הופך אפליקציה לנוחה, ברורה ומזמינה",
-      activities: [
-        "עקרונות UX/UI ועיצוב ממוקד משתמש",
-        "תכנון ראשוני (Wireframes) ידני ודיגיטלי",
-        "עקרונות נגישות וכלליות בעיצוב",
-        "יצירת תוכן ויזואלי עם Canva AI"
-      ]
+      description: "לומדים איך לחשוב כמו משתמשים – מה הופך אפליקציה לנוחה, ברורה ומזמינה? מתנסים בתכנון ראשוני (Wireframes) עם עקרונות עיצוב ונגישות שמתאימים לכולם.",
+      icon: Palette,
+      color: "text-blue-600",
+      bgColor: "bg-blue-100"
     },
     {
-      day: 3,
+      day: "יום 3",
       title: "בונים אפליקציה בלי קוד",
-      color: "bg-camp-teal-500",
-      icon: <Smartphone className="w-6 h-6" />,
-      description: "משתמשים בכלים של No-Code כדי להפוך את הרעיון למסכים אמיתיים",
-      activities: [
-        "היכרות עם Bubble ופלטפורמות No-Code",
-        "בניית מבנה מסכים וניווט",
-        "בחירת עיצוב וצבעים מותאמים",
-        "יצירת אפליקציה פעילה ותפקודית"
-      ]
+      description: "משתמשים בכלים של No-Code כדי להפוך את הרעיון למסכים אמיתיים. בוחרים עיצוב, מוסיפים כפתורים, מייצרים תהליך – ויוצרים אפליקציה פעילה שמתפקדת ממש.",
+      icon: Code,
+      color: "text-green-600",
+      bgColor: "bg-green-100"
     },
     {
-      day: 4,
-      title: "שילוב בינה מלאכותית",
-      color: "bg-camp-blue-600",
-      icon: <Brain className="w-6 h-6" />,
-      description: "מגלים איך לשלב יכולות AI אמיתיות בתוך האפליקציה",
-      activities: [
-        "שילוב Lovable.dev ו-Google AI Studio",
-        "הוספת צ'אט חכם או זיהוי תמונות",
-        "יצירת תוכן אוטומטי עם Rosebud AI",
-        "תיקון בעיות ודיוק פיצ'רים"
-      ]
+      day: "יום 4",
+      title: "שילוב בינה מלאכותית לאפליקציה",
+      description: "מגלים איך לשלב יכולות AI אמיתיות בתוך האפליקציה – כמו צ'אט חכם, זיהוי תמונות, או יצירת תוכן אוטומטי. מתרגלים תיקון בעיות ודיוק הפיצ'רים.",
+      icon: Brain,
+      color: "text-purple-600",
+      bgColor: "bg-purple-100"
     },
     {
-      day: 5,
-      title: "הצגת מיזם כמו בסטארטאפ",
-      color: "bg-camp-purple-600",
-      icon: <Presentation className="w-6 h-6" />,
-      description: "מסכמים את מה שבנינו ומתכוננים להצגה אישית מול הקבוצה",
-      activities: [
-        "הכנת מצגת מכירה עם Gamma AI",
-        "תרגול הצגה אישית ופיץ'",
-        "הצגת המיזמים מול הקבוצה",
-        "משוב, פידבק וחגיגת סיום"
-      ]
+      day: "יום 5",
+      title: "הצגת מיזם דיגיטלי כמו בסטארטאפ",
+      description: "מסכמים את מה שבנינו, מתכוננים להצגה אישית מול הקבוצה, ולומדים איך להסביר רעיון דיגיטלי בצורה משכנעת. כל משתתף.ת משתף.ת את המיזם, מקבל.ת פידבק, וסוגר.ת את השבוע בגאווה.",
+      icon: Presentation,
+      color: "text-orange-600",
+      bgColor: "bg-orange-100"
     }
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-12 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
-          מבנה לימודי יומי מפורט
-        </h2>
-        <div className="grid grid-cols-1 gap-8">
-          {dailySchedule.map((day) => (
-            <Card key={day.day} className="hover:shadow-lg transition-shadow">
-              <CardHeader className={`${day.color} text-white rounded-t-lg`}>
-                <CardTitle className="flex items-center space-x-4 rtl:space-x-reverse">
-                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                    {day.icon}
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            מבנה יומי מפורט
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-1 gap-6 max-w-4xl mx-auto">
+          {days.map((day, index) => (
+            <Card key={index} className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className={`w-14 h-14 ${day.bgColor} rounded-full flex items-center justify-center`}>
+                    <day.icon className={`w-7 h-7 ${day.color}`} />
                   </div>
                   <div>
-                    <span className="text-white/80 text-sm">יום {day.day}</span>
-                    <h3 className="text-xl font-bold">{day.title}</h3>
+                    <CardTitle className={`${day.color} text-xl`}>
+                      {day.day}: {day.title}
+                    </CardTitle>
                   </div>
-                </CardTitle>
+                </div>
               </CardHeader>
-              <CardContent className="p-6">
-                <p className="text-gray-700 mb-4 font-medium">{day.description}</p>
-                <ul className="space-y-2">
-                  {day.activities.map((activity, index) => (
-                    <li key={index} className="flex items-start space-x-2 rtl:space-x-reverse">
-                      <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-600">{activity}</span>
-                    </li>
-                  ))}
-                </ul>
+              <CardContent>
+                <p className="text-gray-600 leading-relaxed">
+                  {day.description}
+                </p>
               </CardContent>
             </Card>
           ))}
-        </div>
-        
-        {/* Daily Structure */}
-        <div className="bg-white p-8 rounded-lg shadow-lg mt-12">
-          <h3 className="font-bold text-xl mb-6 text-center gradient-text">מבנה יומי מובנה</h3>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-camp-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Clock className="w-8 h-8 text-camp-blue-600" />
-              </div>
-              <h4 className="font-semibold text-camp-blue-600">09:00-09:15</h4>
-              <p className="text-sm text-gray-600">צ'ק-אין ומיקוד</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-camp-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <BookOpen className="w-8 h-8 text-camp-purple-600" />
-              </div>
-              <h4 className="font-semibold text-camp-purple-600">09:15-10:15</h4>
-              <p className="text-sm text-gray-600">למידה חדשה</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-camp-teal-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Users className="w-8 h-8 text-camp-teal-600" />
-              </div>
-              <h4 className="font-semibold text-camp-teal-600">10:30-11:45</h4>
-              <p className="text-sm text-gray-600">תרגול מונחה</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-camp-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Target className="w-8 h-8 text-camp-blue-600" />
-              </div>
-              <h4 className="font-semibold text-camp-blue-600">12:00-13:00</h4>
-              <p className="text-sm text-gray-600">יישום עצמאי</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>

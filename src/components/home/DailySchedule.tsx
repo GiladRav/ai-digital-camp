@@ -48,18 +48,18 @@ const DailySchedule = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-12 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             מבנה שבועי
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-5 gap-6 mb-12">
+        <div className="grid md:grid-cols-5 gap-4 mb-8">
           {days.map((day, index) => (
             <Card key={index} className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
+              <CardHeader className="pb-3">
                 <div className={`mx-auto w-12 h-12 ${day.bgColor} rounded-full flex items-center justify-center mb-3`}>
                   <day.icon className={`w-6 h-6 ${day.color}`} />
                 </div>
@@ -68,8 +68,8 @@ const DailySchedule = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <h3 className="font-semibold mb-2">{day.title}</h3>
-                <p className="text-sm text-gray-600">{day.description}</p>
+                <h3 className="font-semibold mb-2 text-sm">{day.title}</h3>
+                <p className="text-xs text-gray-600">{day.description}</p>
               </CardContent>
             </Card>
           ))}

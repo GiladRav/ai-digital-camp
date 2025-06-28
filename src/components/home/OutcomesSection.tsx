@@ -41,27 +41,27 @@ const OutcomesSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-12 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             מה נלמד?
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {outcomes.map((outcome, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className={`mx-auto w-16 h-16 ${outcome.bgColor} rounded-full flex items-center justify-center mb-4`}>
-                  <outcome.icon className={`w-8 h-8 ${outcome.color}`} />
+              <CardHeader className="pb-3">
+                <div className={`mx-auto w-14 h-14 ${outcome.bgColor} rounded-full flex items-center justify-center mb-3`}>
+                  <outcome.icon className={`w-7 h-7 ${outcome.color}`} />
                 </div>
-                <CardTitle className={`text-center ${outcome.color}`}>
+                <CardTitle className={`text-center ${outcome.color} text-lg`}>
                   {outcome.title}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 text-center">
+                <p className="text-gray-600 text-center text-sm leading-relaxed">
                   {outcome.description}
                 </p>
               </CardContent>
