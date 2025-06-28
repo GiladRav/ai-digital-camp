@@ -69,7 +69,7 @@ const ProgramHero = () => {
             }}
           >
             <Link to="/faq">
-              שאלות ותשובות
+              צרו קשר
             </Link>
           </Button>
         </div>

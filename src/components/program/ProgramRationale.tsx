@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Target, Heart, Users, Lightbulb, TrendingUp, AlertTriangle, CheckCircle } from "lucide-react";
+import { Heart, Users, Lightbulb, TrendingUp, AlertTriangle, CheckCircle } from "lucide-react";
 
 const ProgramRationale = () => {
   const values = [
@@ -42,23 +42,6 @@ const ProgramRationale = () => {
     <section className="py-12 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          {/* המשימה שלנו */}
-          <Card className="mb-10">
-            <CardHeader>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                  <Target className="w-6 h-6 text-green-600" />
-                </div>
-                <CardTitle className="text-2xl text-green-600">המשימה שלנו</CardTitle>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                אנחנו מאמינים שכל ילד יכול להיות יזם טכנולוגי. בעידן הבינה המלאכותית, הכלים שמאפשרים ליצור טכנולוגיה הפכו נגישים יותר מאי פעם. הקייטנה שלנו נועדה לחבר בין הסקרנות הטבעית של ילדים לבין הכוח הבלתי מוגבל של בינה מלאכותית, ולאפשר להם לממש רעיונות ולפתח פתרונות אמיתיים לבעיות שהם רואים בעולם.
-              </p>
-            </CardContent>
-          </Card>
-
           {/* הערכים שלנו */}
           <div className="mb-10">
             <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">הערכים שלנו</h2>
