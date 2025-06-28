@@ -1,7 +1,6 @@
 import Layout from '@/components/Layout';
 import ProgramHero from '@/components/program/ProgramHero';
 import ProgramRationale from '@/components/program/ProgramRationale';
-import DailyScheduleDetailed from '@/components/program/DailyScheduleDetailed';
 import CoreSubjects from '@/components/program/CoreSubjects';
 import AIPlatformsSection from '@/components/program/AIPlatformsSection';
 import ExpectedOutcomes from '@/components/program/ExpectedOutcomes';
@@ -9,6 +8,7 @@ import TeachingMethodologyProgram from '@/components/program/TeachingMethodology
 import ParentCommunication from '@/components/program/ParentCommunication';
 import TechRequirements from '@/components/program/TechRequirements';
 import LongTermGoals from '@/components/program/LongTermGoals';
+import DailyScheduleDetailed from '@/components/program/DailyScheduleDetailed';
 import ProgramCTA from '@/components/program/ProgramCTA';
 
 const Program = () => {
@@ -16,7 +16,6 @@ const Program = () => {
     <Layout>
       <ProgramHero />
       <ProgramRationale />
-      <DailyScheduleDetailed />
       <CoreSubjects />
       <AIPlatformsSection />
       <ExpectedOutcomes />
@@ -24,6 +23,7 @@ const Program = () => {
       <ParentCommunication />
       <TechRequirements />
       <LongTermGoals />
+      <DailyScheduleDetailed />
       <ProgramCTA />
     </Layout>
   );

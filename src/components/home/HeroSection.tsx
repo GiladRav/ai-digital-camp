@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, Users, Clock, Monitor, ArrowRight } from "lucide-react";
+import { Calendar, Users, Clock, Monitor } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
@@ -56,7 +56,6 @@ const HeroSection = () => {
           >
             <Link to="/register">
               להרשמה
-              <ArrowRight className="mr-2 h-5 w-5" />
             </Link>
           </Button>
           <Button 

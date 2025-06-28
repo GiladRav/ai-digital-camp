@@ -2,7 +2,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, Clock } from 'lucide-react';
+import { Phone, Mail, Clock, Calendar, Users, Monitor } from 'lucide-react';
 import Layout from '@/components/Layout';
 
 const FAQ = () => {
@@ -71,15 +71,72 @@ const FAQ = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="gradient-bg text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+      <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white py-20 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          {/* Main Heading */}
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight" style={{ color: '#FFD84C' }}>
             שאלות נפוצות
           </h1>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
+          
+          {/* Subtitle */}
+          <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
             כאן תוכלו למצוא תשובות לשאלות הנפוצות ביותר על הקייטנה. 
             לא מצאתם מה שחיפשתם? צרו קשר ונשמח לעזור!
           </p>
+
+          {/* Info Tags */}
+          <div className="flex flex-wrap justify-center gap-4 mb-10">
+            <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
+              <Calendar className="w-5 h-5" />
+              <span className="text-sm font-medium">13.7.2025 - 17.7.2025</span>
+            </div>
+            <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
+              <Users className="w-5 h-5" />
+              <span className="text-sm font-medium">גילאי 10-14</span>
+            </div>
+            <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
+              <Monitor className="w-5 h-5" />
+              <span className="text-sm font-medium">מפגשים מקוונים</span>
+            </div>
+            <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
+              <Clock className="w-5 h-5" />
+              <span className="text-sm font-medium">10:00-14:30</span>
+            </div>
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              asChild 
+              size="lg" 
+              className="font-semibold text-lg px-8 py-3"
+              style={{ 
+                backgroundColor: '#FFD84C',
+                color: '#1A1A1A',
+                border: 'none'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#EAB100';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#FFD84C';
+              }}
+            >
+              <Link to="/register">
+                להרשמה
+              </Link>
+            </Button>
+            <Button 
+              asChild 
+              size="lg" 
+              variant="outline" 
+              className="border-white text-white hover:bg-white hover:text-blue-600 font-semibold text-lg px-8 py-3"
+            >
+              <Link to="/program">
+                מידע נוסף
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -183,7 +240,7 @@ const FAQ = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 gradient-bg text-white">
+      <section className="py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             מוכנים להתחיל?
@@ -192,16 +249,36 @@ const FAQ = () => {
             קיבלתם את כל התשובות? הגיע הזמן להירשם לקייטנה המרגשת ביותר של הקיץ!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link to="/register">
-              <Button size="lg" className="bg-white text-camp-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
+            <Button 
+              asChild 
+              size="lg" 
+              className="font-semibold text-lg px-8 py-3"
+              style={{ 
+                backgroundColor: '#FFD84C',
+                color: '#1A1A1A',
+                border: 'none'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#EAB100';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#FFD84C';
+              }}
+            >
+              <Link to="/register">
                 הרשמה לקייטנה - 1,400₪
-              </Button>
-            </Link>
-            <Link to="/program">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 text-lg px-8 py-3">
-                עוד על התכנית
-              </Button>
-            </Link>
+              </Link>
+            </Button>
+            <Button 
+              asChild 
+              size="lg" 
+              variant="outline" 
+              className="border-white text-white hover:bg-white hover:text-blue-600 font-semibold text-lg px-8 py-3"
+            >
+              <Link to="/program">
+                מידע נוסף
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

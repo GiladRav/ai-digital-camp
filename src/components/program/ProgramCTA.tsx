@@ -1,10 +1,9 @@
-
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
 const ProgramCTA = () => {
   return (
-    <section className="py-16 gradient-bg text-white">
+    <section className="py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">
           מוכנים להצטרף לתכנית החדשנית?
@@ -13,16 +12,36 @@ const ProgramCTA = () => {
           הירשמו עכשיו למחנה קיץ דיגיטלי שיכין את הילדים שלכם לעתיד הטכנולוגי
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Link to="/register">
-            <Button size="lg" className="bg-white text-camp-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
-              הרשמה לקייטנה - 1,800₪
-            </Button>
-          </Link>
-          <Link to="/faq">
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 text-lg px-8 py-3">
+          <Button 
+            asChild 
+            size="lg" 
+            className="font-semibold text-lg px-8 py-3"
+            style={{ 
+              backgroundColor: '#FFD84C',
+              color: '#1A1A1A',
+              border: 'none'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#EAB100';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = '#FFD84C';
+            }}
+          >
+            <Link to="/register">
+              הרשמה לקייטנה - 1,400₪
+            </Link>
+          </Button>
+          <Button 
+            asChild 
+            size="lg" 
+            variant="outline" 
+            className="border-white text-white hover:bg-white hover:text-blue-600 font-semibold text-lg px-8 py-3"
+          >
+            <Link to="/faq">
               יש לי שאלות
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
