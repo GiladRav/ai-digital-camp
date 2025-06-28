@@ -8,7 +8,6 @@ const DailySchedule = () => {
     {
       day: "ראשון",
       title: "חושבים כמו יזמים",
-      description: "זיהוי בעיות ופיתוח רעיונות",
       icon: Lightbulb,
       color: "text-yellow-600",
       bgColor: "bg-yellow-100"
@@ -16,7 +15,6 @@ const DailySchedule = () => {
     {
       day: "שני",
       title: "יוצרים חוויה דיגיטלית",
-      description: "עיצוב UX/UI ונגישות",
       icon: Palette,
       color: "text-blue-600",
       bgColor: "bg-blue-100"
@@ -24,7 +22,6 @@ const DailySchedule = () => {
     {
       day: "שלישי",
       title: "בונים אפליקציה בלי קוד",
-      description: "פיתוח עם כלי No-Code",
       icon: Code,
       color: "text-green-600",
       bgColor: "bg-green-100"
@@ -32,7 +29,6 @@ const DailySchedule = () => {
     {
       day: "רביעי",
       title: "שילוב בינה מלאכותית",
-      description: "הוספת יכולות AI לאפליקציה",
       icon: Brain,
       color: "text-purple-600",
       bgColor: "bg-purple-100"
@@ -40,7 +36,6 @@ const DailySchedule = () => {
     {
       day: "חמישי",
       title: "הצגת מיזם כמו בסטארטאפ",
-      description: "פיץ' אישי והצגת הפרויקט",
       icon: Presentation,
       color: "text-orange-600",
       bgColor: "bg-orange-100"
@@ -69,7 +64,6 @@ const DailySchedule = () => {
               </CardHeader>
               <CardContent>
                 <h3 className="font-semibold mb-2 text-sm">{day.title}</h3>
-                <p className="text-xs text-gray-600">{day.description}</p>
               </CardContent>
             </Card>
           ))}

@@ -19,9 +19,6 @@ const TargetAudience = () => {
               </div>
               <CardTitle className="text-blue-600">גילאי 10-14</CardTitle>
             </CardHeader>
-            <CardContent>
-              <p className="text-gray-600 text-sm">(כיתות ו'-ח')</p>
-            </CardContent>
           </Card>
 
           <Card className="text-center">
@@ -29,11 +26,8 @@ const TargetAudience = () => {
               <div className="mx-auto w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-3">
                 <Brain className="w-7 h-7 text-green-600" />
               </div>
-              <CardTitle className="text-green-600">אין צורך בידע טכני</CardTitle>
+              <CardTitle className="text-green-600">אין צורך בידע מוקדם</CardTitle>
             </CardHeader>
-            <CardContent>
-              <p className="text-gray-600 text-sm">מוקדם</p>
-            </CardContent>
           </Card>
 
           <Card className="text-center">
@@ -41,11 +35,8 @@ const TargetAudience = () => {
               <div className="mx-auto w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-3">
                 <Heart className="w-7 h-7 text-purple-600" />
               </div>
-              <CardTitle className="text-purple-600">חובבי טכנולוגיה</CardTitle>
+              <CardTitle className="text-purple-600">חובבי טכנולוגיה ודמיון</CardTitle>
             </CardHeader>
-            <CardContent>
-              <p className="text-gray-600 text-sm">ודמיון</p>
-            </CardContent>
           </Card>
         </div>
       </div>

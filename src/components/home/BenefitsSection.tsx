@@ -6,28 +6,24 @@ const BenefitsSection = () => {
     {
       icon: Zap,
       title: "בינה מלאכותית משנה את חוקי המשחק",
-      description: "ילדים צריכים ליצור ולפתח תוכן, לא רק צרכנים",
       color: "text-blue-600",
       bgColor: "bg-blue-100"
     },
     {
-      icon: Brain,
-      title: "למידה מעשית של כלי AI מתקדמים",
-      description: "הכרת פלטפורמות מובילות בעולם הבינה המלאכותית",
+      icon: Users,
+      title: "ילדים צריכים ליצור ולפתח תוכן, לא רק צרכנים",
       color: "text-green-600",
       bgColor: "bg-green-100"
     },
     {
-      icon: Code,
-      title: "פיתוח אפליקציות אמיתיות ללא תכנות",
-      description: "יצירת מוצרים דיגיטליים פועלים ללא צורך בידע טכני",
+      icon: Brain,
+      title: "למידה מעשית של פלטפורמות AI מובילות",
       color: "text-purple-600",
       bgColor: "bg-purple-100"
     },
     {
-      icon: Users,
-      title: "הכנה לעתיד הטכנולוגי",
-      description: "פיתוח כישורים שיהיו רלוונטיים בעולם של 2030",
+      icon: Code,
+      title: "פיתוח אפליקציות אמיתיות ללא תכנות",
       color: "text-orange-600",
       bgColor: "bg-orange-100"
     }
@@ -53,11 +49,6 @@ const BenefitsSection = () => {
                   {benefit.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 text-center text-sm">
-                  {benefit.description}
-                </p>
-              </CardContent>
             </Card>
           ))}
         </div>
