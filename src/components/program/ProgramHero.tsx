@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Calendar, Users, Clock, Monitor } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -68,7 +69,7 @@ const ProgramHero = () => {
             }}
           >
             <Link to="/faq">
-              שאלות ותשובות
+              צרו קשר
             </Link>
           </Button>
         </div>
