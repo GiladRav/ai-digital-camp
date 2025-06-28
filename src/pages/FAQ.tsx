@@ -71,7 +71,7 @@ const FAQ = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white py-20 px-4">
+      <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white py-20 px-4" style={{ background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #4338ca 100%)' }}>
         <div className="max-w-6xl mx-auto text-center">
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight" style={{ color: '#FFD84C' }}>
@@ -142,8 +142,8 @@ const FAQ = () => {
                 e.currentTarget.style.backgroundColor = '#FFD84C';
               }}
             >
-              <Link to="/program">
-                מידע נוסף
+              <Link to="/contact">
+                צרו קשר
               </Link>
             </Button>
           </div>
@@ -252,7 +252,7 @@ const FAQ = () => {
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#FFD84C' }}>
             מוכנים להתחיל?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -276,7 +276,7 @@ const FAQ = () => {
               }}
             >
               <Link to="/register">
-                הרשמה לקייטנה - 1,400₪
+                להרשמה
               </Link>
             </Button>
             <Button 
@@ -295,8 +295,8 @@ const FAQ = () => {
                 e.currentTarget.style.backgroundColor = '#FFD84C';
               }}
             >
-              <Link to="/program">
-                מידע נוסף
+              <Link to="/contact">
+                צרו קשר
               </Link>
             </Button>
           </div>

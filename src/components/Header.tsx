@@ -65,7 +65,7 @@ const Header = () => {
                   e.currentTarget.style.backgroundColor = '#FFD84C';
                 }}
               >
-                הרשמה לקייטנה
+                הרשמה
               </Button>
             </Link>
           </div>
@@ -110,7 +110,7 @@ const Header = () => {
                     e.currentTarget.style.backgroundColor = '#FFD84C';
                   }}
                 >
-                  הרשמה לקייטנה
+                  הרשמה
                 </Button>
               </Link>
             </nav>

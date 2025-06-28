@@ -145,7 +145,7 @@ const Register = () => {
               }}
             >
               <a href="#registration-form">
-                הרשמה עכשיו
+                להרשמה
               </a>
             </Button>
             <Button 
@@ -165,7 +165,7 @@ const Register = () => {
               }}
             >
               <a href="tel:052-2998444">
-                צור קשר
+                צרו קשר
               </a>
             </Button>
           </div>

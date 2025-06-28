@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const FinalCTA = () => {
   return (
-    <section className="py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white">
+    <section className="py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white" style={{ background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #4338ca 100%)' }}>
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#FFD84C' }}>
           מוכנים להצטרף למהפכה דיגיטלית?

@@ -4,7 +4,6 @@ import ProgramRationale from '@/components/program/ProgramRationale';
 import CoreSubjects from '@/components/program/CoreSubjects';
 import AIPlatformsSection from '@/components/program/AIPlatformsSection';
 import ExpectedOutcomes from '@/components/program/ExpectedOutcomes';
-import TeachingMethodologyProgram from '@/components/program/TeachingMethodologyProgram';
 import ParentCommunication from '@/components/program/ParentCommunication';
 import TechRequirements from '@/components/program/TechRequirements';
 import LongTermGoals from '@/components/program/LongTermGoals';
@@ -19,7 +18,6 @@ const Program = () => {
       <CoreSubjects />
       <AIPlatformsSection />
       <ExpectedOutcomes />
-      <TeachingMethodologyProgram />
       <ParentCommunication />
       <TechRequirements />
       <LongTermGoals />

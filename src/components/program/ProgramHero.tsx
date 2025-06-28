@@ -1,17 +1,16 @@
-
 import { Button } from "@/components/ui/button";
 import { Calendar, Users, Clock, Monitor } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ProgramHero = () => {
   return (
-    <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white py-20 px-4">
+    <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white py-20 px-4" style={{ background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #4338ca 100%)' }}>
       <div className="max-w-6xl mx-auto text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight" style={{ color: '#FFD84C' }}>
-          תכנית יזמות דיגיטלית ופיתוח אפליקציות AI
+          מחנה קיץ מקוון
         </h1>
         <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
-          תכנית חינוכית חדשנית בת 5 ימים להכין דור עתידי לעולם דיגיטלי משתנה
+          שבוע דיגיטלי של פיתוח אפליקציות באמצעות בינה מלאכותית
         </p>
         <div className="flex flex-wrap justify-center gap-4 mb-10">
           <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
