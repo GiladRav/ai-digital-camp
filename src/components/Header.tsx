@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -52,7 +51,20 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link to="/register">
-              <Button className="gradient-bg text-white hover:opacity-90 transition-opacity">
+              <Button 
+                className="font-semibold text-lg px-6 py-2"
+                style={{ 
+                  backgroundColor: '#FFD84C',
+                  color: '#1A1A1A',
+                  border: 'none'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#EAB100';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = '#FFD84C';
+                }}
+              >
                 הרשמה לקייטנה
               </Button>
             </Link>
@@ -84,7 +96,20 @@ const Header = () => {
                 </Link>
               ))}
               <Link to="/register" onClick={() => setIsMenuOpen(false)}>
-                <Button className="w-full gradient-bg text-white hover:opacity-90">
+                <Button 
+                  className="w-full font-semibold text-lg px-6 py-2"
+                  style={{ 
+                    backgroundColor: '#FFD84C',
+                    color: '#1A1A1A',
+                    border: 'none'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = '#EAB100';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = '#FFD84C';
+                  }}
+                >
                   הרשמה לקייטנה
                 </Button>
               </Link>

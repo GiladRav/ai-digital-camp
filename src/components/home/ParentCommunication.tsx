@@ -62,7 +62,22 @@ const ParentCommunication = () => {
         </div>
 
         <div className="text-center">
-          <Button asChild size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+          <Button 
+            asChild 
+            size="lg" 
+            className="font-semibold text-lg px-8 py-3"
+            style={{ 
+              backgroundColor: '#FFD84C',
+              color: '#1A1A1A',
+              border: 'none'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#EAB100';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = '#FFD84C';
+            }}
+          >
             <Link to="/faq">
               שאלות ותשובות
             </Link>

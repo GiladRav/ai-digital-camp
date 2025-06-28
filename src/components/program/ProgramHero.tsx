@@ -54,8 +54,18 @@ const ProgramHero = () => {
           <Button 
             asChild 
             size="lg" 
-            variant="outline" 
-            className="border-white text-white hover:bg-white hover:text-blue-600 font-semibold text-lg px-8 py-3"
+            className="font-semibold text-lg px-8 py-3"
+            style={{ 
+              backgroundColor: '#FFD84C',
+              color: '#1A1A1A',
+              border: 'none'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#EAB100';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = '#FFD84C';
+            }}
           >
             <Link to="/faq">
               שאלות ותשובות

@@ -151,8 +151,18 @@ const Register = () => {
             <Button 
               asChild 
               size="lg" 
-              variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-blue-600 font-semibold text-lg px-8 py-3"
+              className="font-semibold text-lg px-8 py-3"
+              style={{ 
+                backgroundColor: '#FFD84C',
+                color: '#1A1A1A',
+                border: 'none'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#EAB100';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#FFD84C';
+              }}
             >
               <a href="tel:052-2998444">
                 צור קשר
@@ -291,7 +301,22 @@ const Register = () => {
 
                   <Button 
                     type="submit" 
-                    className="w-full gradient-bg text-white hover:opacity-90 text-lg py-3"
+                    className="w-full font-semibold text-lg py-3"
+                    style={{ 
+                      backgroundColor: '#FFD84C',
+                      color: '#1A1A1A',
+                      border: 'none'
+                    }}
+                    onMouseEnter={(e) => {
+                      if (!isSubmitting) {
+                        e.currentTarget.style.backgroundColor = '#EAB100';
+                      }
+                    }}
+                    onMouseLeave={(e) => {
+                      if (!isSubmitting) {
+                        e.currentTarget.style.backgroundColor = '#FFD84C';
+                      }
+                    }}
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? "שולח..." : "שלח הרשמה"}

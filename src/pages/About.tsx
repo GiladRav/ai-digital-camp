@@ -124,8 +124,18 @@ const About = () => {
             <Button 
               asChild 
               size="lg" 
-              variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-blue-600 font-semibold text-lg px-8 py-3"
+              className="font-semibold text-lg px-8 py-3"
+              style={{ 
+                backgroundColor: '#FFD84C',
+                color: '#1A1A1A',
+                border: 'none'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#EAB100';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#FFD84C';
+              }}
             >
               <Link to="/program">
                 מידע נוסף
@@ -359,12 +369,40 @@ const About = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link to="/register">
-              <Button size="lg" className="bg-white text-camp-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
+              <Button 
+                size="lg" 
+                className="font-semibold text-lg px-8 py-3"
+                style={{ 
+                  backgroundColor: '#FFD84C',
+                  color: '#1A1A1A',
+                  border: 'none'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#EAB100';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = '#FFD84C';
+                }}
+              >
                 הרשמה לקייטנה - 1,600₪
               </Button>
             </Link>
             <Link to="/faq">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 text-lg px-8 py-3">
+              <Button 
+                size="lg" 
+                className="font-semibold text-lg px-8 py-3"
+                style={{ 
+                  backgroundColor: '#FFD84C',
+                  color: '#1A1A1A',
+                  border: 'none'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#EAB100';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = '#FFD84C';
+                }}
+              >
                 יש לי שאלות
               </Button>
             </Link>

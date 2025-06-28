@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -38,7 +37,21 @@ const FAQSection = () => {
         </div>
         <div className="text-center mt-8">
           <Link to="/faq">
-            <Button variant="outline" size="lg">
+            <Button 
+              size="lg"
+              className="font-semibold text-lg px-8 py-3"
+              style={{ 
+                backgroundColor: '#FFD84C',
+                color: '#1A1A1A',
+                border: 'none'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#EAB100';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#FFD84C';
+              }}
+            >
               עוד שאלות ותשובות
             </Button>
           </Link>

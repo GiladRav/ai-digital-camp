@@ -70,7 +70,22 @@ const DailySchedule = () => {
         </div>
 
         <div className="text-center">
-          <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
+          <Button 
+            asChild 
+            size="lg" 
+            className="font-semibold text-lg px-8 py-3"
+            style={{ 
+              backgroundColor: '#FFD84C',
+              color: '#1A1A1A',
+              border: 'none'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#EAB100';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = '#FFD84C';
+            }}
+          >
             <Link to="/program">
               ראה פירוט מלא של התכנית
             </Link>
