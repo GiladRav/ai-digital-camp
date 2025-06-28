@@ -1,37 +1,50 @@
-
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import { Button } from "@/components/ui/button";
+import { Calendar, Users, Clock, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <section className="gradient-bg text-white py-20">
-      <div className="container mx-auto px-4 text-center">
-        <div className="animate-fade-in">
-          <Badge className="mb-6 bg-white/20 text-white border-white/30">
-            מחנה קיץ דיגיטלי אינטנסיבי - 13.7.2025 – 17.7.2025
-          </Badge>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-            יזמות דיגיטלית ופיתוח
-            <br />
-            <span className="text-yellow-300">אפליקציות AI</span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
-            תכנית חינוכית חדשנית המכינה את דור העתיד לעולם שבו 80% מהמקצועות בשנות ה-2030 
-            עדיין לא קיימים היום. שילוב יזמות, טכנולוגיה ובינה מלאכותית בגישה פדגוגית מתקדמת.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link to="/register">
-              <Button size="lg" className="bg-white text-camp-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
-                הרשמה לקייטנה - 1,400₪
-              </Button>
-            </Link>
-            <Link to="/program">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 text-lg px-8 py-3">
-                מה בתכנית?
-              </Button>
-            </Link>
+    <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white py-20 px-4">
+      <div className="max-w-6xl mx-auto text-center">
+        {/* Main Heading */}
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          יזמות ופיתוח אפליקציות AI
+        </h1>
+        
+        {/* Subtitle */}
+        <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
+          מחנה קיץ מקוון לפיתוח פלטפורמות דיגיטליות באמצעות בינה מלאכותית
+        </p>
+
+        {/* Info Tags */}
+        <div className="flex flex-wrap justify-center gap-4 mb-10">
+          <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
+            <Calendar className="w-5 h-5" />
+            <span className="text-sm font-medium">13.7.2025 - 17.7.2025</span>
           </div>
+          <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
+            <Users className="w-5 h-5" />
+            <span className="text-sm font-medium">גילאי 10-14</span>
+          </div>
+          <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
+            <Clock className="w-5 h-5" />
+            <span className="text-sm font-medium">מפגשים מקוונים, 10:00-14:30</span>
+          </div>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-blue-50 font-semibold">
+            <Link to="/register">
+              להרשמה
+              <ArrowRight className="mr-2 h-5 w-5" />
+            </Link>
+          </Button>
+          <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
+            <Link to="/program">
+              מידע נוסף
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

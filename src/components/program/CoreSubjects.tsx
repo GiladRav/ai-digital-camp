@@ -1,62 +1,76 @@
-
-import { Card, CardContent } from '@/components/ui/card';
-import { 
-  TrendingUp, 
-  Brain, 
-  Palette, 
-  Target, 
-  Heart 
-} from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Lightbulb, Smartphone, Brain } from "lucide-react";
 
 const CoreSubjects = () => {
-  const coreSubjects = [
+  const subjects = [
     {
-      title: "יזמות בעידן הדיגיטלי",
-      icon: <TrendingUp className="w-6 h-6" />,
-      color: "bg-blue-500",
-      description: "היכרות עם האקוסיסטם הסטארטאפ הישראלי ועקרונות יזמות מודרנית"
+      icon: Lightbulb,
+      title: "יזמות דיגיטלית",
+      color: "text-yellow-600",
+      bgColor: "bg-yellow-100",
+      items: [
+        "פיתוח חשיבה יזמית וזיהוי הזדמנויות עסקיות",
+        "למידת עקרונות מחקר שוק ובניית מודל עסקי פשוט",
+        "הכרת תהליכי פיתוח מוצר מרעיון ועד מימוש",
+        "בנייה והצגה של פרויקטים עסקיים מקוריים",
+        "פיתוח מיומנויות הצגה, שיווק ומכירה"
+      ]
     },
     {
-      title: "טכנולוגיות מתפתחות בAI",
-      icon: <Brain className="w-6 h-6" />,
-      color: "bg-purple-500",
-      description: "הבנה מעמיקה של יכולות הבינה המלאכותית ויישומיה"
+      icon: Smartphone,
+      title: "פיתוח אפליקציות",
+      color: "text-blue-600",
+      bgColor: "bg-blue-100",
+      items: [
+        "שימוש בכלי AI מתקדמים ליצירת אפליקציות פועלות ללא צורך בתכנות",
+        "הבנת עקרונות עיצוב UI/UX עם סיוע בינה מלאכותית",
+        "למידת תהליכי בדיקה, שיפור ופיתוח מוצר עם משוב אוטומטי",
+        "הכרת טכנולוגיות AI כמו למידת מכונה, עיבוד שפה טבעית ויצירת תוכן",
+        "בנייה של 1-2 אפליקציות פועלות עם אינטגרציה של AI"
+      ]
     },
     {
-      title: "עיצוב וחוויית משתמש",
-      icon: <Palette className="w-6 h-6" />,
-      color: "bg-teal-500",
-      description: "עקרונות UX/UI עם דגש על נגישות כוללנית"
-    },
-    {
-      title: "ניהול פרויקטים מתקדם",
-      icon: <Target className="w-6 h-6" />,
-      color: "bg-green-500",
-      description: "מתודולוגיות Agile וניהול צוותים דיגיטליים"
-    },
-    {
-      title: "אתיקה וחינוך דיגיטלי",
-      icon: <Heart className="w-6 h-6" />,
-      color: "bg-red-500",
-      description: "אחריות חברתית ושימוש אתי בטכנולוגיה"
+      icon: Brain,
+      title: "מיומנויות דיגיטליות",
+      color: "text-green-600",
+      bgColor: "bg-green-100",
+      items: [
+        "היכרות עם 10+ פלטפורמות AI מתקדמות לפיתוח ויצירה",
+        "פיתוח כישורי פתרון בעיות וחשיבה אלגוריתמית עם סיוע AI",
+        "תרגול עבודת צוות ומנהיגות בפרויקטים דיגיטליים",
+        "ביטוי יצירתי ופיתוח זהות מקצועית צעירה בעידן הAI"
+      ]
     }
   ];
 
   return (
-    <section className="py-16">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
-          נושאי ליבה בתכנית
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {coreSubjects.map((subject, index) => (
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            מטרות מרכזיות
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {subjects.map((subject, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <div className={`w-12 h-12 ${subject.color} rounded-lg flex items-center justify-center text-white mb-4`}>
-                  {subject.icon}
+              <CardHeader>
+                <div className={`mx-auto w-16 h-16 ${subject.bgColor} rounded-full flex items-center justify-center mb-4`}>
+                  <subject.icon className={`w-8 h-8 ${subject.color}`} />
                 </div>
-                <h3 className="font-semibold text-lg mb-3">{subject.title}</h3>
-                <p className="text-gray-600 text-sm">{subject.description}</p>
+                <CardTitle className={`text-center ${subject.color}`}>
+                  {subject.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  {subject.items.map((item, itemIndex) => (
+                    <li key={itemIndex} className="text-gray-600 text-sm leading-relaxed">
+                      • {item}
+                    </li>
+                  ))}
+                </ul>
               </CardContent>
             </Card>
           ))}

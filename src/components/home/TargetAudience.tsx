@@ -1,33 +1,50 @@
-
-import { Card, CardContent } from '@/components/ui/card';
-import { CheckCircle } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Users, Brain, Heart } from "lucide-react";
 
 const TargetAudience = () => {
-  const targetAudience = [
-    "בני נוער בגילאי 11-14 (כיתות ו'-ח')",
-    "ללא צורך בידע טכני מוקדם",
-    "עניין ביזמות ופתרון בעיות",
-    "סקרנות טכנולוגיה ויצירתיות",
-    "מוטיבציה ללמידה פעילה"
-  ];
-
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 gradient-text">
-            למי זה מתאים?
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            קהל יעד
           </h2>
-          <Card className="p-8">
-            <CardContent className="p-0">
-              <ul className="space-y-4 text-lg">
-                {targetAudience.map((item, index) => (
-                  <li key={index} className="flex items-center justify-center space-x-3 rtl:space-x-reverse">
-                    <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <Card className="text-center">
+            <CardHeader>
+              <div className="mx-auto w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                <Users className="w-8 h-8 text-blue-600" />
+              </div>
+              <CardTitle className="text-blue-600">גילאי 10-14</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-gray-600">(כיתות ו'-ח')</p>
+            </CardContent>
+          </Card>
+
+          <Card className="text-center">
+            <CardHeader>
+              <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                <Brain className="w-8 h-8 text-green-600" />
+              </div>
+              <CardTitle className="text-green-600">אין צורך בידע טכני</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-gray-600">מוקדם</p>
+            </CardContent>
+          </Card>
+
+          <Card className="text-center">
+            <CardHeader>
+              <div className="mx-auto w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                <Heart className="w-8 h-8 text-purple-600" />
+              </div>
+              <CardTitle className="text-purple-600">חובבי טכנולוגיה</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-gray-600">ודמיון</p>
             </CardContent>
           </Card>
         </div>

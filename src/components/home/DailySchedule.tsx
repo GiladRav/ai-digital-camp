@@ -1,66 +1,86 @@
-
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Lightbulb, Palette, Code, Brain, Presentation } from "lucide-react";
 
 const DailySchedule = () => {
-  const weeklySchedule = [
-    { day: "יום 1", focus: "חושבים כמו יזמים", description: "זיהוי בעיות ופיתוח רעיונות", color: "bg-camp-blue-100 text-camp-blue-800" },
-    { day: "יום 2", focus: "יוצרים חוויה דיגיטלית", description: "עיצוב UX/UI ונגישות", color: "bg-camp-purple-100 text-camp-purple-800" },
-    { day: "יום 3", focus: "בונים אפליקציה בלי קוד", description: "פיתוח עם כלי No-Code", color: "bg-camp-teal-100 text-camp-teal-800" },
-    { day: "יום 4", focus: "שילוב בינה מלאכותית", description: "הוספת יכולות AI לאפליקציה", color: "bg-camp-blue-100 text-camp-blue-800" },
-    { day: "יום 5", focus: "הצגת מיזם כמו בסטארטאפ", description: "פיץ' אישי והצגת הפרויקט", color: "bg-camp-purple-100 text-camp-purple-800" }
+  const days = [
+    {
+      day: "ראשון",
+      title: "חושבים כמו יזמים",
+      description: "זיהוי בעיות ופיתוח רעיונות",
+      icon: Lightbulb,
+      color: "text-yellow-600",
+      bgColor: "bg-yellow-100"
+    },
+    {
+      day: "שני",
+      title: "יוצרים חוויה דיגיטלית",
+      description: "עיצוב UX/UI ונגישות",
+      icon: Palette,
+      color: "text-blue-600",
+      bgColor: "bg-blue-100"
+    },
+    {
+      day: "שלישי",
+      title: "בונים אפליקציה בלי קוד",
+      description: "פיתוח עם כלי No-Code",
+      icon: Code,
+      color: "text-green-600",
+      bgColor: "bg-green-100"
+    },
+    {
+      day: "רביעי",
+      title: "שילוב בינה מלאכותית",
+      description: "הוספת יכולות AI לאפליקציה",
+      icon: Brain,
+      color: "text-purple-600",
+      bgColor: "bg-purple-100"
+    },
+    {
+      day: "חמישי",
+      title: "הצגת מיזם כמו בסטארטאפ",
+      description: "פיץ' אישי והצגת הפרויקט",
+      icon: Presentation,
+      color: "text-orange-600",
+      bgColor: "bg-orange-100"
+    }
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
-          מבנה לימודי יומי
-        </h2>
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-            {weeklySchedule.map((day, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
-                  <Badge className={`mb-3 ${day.color}`}>
-                    {day.day}
-                  </Badge>
-                  <h3 className="font-bold text-sm mb-2">{day.focus}</h3>
-                  <p className="text-xs text-gray-600">{day.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-md mt-8">
-            <h3 className="font-bold text-lg mb-4 text-center gradient-text">מבנה יומי מובנה</h3>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
-              <div>
-                <h4 className="font-semibold text-camp-blue-600">09:00-09:15</h4>
-                <p className="text-sm text-gray-600">צ'ק-אין ומיקוד</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-camp-purple-600">09:15-10:15</h4>
-                <p className="text-sm text-gray-600">למידה חדשה</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-camp-teal-600">10:30-11:45</h4>
-                <p className="text-sm text-gray-600">תרגול מונחה</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-camp-blue-600">12:00-13:00</h4>
-                <p className="text-sm text-gray-600">יישום עצמאי</p>
-              </div>
-            </div>
-          </div>
-          <div className="text-center mt-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            מבנה שבועי
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-5 gap-6 mb-12">
+          {days.map((day, index) => (
+            <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className={`mx-auto w-12 h-12 ${day.bgColor} rounded-full flex items-center justify-center mb-3`}>
+                  <day.icon className={`w-6 h-6 ${day.color}`} />
+                </div>
+                <CardTitle className={`text-lg ${day.color}`}>
+                  {day.day}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <h3 className="font-semibold mb-2">{day.title}</h3>
+                <p className="text-sm text-gray-600">{day.description}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <div className="text-center">
+          <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
             <Link to="/program">
-              <Button variant="outline" size="lg">
-                ראה פירוט מלא של התכנית
-              </Button>
+              ראה פירוט מלא של התכנית
             </Link>
-          </div>
+          </Button>
         </div>
       </div>
     </section>

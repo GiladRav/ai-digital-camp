@@ -1,41 +1,72 @@
-
-import { 
-  Brain, 
-  Smartphone, 
-  Code,
-  Presentation,
-  Target,
-  CheckCircle
-} from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Lightbulb, Smartphone, Brain, Presentation, Trophy } from "lucide-react";
 
 const OutcomesSection = () => {
   const outcomes = [
-    { icon: Brain, text: "מפת חשיבה אישית לרעיון דיגיטלי" },
-    { icon: Smartphone, text: "אפליקציה פעילה ותפקודית" },
-    { icon: Code, text: "שליטה בכלי AI ופלטפורמות מתקדמות" },
-    { icon: Presentation, text: "פיץ' אישי בסגנון סטארטאפ" },
-    { icon: Target, text: "זהות אישית ולוגו למיזם" },
-    { icon: CheckCircle, text: "ביטחון עצמי טכנולוגי" }
+    {
+      icon: Lightbulb,
+      title: "חשיבה יזמית",
+      description: "יכולת לזהות בעיות בסביבה ולחשוב על פתרונות דיגיטליים יצירתיים ומעשיים",
+      color: "text-yellow-600",
+      bgColor: "bg-yellow-100"
+    },
+    {
+      icon: Smartphone,
+      title: "אפליקציה פועלת",
+      description: "פרויקט דיגיטלי מוגמר שעובד באמת בהתאם לבחירת כל משתתפ.ת",
+      color: "text-blue-600",
+      bgColor: "bg-blue-100"
+    },
+    {
+      icon: Brain,
+      title: "אוריינות דיגיטלית מתקדמת",
+      description: "ידע מעשי בכלי בינה מלאכותית ופלטפורמות פיתוח שיסייעו בלמידה ויצירה לכל החיים",
+      color: "text-green-600",
+      bgColor: "bg-green-100"
+    },
+    {
+      icon: Presentation,
+      title: "כישורי הצגה ותקשורת",
+      description: "יכולת להציג רעיונות בצורה משכנעת ומקצועית כמו יזמים אמיתיים",
+      color: "text-purple-600",
+      bgColor: "bg-purple-100"
+    },
+    {
+      icon: Trophy,
+      title: "ביטחון עצמי טכנולוגי",
+      description: "תחושת מסוגלות ועצמאות בעולם הדיגיטלי ויכולת להמשיך ללמוד לבד",
+      color: "text-orange-600",
+      bgColor: "bg-orange-100"
+    }
   ];
 
   return (
-    <section className="py-16">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
-          תוצרי הקייטנה - מה המשתתפים יוצרים?
-        </h2>
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {outcomes.map((outcome, index) => {
-            const IconComponent = outcome.icon;
-            return (
-              <div key={index} className="flex items-center space-x-3 rtl:space-x-reverse p-4 bg-white rounded-lg border hover:shadow-md transition-shadow">
-                <div className="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center text-white">
-                  <IconComponent size={20} />
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            מה נלמד?
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {outcomes.map((outcome, index) => (
+            <Card key={index} className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className={`mx-auto w-16 h-16 ${outcome.bgColor} rounded-full flex items-center justify-center mb-4`}>
+                  <outcome.icon className={`w-8 h-8 ${outcome.color}`} />
                 </div>
-                <span className="font-medium">{outcome.text}</span>
-              </div>
-            );
-          })}
+                <CardTitle className={`text-center ${outcome.color}`}>
+                  {outcome.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 text-center">
+                  {outcome.description}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>

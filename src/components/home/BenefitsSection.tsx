@@ -1,51 +1,62 @@
-
-import { Card, CardContent } from '@/components/ui/card';
-import { 
-  Brain, 
-  Smartphone, 
-  Zap,
-  Heart
-} from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Zap, Users, Brain, Code } from "lucide-react";
 
 const BenefitsSection = () => {
   const benefits = [
     {
-      icon: <Brain className="w-8 h-8" />,
-      title: "חשיבה יזמית מערכתית",
-      description: "פיתוח יכולות פתרון בעיות מורכבות וחשיבה מערכתית"
+      icon: Zap,
+      title: "בינה מלאכותית משנה את חוקי המשחק",
+      description: "ילדים צריכים ליצור ולפתח תוכן, לא רק צרכנים",
+      color: "text-blue-600",
+      bgColor: "bg-blue-100"
     },
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: "אוריינות AI מתקדמת",
-      description: "שימוש יצירתי ב-10+ פלטפורמות בינה מלאכותית מובילות"
+      icon: Brain,
+      title: "למידה מעשית של כלי AI מתקדמים",
+      description: "הכרת פלטפורמות מובילות בעולם הבינה המלאכותית",
+      color: "text-green-600",
+      bgColor: "bg-green-100"
     },
     {
-      icon: <Smartphone className="w-8 h-8" />,
-      title: "פיתוח אפליקציות פועלות",
-      description: "בניית אפליקציות אמיתיות עם כלי No-Code/Low-Code"
+      icon: Code,
+      title: "פיתוח אפליקציות אמיתיות ללא תכנות",
+      description: "יצירת מוצרים דיגיטליים פועלים ללא צורך בידע טכני",
+      color: "text-purple-600",
+      bgColor: "bg-purple-100"
     },
     {
-      icon: <Heart className="w-8 h-8" />,
-      title: "מיומנויות חברתיות-רגשיות",
-      description: "בניית ביטחון עצמי, מנהיגות דיגיטלית ועבודת צוות"
+      icon: Users,
+      title: "הכנה לעתיד הטכנולוגי",
+      description: "פיתוח כישורים שיהיו רלוונטיים בעולם של 2030",
+      color: "text-orange-600",
+      bgColor: "bg-orange-100"
     }
   ];
 
   return (
-    <section className="py-16">
+    <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
-          מטרות התכנית
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            למה להרשם?
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => (
-            <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
-              <CardContent className="p-0">
-                <div className="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4 text-white">
-                  {benefit.icon}
+            <Card key={index} className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className={`mx-auto w-16 h-16 ${benefit.bgColor} rounded-full flex items-center justify-center mb-4`}>
+                  <benefit.icon className={`w-8 h-8 ${benefit.color}`} />
                 </div>
-                <h3 className="font-semibold text-lg mb-2">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.description}</p>
+                <CardTitle className={`text-center ${benefit.color}`}>
+                  {benefit.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 text-center">
+                  {benefit.description}
+                </p>
               </CardContent>
             </Card>
           ))}

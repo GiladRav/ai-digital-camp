@@ -1,41 +1,72 @@
-
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Phone, Mail, Users } from "lucide-react";
 
 const ParentCommunication = () => {
+  const communicationStages = [
+    {
+      stage: "לפני",
+      title: "שיחת הכנה אישית",
+      description: "שיחה עם כל הורה להכרת הילד, הצרכים שלו ותחומי העניין הייחודיים, בנוסף להסבר מפורט על מהלך הקייטנה והציפיות",
+      icon: Phone,
+      color: "text-blue-600",
+      bgColor: "bg-blue-100"
+    },
+    {
+      stage: "במהלך",
+      title: "מייל עדכון יומי",
+      description: "מייל עדכון יומי עם תמונות ותובנות מהיום, בנוסף לזמינות מלאה של המדריכים לכל שאלה או חשש לאורך כל שעות הפעילות",
+      icon: Mail,
+      color: "text-green-600",
+      bgColor: "bg-green-100"
+    },
+    {
+      stage: "אחרי",
+      title: "ערב הרצאה מיוחד להורים",
+      description: "ערב הרצאה מיוחד להורים עם הצגת הפרויקטים, סיכום התפתחות כל ילד והמלצות להמשך פיתוח הכישורים שנרכשו",
+      icon: Users,
+      color: "text-purple-600",
+      bgColor: "bg-purple-100"
+    }
+  ];
+
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
-          תקשורת עם הורים
-        </h2>
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Card className="p-6">
-            <CardContent className="p-0">
-              <h3 className="font-semibold text-lg mb-3 text-camp-blue-600">לפני</h3>
-              <p className="text-gray-600">שיחת הכנה אישית</p>
-            </CardContent>
-          </Card>
-          <Card className="p-6">
-            <CardContent className="p-0">
-              <h3 className="font-semibold text-lg mb-3 text-camp-purple-600">במהלך</h3>
-              <p className="text-gray-600">מייל יומי + זמינות שוטפת</p>
-            </CardContent>
-          </Card>
-          <Card className="p-6">
-            <CardContent className="p-0">
-              <h3 className="font-semibold text-lg mb-3 text-camp-teal-600">אחרי</h3>
-              <p className="text-gray-600">ערב סיכום והצגת מיזמים</p>
-            </CardContent>
-          </Card>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            תקשורת עם הורים
+          </h2>
         </div>
-        <div className="text-center mt-8">
-          <Link to="/faq">
-            <Button variant="outline" size="lg">
+
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          {communicationStages.map((stage, index) => (
+            <Card key={index} className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className={`mx-auto w-16 h-16 ${stage.bgColor} rounded-full flex items-center justify-center mb-4`}>
+                  <stage.icon className={`w-8 h-8 ${stage.color}`} />
+                </div>
+                <CardTitle className={`text-center ${stage.color}`}>
+                  {stage.stage}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <h3 className="font-semibold text-center mb-3">{stage.title}</h3>
+                <p className="text-gray-600 text-center">
+                  {stage.description}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <div className="text-center">
+          <Button asChild size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+            <Link to="/faq">
               שאלות ותשובות
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

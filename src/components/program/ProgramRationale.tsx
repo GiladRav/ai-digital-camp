@@ -1,38 +1,44 @@
-
-import { Card, CardContent } from '@/components/ui/card';
-import { Star, Zap, BookOpen } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Eye, Target } from "lucide-react";
 
 const ProgramRationale = () => {
   return (
-    <section className="py-16">
+    <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
-          רציונל התכנית
-        </h2>
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <Card className="text-center p-6">
-              <CardContent className="p-0">
-                <Star className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
-                <h3 className="font-bold text-lg mb-3 text-camp-blue-600">הצורך</h3>
-                <p className="text-gray-600">הכנת דור עתידי לעולם שבו 80% מהמקצועות בשנות ה-2030 עדיין לא קיימים היום</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center p-6">
-              <CardContent className="p-0">
-                <Zap className="w-12 h-12 text-blue-500 mx-auto mb-4" />
-                <h3 className="font-bold text-lg mb-3 text-camp-purple-600">הפתרון</h3>
-                <p className="text-gray-600">שילוב שלושה תחומי ידע קריטיים: יזמות כחשיבה מערכתית, אוריינות AI ופיתוח דיגיטלי</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center p-6">
-              <CardContent className="p-0">
-                <BookOpen className="w-12 h-12 text-green-500 mx-auto mb-4" />
-                <h3 className="font-bold text-lg mb-3 text-camp-teal-600">הגישה</h3>
-                <p className="text-gray-600">למידה חווייתית ומבוססת פרויקטים עם אסטרטגיות קונסטרוקטיביסטיות</p>
-              </CardContent>
-            </Card>
-          </div>
+          {/* חזון */}
+          <Card className="mb-8">
+            <CardHeader>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                  <Eye className="w-6 h-6 text-blue-600" />
+                </div>
+                <CardTitle className="text-2xl text-blue-600">חזון</CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                החזון שלנו הוא להכין את הדור הבא של יזמי הטכנולוגיה ולהפוך את עולם ה-AI לנגיש לכל ילד
+              </p>
+            </CardContent>
+          </Card>
+
+          {/* המשימה שלנו */}
+          <Card>
+            <CardHeader>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                  <Target className="w-6 h-6 text-green-600" />
+                </div>
+                <CardTitle className="text-2xl text-green-600">המשימה שלנו</CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                אנחנו מאמינים שכל ילד יכול להיות יזם טכנולוגי. בעידן הבינה המלאכותית, הכלים שמאפשרים ליצור טכנולוגיה הפכו נגישים יותר מאי פעם. הקייטנה שלנו נועדה לחבר בין הסקרנות הטבעית של ילדים לבין הכוח הבלתי מוגבל של בינה מלאכותית, ולאפשר להם לממש רעיונות ולפתח פתרונות אמיתיים לבעיות שהם רואים בעולם.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
