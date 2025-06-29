@@ -1,14 +1,22 @@
+
 import { Button } from "@/components/ui/button";
 import { Calendar, Users, Clock, Monitor } from "lucide-react";
 import { Link } from "react-router-dom";
+
 const ProgramHero = () => {
-  return <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white py-20 px-4" style={{
-    background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #4338ca 100%)'
-  }}>
-      <div className="max-w-6xl mx-auto text-center">
+  return (
+    <section 
+      className="relative text-white py-20 px-4 bg-cover bg-center bg-no-repeat" 
+      style={{
+        backgroundImage: `linear-gradient(135deg, rgba(37, 99, 235, 0.9) 0%, rgba(124, 58, 237, 0.9) 50%, rgba(67, 56, 202, 0.9) 100%), url('/lovable-uploads/a6643e5a-9962-4648-b0d7-d286a5a20d5a.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}
+    >
+      <div className="max-w-6xl mx-auto text-center relative z-10">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight" style={{
-        color: '#FFD84C'
-      }}>מה בתכנית?</h1>
+          color: '#FFD84C'
+        }}>מה בתכנית?</h1>
         <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
           שבוע דיגיטלי של פיתוח אפליקציות באמצעות בינה מלאכותית
         </p>
@@ -32,33 +40,35 @@ const ProgramHero = () => {
         </div>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button asChild size="lg" className="font-semibold text-lg px-8 py-3" style={{
-          backgroundColor: '#FFD84C',
-          color: '#1A1A1A',
-          border: 'none'
-        }} onMouseEnter={e => {
-          e.currentTarget.style.backgroundColor = '#EAB100';
-        }} onMouseLeave={e => {
-          e.currentTarget.style.backgroundColor = '#FFD84C';
-        }}>
+            backgroundColor: '#FFD84C',
+            color: '#1A1A1A',
+            border: 'none'
+          }} onMouseEnter={e => {
+            e.currentTarget.style.backgroundColor = '#EAB100';
+          }} onMouseLeave={e => {
+            e.currentTarget.style.backgroundColor = '#FFD84C';
+          }}>
             <Link to="/register">
               להרשמה
             </Link>
           </Button>
           <Button asChild size="lg" className="font-semibold text-lg px-8 py-3" style={{
-          backgroundColor: '#FFD84C',
-          color: '#1A1A1A',
-          border: 'none'
-        }} onMouseEnter={e => {
-          e.currentTarget.style.backgroundColor = '#EAB100';
-        }} onMouseLeave={e => {
-          e.currentTarget.style.backgroundColor = '#FFD84C';
-        }}>
-            <Link to="/faq">
+            backgroundColor: '#FFD84C',
+            color: '#1A1A1A',
+            border: 'none'
+          }} onMouseEnter={e => {
+            e.currentTarget.style.backgroundColor = '#EAB100';
+          }} onMouseLeave={e => {
+            e.currentTarget.style.backgroundColor = '#FFD84C';
+          }}>
+            <Link to="/contact">
               צרו קשר
             </Link>
           </Button>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default ProgramHero;

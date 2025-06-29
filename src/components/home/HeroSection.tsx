@@ -1,11 +1,19 @@
+
 import { Button } from "@/components/ui/button";
 import { Calendar, Users, Clock, Monitor } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white py-20 px-4" style={{ background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #4338ca 100%)' }}>
-      <div className="max-w-6xl mx-auto text-center">
+    <section 
+      className="relative text-white py-20 px-4 bg-cover bg-center bg-no-repeat" 
+      style={{ 
+        backgroundImage: `linear-gradient(135deg, rgba(37, 99, 235, 0.9) 0%, rgba(124, 58, 237, 0.9) 50%, rgba(67, 56, 202, 0.9) 100%), url('/lovable-uploads/a6643e5a-9962-4648-b0d7-d286a5a20d5a.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}
+    >
+      <div className="max-w-6xl mx-auto text-center relative z-10">
         {/* Main Heading */}
         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight" style={{ color: '#FFD84C' }}>
           יזמות ופיתוח אפליקציות AI
