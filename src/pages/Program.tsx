@@ -1,5 +1,7 @@
+
 import Layout from '@/components/Layout';
 import ProgramHero from '@/components/program/ProgramHero';
+import ProgramMission from '@/components/program/ProgramMission';
 import ProgramRationale from '@/components/program/ProgramRationale';
 import CoreSubjects from '@/components/program/CoreSubjects';
 import AIPlatformsSection from '@/components/program/AIPlatformsSection';
@@ -14,6 +16,7 @@ const Program = () => {
   return (
     <Layout>
       <ProgramHero />
+      <ProgramMission />
       <ProgramRationale />
       <CoreSubjects />
       <AIPlatformsSection />
