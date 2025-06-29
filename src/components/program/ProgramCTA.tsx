@@ -3,7 +3,12 @@ import { Link } from 'react-router-dom';
 
 const ProgramCTA = () => {
   return (
-    <section className="py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white" style={{ background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #4338ca 100%)' }}>
+    <section className="relative text-white py-20 px-4" style={{ 
+      backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/visuals/2.png")',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}>
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#FFD84C' }}>
           מוכנים להצטרף לתכנית החדשנית?

@@ -13,7 +13,9 @@ import {
   TrendingUp,
   Calendar,
   Clock,
-  Monitor
+  Monitor,
+  Cpu,
+  Brain
 } from 'lucide-react';
 import Layout from '@/components/Layout';
 
@@ -67,35 +69,40 @@ const About = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white py-20 px-4" style={{ background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #4338ca 100%)' }}>
+      <section className="relative text-white py-20 px-4" style={{ 
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/visuals/1.png")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}>
         <div className="max-w-6xl mx-auto text-center">
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight" style={{ color: '#FFD84C' }}>
-            אודות הקייטנה
+            גלעד רביד
           </h1>
           
           {/* Subtitle */}
           <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
-            החזון שלנו הוא להכין את הדור הבא של יזמי הטכנולוגיה ולהפוך את עולם ה-AI לנגיש לכל ילד
+            מומחה ליזמות חינוכית וחדשנות טכנולוגית עם התמקדות בלמידה מבוססת משחק
           </p>
 
           {/* Info Tags */}
           <div className="flex flex-wrap justify-center gap-4 mb-10">
             <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
-              <Calendar className="w-5 h-5" />
-              <span className="text-sm font-medium">13.7.2025 - 17.7.2025</span>
+              <Calendar className="w-5 h-5" style={{ color: '#2ea41c' }} />
+              <span className="text-sm font-medium" style={{ color: '#2ea41c' }}>13.7.2025 - 17.7.2025</span>
             </div>
             <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
-              <Users className="w-5 h-5" />
-              <span className="text-sm font-medium">גילאי 10-14</span>
+              <Users className="w-5 h-5" style={{ color: '#a44e1c' }} />
+              <span className="text-sm font-medium" style={{ color: '#a44e1c' }}>גילאי 10-14</span>
             </div>
             <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
-              <Monitor className="w-5 h-5" />
-              <span className="text-sm font-medium">מפגשים מקוונים</span>
+              <Monitor className="w-5 h-5" style={{ color: '#921ca4' }} />
+              <span className="text-sm font-medium" style={{ color: '#921ca4' }}>מפגשים מקוונים</span>
             </div>
             <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
-              <Clock className="w-5 h-5" />
-              <span className="text-sm font-medium">10:00-14:30</span>
+              <Clock className="w-5 h-5" style={{ color: '#1c72a4' }} />
+              <span className="text-sm font-medium" style={{ color: '#1c72a4' }}>10:00-14:30</span>
             </div>
           </div>
 
@@ -170,20 +177,40 @@ const About = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
-            הערכים שלנו
+            מומחיות מקצועית
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, index) => (
-              <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
-                <CardContent className="p-0">
-                  <div className="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4 text-white">
-                    {value.icon}
-                  </div>
-                  <h3 className="font-semibold text-lg mb-3">{value.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+            <div className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Lightbulb className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">חדשנות</h3>
+              <p className="text-gray-600">פיתוח פתרונות יצירתיים וחדשניים בתחום החינוך והטכנולוגיה</p>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Cpu className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">טכנולוגיה</h3>
+              <p className="text-gray-600">מומחיות בפיתוח טכנולוגיות מתקדמות ופתרונות דיגיטליים</p>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Brain className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">בינה מלאכותית</h3>
+              <p className="text-gray-600">התמחות בתחום ה-AI ויישומיו בחינוך ובפיתוח אפליקציות</p>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <GraduationCap className="w-8 h-8 text-orange-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">חינוך</h3>
+              <p className="text-gray-600">ניסיון עשיר בהוראה ופיתוח מתודולוגיות למידה מתקדמות</p>
+            </div>
           </div>
         </div>
       </section>
@@ -358,9 +385,14 @@ const About = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 gradient-bg text-white">
-        <div className="container mx-auto px-4 text-center">
+      {/* Final CTA Section */}
+      <section className="relative text-white py-20 px-4" style={{ 
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/visuals/2.png")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}>
+        <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#FFD84C' }}>
             בואו להיות חלק מהחזון
           </h2>

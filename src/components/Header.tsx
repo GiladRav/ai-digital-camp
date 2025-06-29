@@ -7,12 +7,13 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
-  const navItems = [
-    { name: 'דף הבית', path: '/' },
-    { name: 'מה בתכנית', path: '/program' },
-    { name: 'פלטפורמות בקורס', path: '/platforms' },
+  const navigation = [
+    { name: 'בית', path: '/' },
+    { name: 'מה בתכנית?', path: '/program' },
+    { name: 'פלטפורמות', path: '/platforms' },
+    { name: 'מומחיות מקצועית', path: '/about' },
     { name: 'שאלות נפוצות', path: '/faq' },
-    { name: 'אודות', path: '/about' },
+    { name: 'הרשמה', path: '/register' },
   ];
 
   const isActivePath = (path: string) => {
@@ -33,7 +34,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8 rtl:space-x-reverse">
-            {navItems.map((item) => (
+            {navigation.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
@@ -83,7 +84,7 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200 bg-white">
             <nav className="flex flex-col space-y-4">
-              {navItems.map((item) => (
+              {navigation.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
