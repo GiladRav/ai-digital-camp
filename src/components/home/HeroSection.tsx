@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Calendar, Users, Clock, Monitor } from "lucide-react";
 import { Link } from "react-router-dom";
 
+// עדכון זמני לבדיקת deploy - 2025
 const HeroSection = () => {
   return (
     <section className="relative text-white py-20 px-4" style={{ 
@@ -45,7 +46,6 @@ const HeroSection = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button 
             asChild 
-            size="lg" 
             className="font-semibold text-lg px-8 py-3"
             style={{ 
               backgroundColor: '#FFD84C',
@@ -65,7 +65,6 @@ const HeroSection = () => {
           </Button>
           <Button 
             asChild 
-            size="lg" 
             className="font-semibold text-lg px-8 py-3"
             style={{ 
               backgroundColor: '#FFD84C',
