@@ -11,9 +11,9 @@ const ProgramHero = () => {
       backgroundRepeat: 'no-repeat'
     }}>
       <div className="max-w-6xl mx-auto text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight" style={{ color: '#FFD84C' }}>
-          מחנה קיץ מקוון
-        </h1>
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight" style={{
+        color: '#FFD84C'
+      }}>מה בתכנית?</h1>
         <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
           שבוע דיגיטלי של פיתוח אפליקציות באמצעות בינה מלאכותית
         </p>
@@ -36,42 +36,28 @@ const ProgramHero = () => {
           </div>
         </div>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button 
-            asChild 
-            size="lg" 
-            className="font-semibold text-lg px-8 py-3"
-            style={{ 
-              backgroundColor: '#FFD84C',
-              color: '#1A1A1A',
-              border: 'none'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#EAB100';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = '#FFD84C';
-            }}
-          >
+          <Button asChild className="font-semibold text-lg px-8 py-3" style={{
+          backgroundColor: '#FFD84C',
+          color: '#1A1A1A',
+          border: 'none'
+        }} onMouseEnter={e => {
+          e.currentTarget.style.backgroundColor = '#EAB100';
+        }} onMouseLeave={e => {
+          e.currentTarget.style.backgroundColor = '#FFD84C';
+        }}>
             <Link to="/register">
               להרשמה
             </Link>
           </Button>
-          <Button 
-            asChild 
-            size="lg" 
-            className="font-semibold text-lg px-8 py-3"
-            style={{ 
-              backgroundColor: '#FFD84C',
-              color: '#1A1A1A',
-              border: 'none'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#EAB100';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = '#FFD84C';
-            }}
-          >
+          <Button asChild className="font-semibold text-lg px-8 py-3" style={{
+          backgroundColor: '#FFD84C',
+          color: '#1A1A1A',
+          border: 'none'
+        }} onMouseEnter={e => {
+          e.currentTarget.style.backgroundColor = '#EAB100';
+        }} onMouseLeave={e => {
+          e.currentTarget.style.backgroundColor = '#FFD84C';
+        }}>
             <Link to="/faq">
               צרו קשר
             </Link>

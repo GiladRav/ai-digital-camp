@@ -1,53 +1,43 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heart, Users, Lightbulb, TrendingUp, AlertTriangle, CheckCircle } from "lucide-react";
-
 const ProgramRationale = () => {
-  const values = [
-    {
-      icon: <Heart className="w-6 h-6" />,
-      title: "למידה מתוך תשוקה",
-      description: "אנחנו מאמינים שלמידה טובה ביותר מגיעה כשהילדים לומדים על נושאים שמעניינים אותם באמת",
-      color: "text-red-600",
-      bgColor: "bg-red-50",
-      borderColor: "border-red-200"
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "ליווי אישי",
-      description: "כל ילד הוא עולם ומלואו. אנחנו מתאימים את הלמידה לכל משתתף בנפרד",
-      color: "text-blue-600",
-      bgColor: "bg-blue-50",
-      borderColor: "border-blue-200"
-    },
-    {
-      icon: <Lightbulb className="w-6 h-6" />,
-      title: "חדשנות ויצירתיות",
-      description: "אנחנו מעודדים חשיבה מחוץ לקופסה ופתרונות יצירתיים לבעיות אמיתיות",
-      color: "text-yellow-600",
-      bgColor: "bg-yellow-50",
-      borderColor: "border-yellow-200"
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "למידה מעשית",
-      description: "התיאוריה חשובה, אבל הכי חשוב הוא שהילדים יכלו ליישם את מה שלמדו בפועל",
-      color: "text-green-600",
-      bgColor: "bg-green-50",
-      borderColor: "border-green-200"
-    }
-  ];
-
-  return (
-    <section className="py-12 bg-gray-50">
+  const values = [{
+    icon: <Heart className="w-6 h-6" />,
+    title: "למידה מתוך תשוקה",
+    description: "אנחנו מאמינים שלמידה טובה ביותר מגיעה כשהילדים לומדים על נושאים שמעניינים אותם באמת",
+    color: "text-red-600",
+    bgColor: "bg-red-50",
+    borderColor: "border-red-200"
+  }, {
+    icon: <Users className="w-6 h-6" />,
+    title: "ליווי אישי",
+    description: "כל ילד הוא עולם ומלואו. אנחנו מתאימים את הלמידה לכל משתתף בנפרד",
+    color: "text-blue-600",
+    bgColor: "bg-blue-50",
+    borderColor: "border-blue-200"
+  }, {
+    icon: <Lightbulb className="w-6 h-6" />,
+    title: "חדשנות ויצירתיות",
+    description: "אנחנו מעודדים חשיבה מחוץ לקופסה ופתרונות יצירתיים לבעיות אמיתיות",
+    color: "text-yellow-600",
+    bgColor: "bg-yellow-50",
+    borderColor: "border-yellow-200"
+  }, {
+    icon: <TrendingUp className="w-6 h-6" />,
+    title: "למידה מעשית",
+    description: "התיאוריה חשובה, אבל הכי חשוב הוא שהילדים יכלו ליישם את מה שלמדו בפועל",
+    color: "text-green-600",
+    bgColor: "bg-green-50",
+    borderColor: "border-green-200"
+  }];
+  return <section className="py-12 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* הערכים שלנו */}
           <div className="mb-10">
             <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">הערכים שלנו</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {values.map((value, index) => (
-                <Card key={index} className={`${value.bgColor} border-2 ${value.borderColor} hover:shadow-lg transition-all duration-300`}>
+              {values.map((value, index) => <Card key={index} className={`${value.bgColor} border-2 ${value.borderColor} hover:shadow-lg transition-all duration-300`}>
                   <CardHeader className="pb-3">
                     <div className="flex items-center gap-3">
                       <div className={`w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm`}>
@@ -65,14 +55,13 @@ const ProgramRationale = () => {
                       {value.description}
                     </p>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
 
           {/* למה נוצרה התכנית */}
           <div>
-            <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">למה נוצרה התכנית?</h2>
+            <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">הצורך בידע רלוונטי</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <Card className="bg-red-50 border-2 border-red-200">
                 <CardHeader>
@@ -139,8 +128,6 @@ const ProgramRationale = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ProgramRationale;
