@@ -55,7 +55,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">צרו קשר</h3>
+            <h3 className="font-semibold text-lg mb-4">פרטי התקשרות</h3>
             <div className="space-y-3">
               <div className="space-y-2 text-gray-300">
                 <a 

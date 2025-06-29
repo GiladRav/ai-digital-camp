@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -22,7 +21,6 @@ const ProgramCTA = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button 
             asChild 
-            size="lg" 
             className="font-semibold text-lg px-8 py-3"
             style={{ 
               backgroundColor: '#FFD84C',
@@ -42,7 +40,6 @@ const ProgramCTA = () => {
           </Button>
           <Button 
             asChild 
-            size="lg" 
             className="font-semibold text-lg px-8 py-3"
             style={{ 
               backgroundColor: '#FFD84C',
@@ -56,8 +53,8 @@ const ProgramCTA = () => {
               e.currentTarget.style.backgroundColor = '#FFD84C';
             }}
           >
-            <Link to="/contact">
-              צרו קשר
+            <Link to="/faq">
+              שאלות נפוצות
             </Link>
           </Button>
         </div>

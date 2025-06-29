@@ -13,7 +13,6 @@ const Header = () => {
     { name: 'פלטפורמות', path: '/platforms' },
     { name: 'מומחיות מקצועית', path: '/about' },
     { name: 'שאלות נפוצות', path: '/faq' },
-    { name: 'הרשמה', path: '/register' },
   ];
 
   const isActivePath = (path: string) => {
