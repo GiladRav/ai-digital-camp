@@ -8,7 +8,7 @@ const HeroSection = () => {
     <section 
       className="relative text-white py-20 px-4 bg-cover bg-center bg-no-repeat" 
       style={{ 
-        backgroundImage: `linear-gradient(135deg, rgba(37, 99, 235, 0.9) 0%, rgba(124, 58, 237, 0.9) 50%, rgba(67, 56, 202, 0.9) 100%), url('/lovable-uploads/a6643e5a-9962-4648-b0d7-d286a5a20d5a.png')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('/lovable-uploads/a6643e5a-9962-4648-b0d7-d286a5a20d5a.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
