@@ -63,6 +63,34 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
+				// Brand Colors
+				brand: {
+					'primary-navy': '#181259',
+					'sunny-yellow': '#FFD84C',
+					'sunny-yellow-hover': '#EAB100',
+					'camp-purple': '#7C3AED',
+					'light-purple': '#8B5CF6',
+					'soft-lavender': '#A78BFA',
+				},
+				// Platform Colors
+				platform: {
+					'language': '#22C55E',
+					'visual': '#F59E0B',
+					'development': '#3B82F6',
+					'learning': '#8B5CF6',
+				},
+				// Status Colors
+				status: {
+					'success': '#22C55E',
+					'success-light': '#F0FDF4',
+					'warning': '#F59E0B',
+					'warning-light': '#FEF3C7',
+					'error': '#EF4444',
+					'error-light': '#FEF2F2',
+					'info': '#3B82F6',
+					'info-light': '#EFF6FF',
+				},
+				// Legacy camp colors for compatibility
 				'camp-blue': {
 					50: '#eff6ff',
 					100: '#dbeafe',
