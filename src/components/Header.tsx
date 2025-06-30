@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -21,15 +20,15 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-gray-200">
+    <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-gray-200">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 rtl:space-x-reverse">
-            <div className="w-8 h-8 gradient-bg-primary rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">AI</span>
             </div>
-            <span className="font-bold text-xl gradient-text-primary">קייטנת AI</span>
+            <span className="font-bold text-xl gradient-text">קייטנת AI</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -38,10 +37,10 @@ const Header = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`font-medium transition-colors duration-200 ${
+                className={`font-medium transition-colors duration-200 hover:text-camp-blue-600 ${
                   isActivePath(item.path) 
-                    ? 'text-brand-primary-navy border-b-2 border-brand-camp-purple pb-1' 
-                    : 'text-brand-primary-navy hover:text-brand-light-purple'
+                    ? 'text-camp-blue-600 border-b-2 border-camp-blue-600 pb-1' 
+                    : 'text-gray-700'
                 }`}
               >
                 {item.name}
@@ -52,7 +51,20 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link to="/register">
-              <Button className="btn-primary font-semibold text-lg px-6 py-2">
+              <Button 
+                className="font-semibold text-lg px-6 py-2"
+                style={{ 
+                  backgroundColor: '#FFD84C',
+                  color: '#1A1A1A',
+                  border: 'none'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#EAB100';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = '#FFD84C';
+                }}
+              >
                 הרשמה
               </Button>
             </Link>
@@ -60,7 +72,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-brand-primary-navy"
+            className="md:hidden p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -75,8 +87,8 @@ const Header = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`font-medium transition-colors duration-200 ${
-                    isActivePath(item.path) ? 'text-brand-camp-purple' : 'text-brand-primary-navy hover:text-brand-light-purple'
+                  className={`font-medium transition-colors duration-200 hover:text-camp-blue-600 ${
+                    isActivePath(item.path) ? 'text-camp-blue-600' : 'text-gray-700'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -84,7 +96,20 @@ const Header = () => {
                 </Link>
               ))}
               <Link to="/register" onClick={() => setIsMenuOpen(false)}>
-                <Button className="btn-primary w-full font-semibold text-lg px-6 py-2">
+                <Button 
+                  className="w-full font-semibold text-lg px-6 py-2"
+                  style={{ 
+                    backgroundColor: '#FFD84C',
+                    color: '#1A1A1A',
+                    border: 'none'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = '#EAB100';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = '#FFD84C';
+                  }}
+                >
                   הרשמה
                 </Button>
               </Link>

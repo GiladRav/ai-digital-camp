@@ -4,112 +4,86 @@
 @tailwind components;
 @tailwind utilities;
 
-/* AI Digital Camp - Brand Color System 2025 */
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
 
 @layer base {
   :root {
-    /* Primary Brand Colors */
-    --brand-primary-navy: #181259;
-    --brand-sunny-yellow: #FFD84C;
-    --brand-sunny-yellow-hover: #EAB100;
-    --brand-camp-purple: #7C3AED;
-    --brand-light-purple: #8B5CF6;
-    --brand-soft-lavender: #A78BFA;
-
-    /* Base Colors */
     --background: 0 0% 100%;
-    --foreground: #1F2937;
-    --text-primary: #1F2937;
-    --text-secondary: #6B7280;
-    --text-muted: #9CA3AF;
+    --foreground: 222.2 84% 4.9%;
 
-    /* Interactive Elements */
     --card: 0 0% 100%;
-    --card-foreground: #1F2937;
+    --card-foreground: 222.2 84% 4.9%;
+
     --popover: 0 0% 100%;
-    --popover-foreground: #1F2937;
+    --popover-foreground: 222.2 84% 4.9%;
 
-    /* Form Elements */
-    --primary: #181259;
-    --primary-foreground: #FFFFFF;
-    --secondary: #F3F4F6;
-    --secondary-foreground: #181259;
+    --primary: 220 91% 54%;
+    --primary-foreground: 210 40% 98%;
 
-    --muted: #F9FAFB;
-    --muted-foreground: #6B7280;
-    --accent: #F3E8FF;
-    --accent-foreground: #181259;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --destructive: #EF4444;
-    --destructive-foreground: #FFFFFF;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --border: #E5E7EB;
-    --input: #D1D5DB;
-    --ring: #181259;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 220 91% 54%;
 
     --radius: 0.75rem;
 
-    /* Status Colors */
-    --success: #22C55E;
-    --success-light: #F0FDF4;
-    --warning: #F59E0B;
-    --warning-light: #FEF3C7;
-    --error: #EF4444;
-    --error-light: #FEF2F2;
-    --info: #3B82F6;
-    --info-light: #EFF6FF;
-
-    /* Platform Category Colors */
-    --platform-language: #22C55E;
-    --platform-visual: #F59E0B;
-    --platform-development: #3B82F6;
-    --platform-learning: #8B5CF6;
-
-    /* Sidebar Colors */
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: #1F2937;
-    --sidebar-primary: #181259;
-    --sidebar-primary-foreground: #FFFFFF;
-    --sidebar-accent: #F3E8FF;
-    --sidebar-accent-foreground: #181259;
-    --sidebar-border: #E5E7EB;
-    --sidebar-ring: #181259;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: #0F172A;
-    --foreground: #F1F5F9;
-    --text-primary: #F1F5F9;
-    --text-secondary: #94A3B8;
-    --text-muted: #64748B;
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
 
-    --card: #1E293B;
-    --card-foreground: #F1F5F9;
-    --popover: #1E293B;
-    --popover-foreground: #F1F5F9;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
 
-    --primary: #8B5CF6;
-    --primary-foreground: #FFFFFF;
-    --secondary: #334155;
-    --secondary-foreground: #F1F5F9;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
 
-    --muted: #1E293B;
-    --muted-foreground: #94A3B8;
-    --accent: #334155;
-    --accent-foreground: #F1F5F9;
+    --primary: 220 91% 54%;
+    --primary-foreground: 222.2 47.4% 11.2%;
 
-    --border: #334155;
-    --input: #334155;
-    --ring: #8B5CF6;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
 
-    --sidebar-background: #0F172A;
-    --sidebar-foreground: #F1F5F9;
-    --sidebar-primary: #8B5CF6;
-    --sidebar-primary-foreground: #FFFFFF;
-    --sidebar-accent: #334155;
-    --sidebar-accent-foreground: #F1F5F9;
-    --sidebar-border: #334155;
-    --sidebar-ring: #8B5CF6;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -120,113 +94,24 @@
 
   body {
     @apply bg-background text-foreground font-sans;
-    color: var(--text-primary);
   }
 }
 
 @layer components {
-  /* Brand Gradient Backgrounds */
-  .gradient-bg-primary {
-    background: linear-gradient(135deg, var(--brand-primary-navy) 0%, var(--brand-camp-purple) 100%);
+  .gradient-bg {
+    background: linear-gradient(135deg, rgb(59 130 246) 0%, rgb(139 92 246) 35%, rgb(20 184 166) 100%);
   }
   
-  .gradient-bg-secondary {
-    background: linear-gradient(135deg, var(--brand-light-purple) 0%, var(--brand-soft-lavender) 100%);
-  }
-
-  .gradient-bg-hero {
-    background: linear-gradient(135deg, var(--brand-primary-navy) 0%, var(--brand-camp-purple) 35%, var(--brand-light-purple) 100%);
-  }
-  
-  /* Brand Text Gradients */
-  .gradient-text-primary {
-    background: linear-gradient(135deg, var(--brand-primary-navy) 0%, var(--brand-camp-purple) 50%, var(--brand-light-purple) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .gradient-text-secondary {
-    background: linear-gradient(135deg, var(--brand-camp-purple) 0%, var(--brand-light-purple) 50%, var(--brand-soft-lavender) 100%);
+  .gradient-text {
+    background: linear-gradient(135deg, rgb(59 130 246) 0%, rgb(139 92 246) 50%, rgb(20 184 166) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   
-  /* Glass Effect */
   .glass-effect {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
-  /* Brand Buttons */
-  .btn-primary {
-    background-color: var(--brand-sunny-yellow);
-    color: #1A1A1A;
-    border: none;
-    transition: background-color 0.2s ease;
-  }
-
-  .btn-primary:hover {
-    background-color: var(--brand-sunny-yellow-hover);
-  }
-
-  .btn-secondary {
-    background-color: var(--brand-primary-navy);
-    color: #FFFFFF;
-    border: none;
-    transition: background-color 0.2s ease;
-  }
-
-  .btn-secondary:hover {
-    background-color: var(--brand-light-purple);
-  }
-
-  /* Brand Cards */
-  .card-purple {
-    background: #F3E8FF;
-    border: 1px solid #E9D5FF;
-  }
-
-  .card-blue {
-    background: #EFF6FF;
-    border: 1px solid #DBEAFE;
-  }
-
-  .card-green {
-    background: #F0FDF4;
-    border: 1px solid #BBF7D0;
-  }
-
-  .card-orange {
-    background: #FFF7ED;
-    border: 1px solid #FED7AA;
-  }
-
-  .card-teal {
-    background: #F0FDFA;
-    border: 1px solid #99F6E4;
-  }
-
-  /* Section Backgrounds */
-  .section-bg-vision {
-    background: linear-gradient(to bottom right, #F8FAFC, #EFF6FF);
-  }
-
-  .section-bg-benefits {
-    background: linear-gradient(to bottom right, #EEF2FF, #F3E8FF);
-  }
-
-  .section-bg-outcomes {
-    background: linear-gradient(to bottom right, #EFF6FF, #F3E8FF);
-  }
-
-  .section-bg-mission {
-    background: linear-gradient(to right, #F8FAFC, #EEF2FF);
-  }
-
-  .section-bg-platforms {
-    background: linear-gradient(to bottom right, #F8FAFC, #F5F3FF);
   }
 }
