@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -37,10 +38,10 @@ const Header = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`font-medium transition-colors duration-200 hover:text-camp-blue-600 ${
+                className={`font-medium transition-colors duration-200 hover:text-[#8B5CF6] ${
                   isActivePath(item.path) 
-                    ? 'text-camp-blue-600 border-b-2 border-camp-blue-600 pb-1' 
-                    : 'text-gray-700'
+                    ? 'text-[#8B5CF6] border-b-2 border-[#8B5CF6] pb-1' 
+                    : 'text-[#181259]'
                 }`}
               >
                 {item.name}
@@ -55,7 +56,7 @@ const Header = () => {
                 className="font-semibold text-lg px-6 py-2"
                 style={{ 
                   backgroundColor: '#FFD84C',
-                  color: '#1A1A1A',
+                  color: '#181259',
                   border: 'none'
                 }}
                 onMouseEnter={(e) => {
@@ -87,8 +88,8 @@ const Header = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`font-medium transition-colors duration-200 hover:text-camp-blue-600 ${
-                    isActivePath(item.path) ? 'text-camp-blue-600' : 'text-gray-700'
+                  className={`font-medium transition-colors duration-200 hover:text-[#8B5CF6] ${
+                    isActivePath(item.path) ? 'text-[#8B5CF6]' : 'text-[#181259]'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -100,7 +101,7 @@ const Header = () => {
                   className="w-full font-semibold text-lg px-6 py-2"
                   style={{ 
                     backgroundColor: '#FFD84C',
-                    color: '#1A1A1A',
+                    color: '#181259',
                     border: 'none'
                   }}
                   onMouseEnter={(e) => {

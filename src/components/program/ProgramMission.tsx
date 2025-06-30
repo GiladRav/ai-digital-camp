@@ -13,9 +13,9 @@ const ProgramMission = () => {
                 <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
                   <Target className="w-6 h-6 text-green-600" />
                 </div>
-                <h2 className="text-3xl font-bold text-gray-900">המשימה שלנו</h2>
+                <h2 className="text-3xl font-bold" style={{ color: '#181259' }}>המשימה שלנו</h2>
               </div>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg leading-relaxed" style={{ color: '#1F2937' }}>
                 אנחנו מאמינים שכל ילד יכול להיות יזם טכנולוגי. בעידן הבינה המלאכותית, הכלים שמאפשרים ליצור טכנולוגיה הפכו נגישים יותר מאי פעם. הקייטנה שלנו נועדה לחבר בין הסקרנות הטבעית של ילדים לבין הכוח הבלתי מוגבל של בינה מלאכותית, ולאפשר להם לממש רעיונות ולפתח פתרונות אמיתיים לבעיות שהם רואים בעולם.
               </p>
             </CardContent>

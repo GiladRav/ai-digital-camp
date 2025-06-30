@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Phone, Mail } from 'lucide-react';
@@ -23,7 +24,7 @@ const Footer = () => {
                 className="font-semibold"
                 style={{ 
                   backgroundColor: '#FFD84C',
-                  color: '#1A1A1A',
+                  color: '#181259',
                   border: 'none'
                 }}
                 onMouseEnter={(e) => {
@@ -43,12 +44,12 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">קישורים מהירים</h3>
             <div className="space-y-4">
               <ul className="space-y-2">
-                <li><a href="/" className="text-gray-600 hover:text-blue-600 transition-colors">דף הבית</a></li>
-                <li><a href="/program" className="text-gray-600 hover:text-blue-600 transition-colors">מה בתכנית?</a></li>
-                <li><a href="/platforms" className="text-gray-600 hover:text-blue-600 transition-colors">פלטפורמות</a></li>
-                <li><a href="/about" className="text-gray-600 hover:text-blue-600 transition-colors">מומחיות מקצועית</a></li>
-                <li><a href="/faq" className="text-gray-600 hover:text-blue-600 transition-colors">שאלות נפוצות</a></li>
-                <li><a href="/register" className="text-gray-600 hover:text-blue-600 transition-colors">הרשמה</a></li>
+                <li><a href="/" className="text-gray-600 hover:text-[#8B5CF6] transition-colors">דף הבית</a></li>
+                <li><a href="/program" className="text-gray-600 hover:text-[#8B5CF6] transition-colors">מה בתכנית?</a></li>
+                <li><a href="/platforms" className="text-gray-600 hover:text-[#8B5CF6] transition-colors">פלטפורמות</a></li>
+                <li><a href="/about" className="text-gray-600 hover:text-[#8B5CF6] transition-colors">מומחיות מקצועית</a></li>
+                <li><a href="/faq" className="text-gray-600 hover:text-[#8B5CF6] transition-colors">שאלות נפוצות</a></li>
+                <li><a href="/register" className="text-gray-600 hover:text-[#8B5CF6] transition-colors">הרשמה</a></li>
               </ul>
             </div>
           </div>
