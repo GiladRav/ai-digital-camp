@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const FinalCTA = () => {
   return (
     <section className="relative text-white py-20 px-4" style={{ 
-      backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/visuals/2.png")',
+      backgroundImage: 'linear-gradient(rgba(24, 18, 89, 0.4), rgba(24, 18, 89, 0.4)), url("/visuals/2.png")',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat'

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const HeroSection = () => {
   return (
     <section className="relative text-white py-20 px-4" style={{ 
-      backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/visuals/1.png")',
+      backgroundImage: 'linear-gradient(rgba(24, 18, 89, 0.4), rgba(24, 18, 89, 0.4)), url("/visuals/1.png")',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat'
@@ -25,21 +25,21 @@ const HeroSection = () => {
 
         {/* Info Tags */}
         <div className="flex flex-wrap justify-center gap-4 mb-10">
-          <div className="flex items-center gap-2 rounded-full px-4 py-2" style={{ backgroundColor: 'rgba(124, 58, 237, 0.2)' }}>
-            <Calendar className="w-5 h-5" style={{ color: '#059669' }} />
-            <span className="text-sm font-medium" style={{ color: '#047857' }}>13.7.2025 - 17.7.2025</span>
+          <div className="flex items-center gap-2 rounded-full px-4 py-2" style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}>
+            <Calendar className="w-5 h-5" style={{ color: '#1D4ED8' }} />
+            <span className="text-sm font-medium" style={{ color: '#D1D5DB' }}>13.7.2025 - 17.7.2025</span>
           </div>
-          <div className="flex items-center gap-2 rounded-full px-4 py-2" style={{ backgroundColor: 'rgba(124, 58, 237, 0.2)' }}>
-            <Users className="w-5 h-5" style={{ color: '#059669' }} />
-            <span className="text-sm font-medium" style={{ color: '#047857' }}>גילאי 10-14</span>
+          <div className="flex items-center gap-2 rounded-full px-4 py-2" style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}>
+            <Users className="w-5 h-5" style={{ color: '#1D4ED8' }} />
+            <span className="text-sm font-medium" style={{ color: '#D1D5DB' }}>גילאי 10-14</span>
           </div>
-          <div className="flex items-center gap-2 rounded-full px-4 py-2" style={{ backgroundColor: 'rgba(124, 58, 237, 0.2)' }}>
-            <Monitor className="w-5 h-5" style={{ color: '#059669' }} />
-            <span className="text-sm font-medium" style={{ color: '#047857' }}>מפגשים מקוונים</span>
+          <div className="flex items-center gap-2 rounded-full px-4 py-2" style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}>
+            <Monitor className="w-5 h-5" style={{ color: '#1D4ED8' }} />
+            <span className="text-sm font-medium" style={{ color: '#D1D5DB' }}>מפגשים מקוונים</span>
           </div>
-          <div className="flex items-center gap-2 rounded-full px-4 py-2" style={{ backgroundColor: 'rgba(124, 58, 237, 0.2)' }}>
-            <Clock className="w-5 h-5" style={{ color: '#059669' }} />
-            <span className="text-sm font-medium" style={{ color: '#047857' }}>10:00-14:30</span>
+          <div className="flex items-center gap-2 rounded-full px-4 py-2" style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}>
+            <Clock className="w-5 h-5" style={{ color: '#1D4ED8' }} />
+            <span className="text-sm font-medium" style={{ color: '#D1D5DB' }}>10:00-14:30</span>
           </div>
         </div>
 
