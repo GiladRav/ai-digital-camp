@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const FinalCTA = () => {
   return (
     <section className="relative text-white py-20 px-4" style={{ 
-      backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/visuals/2.png")',
+      backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/visuals/2.png")',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat'
@@ -15,7 +15,7 @@ const FinalCTA = () => {
           מוכנים להצטרף למהפכה דיגיטלית?
         </h2>
         
-        <p className="text-xl mb-8 max-w-2xl mx-auto">
+        <p className="text-xl mb-8 max-w-2xl mx-auto text-white">
           הצטרפו עכשיו למחנה קיץ חדשני שיכין את דור העתיד לעולם של 2030
         </p>
 
