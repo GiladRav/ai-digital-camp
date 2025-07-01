@@ -70,42 +70,40 @@ const FAQ = () => {
 
   return (
     <Layout>
-      {/* Hero Section */}
+      {/* Hero Section - Updated with new gradient */}
       <section className="relative text-white py-20 px-4" style={{ 
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/visuals/1.png")',
+        backgroundImage: 'linear-gradient(rgba(24, 18, 89, 0.4), rgba(24, 18, 89, 0.4)), url("/visuals/1.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}>
         <div className="max-w-6xl mx-auto text-center">
-          {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight" style={{ color: '#FFD84C' }}>
             שאלות נפוצות
           </h1>
           
-          {/* Subtitle */}
           <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
             כאן תוכלו למצוא תשובות לשאלות הנפוצות ביותר על הקייטנה. 
             לא מצאתם מה שחיפשתם? בקרו בשאלות נפוצות ונשמח לעזור!
           </p>
 
-          {/* Info Tags */}
+          {/* Info Tags - Updated with new styling */}
           <div className="flex flex-wrap justify-center gap-4 mb-10">
-            <div className="flex items-center gap-2 bg-black/20 backdrop-blur-sm rounded-full px-4 py-2">
-              <Calendar className="w-5 h-5" style={{ color: '#2ea41c' }} />
-              <span className="text-sm font-medium" style={{ color: '#2ea41c' }}>13.7.2025 - 17.7.2025</span>
+            <div className="flex items-center gap-2 rounded-full px-4 py-2" style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}>
+              <Calendar className="w-5 h-5" style={{ color: '#1D4ED8' }} />
+              <span className="text-sm font-medium" style={{ color: '#D1D5DB' }}>13.7.2025 - 17.7.2025</span>
             </div>
-            <div className="flex items-center gap-2 bg-black/20 backdrop-blur-sm rounded-full px-4 py-2">
-              <Users className="w-5 h-5" style={{ color: '#a44e1c' }} />
-              <span className="text-sm font-medium" style={{ color: '#a44e1c' }}>גילאי 10-14</span>
+            <div className="flex items-center gap-2 rounded-full px-4 py-2" style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}>
+              <Users className="w-5 h-5" style={{ color: '#1D4ED8' }} />
+              <span className="text-sm font-medium" style={{ color: '#D1D5DB' }}>גילאי 10-14</span>
             </div>
-            <div className="flex items-center gap-2 bg-black/20 backdrop-blur-sm rounded-full px-4 py-2">
-              <Monitor className="w-5 h-5" style={{ color: '#921ca4' }} />
-              <span className="text-sm font-medium" style={{ color: '#921ca4' }}>מפגשים מקוונים</span>
+            <div className="flex items-center gap-2 rounded-full px-4 py-2" style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}>
+              <Monitor className="w-5 h-5" style={{ color: '#1D4ED8' }} />
+              <span className="text-sm font-medium" style={{ color: '#D1D5DB' }}>מפגשים מקוונים</span>
             </div>
-            <div className="flex items-center gap-2 bg-black/20 backdrop-blur-sm rounded-full px-4 py-2">
-              <Clock className="w-5 h-5" style={{ color: '#1c72a4' }} />
-              <span className="text-sm font-medium" style={{ color: '#1c72a4' }}>10:00-14:30</span>
+            <div className="flex items-center gap-2 rounded-full px-4 py-2" style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}>
+              <Clock className="w-5 h-5" style={{ color: '#1D4ED8' }} />
+              <span className="text-sm font-medium" style={{ color: '#D1D5DB' }}>10:00-14:30</span>
             </div>
           </div>
 
@@ -116,7 +114,7 @@ const FAQ = () => {
               className="font-semibold text-lg px-8 py-3"
               style={{ 
                 backgroundColor: '#FFD84C',
-                color: '#1A1A1A',
+                color: '#181259',
                 border: 'none'
               }}
               onMouseEnter={(e) => {
@@ -135,7 +133,7 @@ const FAQ = () => {
               className="font-semibold text-lg px-8 py-3"
               style={{ 
                 backgroundColor: '#FFD84C',
-                color: '#1A1A1A',
+                color: '#181259',
                 border: 'none'
               }}
               onMouseEnter={(e) => {
@@ -199,7 +197,7 @@ const FAQ = () => {
         </div>
       </section>
 
-      {/* Contact Section - Updated with operator details */}
+      {/* Contact Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 gradient-text">
@@ -252,9 +250,9 @@ const FAQ = () => {
         </div>
       </section>
 
-      {/* Final CTA Section */}
+      {/* Final CTA Section - Updated with new gradient */}
       <section className="relative text-white py-20 px-4" style={{ 
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/visuals/2.png")',
+        backgroundImage: 'linear-gradient(rgba(24, 18, 89, 0.4), rgba(24, 18, 89, 0.4)), url("/visuals/2.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -272,7 +270,7 @@ const FAQ = () => {
               className="font-semibold text-lg px-8 py-3"
               style={{ 
                 backgroundColor: '#FFD84C',
-                color: '#1A1A1A',
+                color: '#181259',
                 border: 'none'
               }}
               onMouseEnter={(e) => {
@@ -291,7 +289,7 @@ const FAQ = () => {
               className="font-semibold text-lg px-8 py-3"
               style={{ 
                 backgroundColor: '#FFD84C',
-                color: '#1A1A1A',
+                color: '#181259',
                 border: 'none'
               }}
               onMouseEnter={(e) => {

@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -42,7 +43,7 @@ const FAQSection = () => {
               className="font-semibold text-lg px-8 py-3"
               style={{ 
                 backgroundColor: '#FFD84C',
-                color: '#1A1A1A',
+                color: '#181259',
                 border: 'none'
               }}
               onMouseEnter={(e) => {
