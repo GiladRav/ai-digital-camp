@@ -4,14 +4,14 @@ import { Target } from "lucide-react";
 
 const ProgramMission = () => {
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-50 to-slate-50">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <Card className="border-0 shadow-lg bg-white">
+          <Card className="border-0 shadow-lg">
             <CardContent className="p-8">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#F0FDF4' }}>
-                  <Target className="w-6 h-6" style={{ color: '#22C55E' }} />
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                  <Target className="w-6 h-6 text-green-600" />
                 </div>
                 <h2 className="text-3xl font-bold" style={{ color: '#181259' }}>המשימה שלנו</h2>
               </div>
