@@ -63,6 +63,47 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
+				/* Brand Colors 2025 */
+				'brand': {
+					'navy-purple': '#181259',
+					'light-purple': '#8B5CF6',
+					'soft-lavender': '#A78BFA',
+					'sunny-yellow': '#FFD84C',
+					'sunny-yellow-hover': '#EAB100',
+				},
+				/* Card System Colors */
+				'card-colors': {
+					'purple-bg': '#F3E8FF',
+					'purple-border': '#E9D5FF',
+					'purple-icon': '#DDD6FE',
+					'blue-bg': '#EFF6FF',
+					'blue-border': '#BFDBFE',
+					'blue-icon': '#BFDBFE',
+					'green-bg': '#F0FDF4',
+					'green-border': '#BBF7D0',
+					'green-icon': '#86EFAC',
+					'orange-bg': '#FFF7ED',
+					'orange-border': '#FED7AA',
+					'orange-icon': '#FDBA74',
+					'teal-bg': '#F0FDFA',
+					'teal-border': '#99F6E4',
+					'teal-icon': '#5EEAD4',
+				},
+				/* Platform Categories */
+				'platform': {
+					'language-bg': '#F0FDF4',
+					'language-text': '#15803D',
+					'language-icon': '#22C55E',
+					'visual-bg': '#FEF3C7',
+					'visual-text': '#D97706',
+					'visual-icon': '#F59E0B',
+					'development-bg': '#EFF6FF',
+					'development-text': '#1D4ED8',
+					'development-icon': '#3B82F6',
+					'learning-bg': '#F3E8FF',
+					'learning-text': '#181259',
+					'learning-icon': '#181259',
+				},
 				'camp-blue': {
 					50: '#eff6ff',
 					100: '#dbeafe',
