@@ -7,11 +7,10 @@ import Layout from '@/components/Layout';
 const Platforms = () => {
   const platformCategories = [{
     title: "מנועי שפה טבעית ומחקר",
-    icon: <Search className="w-6 h-6" />,
-    color: "bg-emerald-500",
-    textColor: "text-emerald-700",
-    borderColor: "border-emerald-300",
-    bgLight: "bg-emerald-50",
+    icon: Search,
+    bgColor: "platform-language",
+    textColor: "text-[#15803D]",
+    iconColor: "text-[#22C55E]",
     platforms: [{
       name: "ChatGPT",
       description: "מנוע השפה הטבעית המתקדם של OpenAI שמשמש כשותף יצירתי לפיתוח רעיונות עסקיים ויצירת תוכן מקצועי. המשתתפים ילמדו להנחות את הבינה המלאכותית באמצעות שאלות חכמות ובקשות מדויקות, ויוכלו לקבל עזרה ביצירת תוכן שיווקי, תיאורי מוצרים ותסריטים לאפליקציות שלהם. הכלי מפתח חשיבה אסטרטגית ומסייע להפוך רעיונות גולמיים למסרים ברורים ומשכנעים.",
@@ -27,11 +26,10 @@ const Platforms = () => {
     }]
   }, {
     title: "עיצוב ויצירת תוכן ויזואלי",
-    icon: <Palette className="w-6 h-6" />,
-    color: "bg-rose-500",
-    textColor: "text-rose-700",
-    borderColor: "border-rose-300",
-    bgLight: "bg-rose-50",
+    icon: Palette,
+    bgColor: "platform-visual",
+    textColor: "text-[#D97706]",
+    iconColor: "text-[#F59E0B]",
     platforms: [{
       name: "Gamma AI",
       description: "פלטפורמה חדשנית ליצירת מצגות אינטראקטיביות ומרשימות באמצעות בינה מלאכותית מתקדמת. המשתתפים ישתמשו ב-Gamma ליצירת מצגות מכירה מקצועיות, דפי נחיתה אינטראקטיביים ומצגות הצגת הפרויקט הסופי. הכלי מאפשר יצירת תוכן ויזואלי דינמי עם אלמנטים אינטראקטיביים, אנימציות ועיצוב מותאם לקהל יעד, ללא צורך בכישורי עיצוב או תכנות מתקדמים. הפלטפורמה מפתחת מיומנויות הצגה ותקשורת ויזואלית.",
@@ -47,11 +45,10 @@ const Platforms = () => {
     }]
   }, {
     title: "פלטפורמות ללא-קוד וסימולציות",
-    icon: <Brain className="w-6 h-6" />,
-    color: "bg-amber-500",
-    textColor: "text-amber-700",
-    borderColor: "border-amber-300",
-    bgLight: "bg-amber-50",
+    icon: Brain,
+    bgColor: "platform-learning",
+    textColor: "text-[#181259]",
+    iconColor: "text-[#181259]",
     platforms: [{
       name: "Lovable.dev",
       description: "פלטפורמת סיוע תכנות מבוססת בינה מלאכותית המציעה הצעות קוד חכמות והסברים מפורטים בזמן אמת. המשתתפים ילמדו עקרונות תכנות בסיסיים ומתקדמים תוך קבלת עזרה חכמה ומותאמת אישית מהבינה המלאכותית, ויוכלו להבין כיצד עובדות האפליקציות שהם בונים מאחורי הקלעים. הפלטפורמה מספקת הסברים פשוטים למושגי תכנות מורכבים ומסייעת במעבר הדרגתי מכלי ללא קוד לתכנות אמיתי. הכלי מפתח חשיבה לוגית ומיומנויות פתרון בעיות טכניות.",
@@ -67,11 +64,10 @@ const Platforms = () => {
     }]
   }, {
     title: "פיתוח ותכנות מתקדם",
-    icon: <Code className="w-6 h-6" />,
-    color: "bg-indigo-500",
-    textColor: "text-indigo-700",
-    borderColor: "border-indigo-300",
-    bgLight: "bg-indigo-50",
+    icon: Code,
+    bgColor: "platform-development",
+    textColor: "text-[#1D4ED8]",
+    iconColor: "text-[#3B82F6]",
     platforms: [{
       name: "Bubble",
       description: "פלטפורמת פיתוח ללא קוד המאפשרת למשתתפים לבנות אפליקציות אינטרנט מלאות ופועלות ללא צורך בידע תכנות מתקדם. המשתתפים ילמדו ליצור אפליקציות אינטראקטיביות עם ממשק משתמש מקצועי, מסדי נתונים מורכבים ופונקציונליות עסקית מתקדמת כמו מערכות תשלום, ניהול משתמשים ויצירת דוחות. הפלטפורמה מדמוקרטת את עולם פיתוח האפליקציות ומאפשרת להפוך רעיונות עסקיים למציאות דיגיטלית פועלת. הכלי מפתח חשיבה מערכתית והבנה עמוקה של תהליכים עסקיים.",
@@ -182,18 +178,18 @@ const Platforms = () => {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {platformCategories.map((category, index) => <TableRow key={index} className={`${category.borderColor} border-r-4 ${category.bgLight}`}>
+                 {platformCategories.map((category, index) => <TableRow key={index} className={`bg-${category.bgColor}`}>
                     <TableCell className={`font-semibold ${category.textColor} text-lg`}>
                       <div className="flex items-center gap-3">
-                        <div className={`w-10 h-10 ${category.color} rounded-full flex items-center justify-center text-white shadow-md`}>
-                          {category.icon}
+                        <div className={`w-10 h-10 bg-${category.bgColor} rounded-full flex items-center justify-center shadow-md`}>
+                          <category.icon className={`w-6 h-6 ${category.iconColor}`} />
                         </div>
                         {category.title}
                       </div>
                     </TableCell>
                     <TableCell>
                       <div className="flex flex-wrap gap-2">
-                        {category.platforms.map((platform, platformIndex) => <span key={platformIndex} className={`px-4 py-2 rounded-full text-sm font-medium ${category.color} text-white shadow-sm`}>
+                        {category.platforms.map((platform, platformIndex) => <span key={platformIndex} className={`px-4 py-2 rounded-full text-sm font-medium bg-${category.bgColor} ${category.textColor} shadow-sm`}>
                             {platform.name}
                           </span>)}
                       </div>
@@ -209,31 +205,31 @@ const Platforms = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="space-y-16">
-            {platformCategories.map((category, categoryIndex) => <div key={categoryIndex} className={`${category.bgLight} rounded-3xl p-8`}>
+            {platformCategories.map((category, categoryIndex) => <div key={categoryIndex} className={`bg-${category.bgColor} rounded-3xl p-8`}>
                 <div className="text-center mb-12">
-                  <div className={`w-20 h-20 ${category.color} rounded-full flex items-center justify-center mx-auto mb-6 text-white shadow-lg`}>
-                    {category.icon}
+                  <div className={`w-20 h-20 bg-${category.bgColor} rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg`}>
+                    <category.icon className={`w-10 h-10 ${category.iconColor}`} />
                   </div>
                   <h2 className={`text-3xl md:text-4xl font-bold ${category.textColor} mb-4`}>
                     {category.title}
                   </h2>
-                  <div className={`w-24 h-1 ${category.color} mx-auto rounded-full`}></div>
+                  <div className={`w-24 h-1 bg-primary mx-auto rounded-full`}></div>
                 </div>
                 
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-                  {category.platforms.map((platform, platformIndex) => <Card key={platformIndex} className={`h-full hover:shadow-xl transition-all duration-300 ${category.borderColor} border-r-4 border-l-4 bg-white/80 backdrop-blur-sm transform hover:-translate-y-1`}>
+                  {category.platforms.map((platform, platformIndex) => <Card key={platformIndex} className="h-full card-purple hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur-sm transform hover:-translate-y-1">
                       <CardHeader className="text-center pb-4">
                         <CardTitle className={`text-2xl ${category.textColor} font-bold`}>
                           {platform.name}
                         </CardTitle>
-                        <div className={`w-16 h-1 ${category.color} mx-auto rounded-full`}></div>
+                        <div className="w-16 h-1 bg-primary mx-auto rounded-full"></div>
                       </CardHeader>
                       <CardContent className="pt-0">
                         <p className="text-gray-700 leading-relaxed mb-6 text-right text-sm">
                           {platform.description}
                         </p>
                         <a href={platform.link} target="_blank" rel="noopener noreferrer" className="block">
-                          <Button className={`w-full ${category.color} hover:opacity-90 text-white shadow-md transition-all duration-300 hover:shadow-lg`}>
+                          <Button className="w-full btn-primary shadow-md transition-all duration-300 hover:shadow-lg">
                             <ExternalLink className="w-4 h-4 mr-2" />
                             בקר באתר הפלטפורמה
                           </Button>
@@ -264,7 +260,7 @@ const Platforms = () => {
             <Link to="/register">
               <Button className="font-semibold text-lg px-8 py-3" style={{
               backgroundColor: '#FFD84C',
-              color: '#1A1A1A',
+               color: '#181259',
               border: 'none'
             }} onMouseEnter={e => {
               e.currentTarget.style.backgroundColor = '#EAB100';
@@ -277,7 +273,7 @@ const Platforms = () => {
             <Link to="/faq">
               <Button className="font-semibold text-lg px-8 py-3" style={{
               backgroundColor: '#FFD84C',
-              color: '#1A1A1A',
+              color: '#181259',
               border: 'none'
             }} onMouseEnter={e => {
               e.currentTarget.style.backgroundColor = '#EAB100';

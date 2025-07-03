@@ -403,7 +403,7 @@ const About = () => {
                 className="font-semibold text-lg px-8 py-3"
                 style={{ 
                   backgroundColor: '#FFD84C',
-                  color: '#1A1A1A',
+                color: '#181259',
                   border: 'none'
                 }}
                 onMouseEnter={(e) => {
@@ -421,7 +421,7 @@ const About = () => {
                 className="font-semibold text-lg px-8 py-3"
                 style={{ 
                   backgroundColor: '#FFD84C',
-                  color: '#1A1A1A',
+                  color: '#181259',
                   border: 'none'
                 }}
                 onMouseEnter={(e) => {
