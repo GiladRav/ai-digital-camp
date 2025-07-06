@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -21,15 +20,13 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-gray-200">
+    <header className="sticky top-0 z-50 w-full backdrop-blur-md border-b border-gray-200" style={{ background: 'linear-gradient(90deg, #F7F7FA 0%, #F3F4F6 100%)' }}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 rtl:space-x-reverse">
-            <div className="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">AI</span>
-            </div>
-            <span className="font-bold text-xl gradient-text">קייטנת AI</span>
+          <Link to="/" className="flex items-center space-x-2 rtl:space-x-reverse" style={{ background: 'linear-gradient(90deg, #E9D8FD 0%, #F3E8FF 100%)', borderRadius: '0.5rem', padding: '0.25rem 0.5rem' }}>
+            <img src="/visuals/Platform.png" alt="Platform Logo" className="w-8 h-8 rounded-lg object-cover" />
+            <span className="font-bold text-xl" style={{ color: '#181259' }}>קיץ דיגיטלי עם AI</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -57,7 +54,7 @@ const Header = () => {
                 style={{ 
                   backgroundColor: '#FFD84C',
                   color: '#181259',
-                  border: 'none'
+                  border: '0.5px solid #181259'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor = '#EAB100';
@@ -82,7 +79,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200 bg-white">
+          <div className="md:hidden py-4 border-t border-gray-200" style={{ background: 'linear-gradient(90deg, #F7F7FA 0%, #F3F4F6 100%)' }}>
             <nav className="flex flex-col space-y-4">
               {navigation.map((item) => (
                 <Link
@@ -102,7 +99,7 @@ const Header = () => {
                   style={{ 
                     backgroundColor: '#FFD84C',
                     color: '#181259',
-                    border: 'none'
+                    border: '0.5px solid #181259'
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.backgroundColor = '#EAB100';

@@ -1,12 +1,11 @@
-
 import { Button } from "@/components/ui/button";
 import { Calendar, Users, Clock, Monitor } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ProgramHero = () => {
   return (
-    <section className="relative text-white py-20 px-4" style={{ 
-      backgroundImage: 'linear-gradient(rgba(24, 18, 89, 0.4), rgba(24, 18, 89, 0.4)), url("/visuals/1.png")',
+    <section className="relative text-white py-16 px-4" style={{ 
+      backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%), url("/visuals/1.png")',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat'
@@ -39,11 +38,12 @@ const ProgramHero = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button 
             asChild 
+            variant="primary"
             className="font-semibold text-lg px-8 py-3"
             style={{ 
               backgroundColor: '#FFD84C',
               color: '#181259',
-              border: 'none'
+              border: '0.5px solid #181259'
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.backgroundColor = '#EAB100';
@@ -62,7 +62,7 @@ const ProgramHero = () => {
             style={{ 
               backgroundColor: '#FFD84C',
               color: '#181259',
-              border: 'none'
+              border: '0.5px solid #181259'
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.backgroundColor = '#EAB100';

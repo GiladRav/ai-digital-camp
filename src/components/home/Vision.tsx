@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Lightbulb, Target, Users, Zap } from "lucide-react";
 
@@ -38,8 +37,8 @@ const Vision = () => {
     <section className="py-8 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-            החזון שלנו
+          <h2 className="text-2xl md:text-3xl font-bold mb-2" style={{ color: '#181259' }}>
+            בהובלת גלעד רביד
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             תכנית חינוכית חדשנית המכינה את דור העתיד לעולם של 2030

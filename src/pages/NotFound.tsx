@@ -1,4 +1,3 @@
-
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
@@ -18,8 +17,8 @@ const NotFound = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative text-white py-20 px-4" style={{ 
-        backgroundImage: 'linear-gradient(rgba(24, 18, 89, 0.4), rgba(24, 18, 89, 0.4)), url("/visuals/1.png")',
+      <section className="relative text-white py-16 px-4" style={{ 
+        backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%), url("/visuals/1.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -38,7 +37,7 @@ const NotFound = () => {
               style={{ 
                 backgroundColor: '#FFD84C',
                 color: '#181259',
-                border: 'none'
+                border: '0.5px solid #181259'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = '#EAB100';

@@ -95,8 +95,8 @@ const Register = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative text-white py-20 px-4" style={{ 
-        backgroundImage: 'linear-gradient(rgba(24, 18, 89, 0.4), rgba(24, 18, 89, 0.4)), url("/visuals/1.png")',
+      <section className="relative text-white py-16 px-4" style={{ 
+        backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%), url("/visuals/1.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -140,7 +140,7 @@ const Register = () => {
               style={{ 
                 backgroundColor: '#FFD84C',
                 color: '#181259',
-                border: 'none'
+                border: '0.5px solid #181259'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = '#EAB100';
@@ -159,7 +159,7 @@ const Register = () => {
               style={{ 
                 backgroundColor: '#FFD84C',
                 color: '#181259',
-                border: 'none'
+                border: '0.5px solid #181259'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = '#EAB100';
@@ -182,7 +182,7 @@ const Register = () => {
           <div className="lg:col-span-2">
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl gradient-text">פרטי הרשמה</CardTitle>
+                <CardTitle className="text-2xl" style={{ color: '#8B5CF6' }}>פרטי הרשמה</CardTitle>
                 <p className="text-gray-600">מלאו את הפרטים הבאים ונחזור אליכם בהקדם</p>
               </CardHeader>
               <CardContent>
@@ -335,7 +335,7 @@ const Register = () => {
             {/* Camp Details */}
             <Card>
               <CardHeader>
-                <CardTitle className="text-xl gradient-text">פרטי הקייטנה</CardTitle>
+                <CardTitle className="text-xl" style={{ color: '#8B5CF6' }}>פרטי הקייטנה</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -469,8 +469,8 @@ const Register = () => {
       </div>
 
       {/* Final CTA Section */}
-      <section className="relative text-white py-20 px-4" style={{ 
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/visuals/2.png")',
+      <section className="relative text-white py-16 px-4" style={{ 
+        backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%), url("/visuals/2.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -514,7 +514,7 @@ const Register = () => {
               style={{ 
                 backgroundColor: '#FFD84C',
                 color: '#1A1A1A',
-                border: 'none'
+                border: '0.5px solid #181259'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = '#EAB100';
@@ -533,7 +533,7 @@ const Register = () => {
               style={{ 
                 backgroundColor: '#FFD84C',
                 color: '#1A1A1A',
-                border: 'none'
+                border: '0.5px solid #181259'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = '#EAB100';

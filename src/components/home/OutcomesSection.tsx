@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Lightbulb, Smartphone, Brain, Presentation, Trophy } from "lucide-react";
 
@@ -50,7 +49,7 @@ const OutcomesSection = () => {
     <section className="py-8 bg-gradient-to-br from-blue-50 to-indigo-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+          <h2 className="text-2xl md:text-3xl font-bold mb-2" style={{ color: '#181259' }}>
             מה נלמד?
           </h2>
         </div>

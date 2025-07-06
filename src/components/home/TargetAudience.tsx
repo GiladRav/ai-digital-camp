@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Brain, Heart } from "lucide-react";
 
@@ -34,7 +33,7 @@ const TargetAudience = () => {
     <section className="py-6 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+          <h2 className="text-2xl md:text-3xl font-bold mb-2" style={{ color: '#181259' }}>
             קהל יעד
           </h2>
         </div>

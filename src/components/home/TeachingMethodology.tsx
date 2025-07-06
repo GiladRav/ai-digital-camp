@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Globe, TrendingUp, Heart, Bot } from "lucide-react";
 
@@ -42,7 +41,7 @@ const TeachingMethodology = () => {
     <section className="py-8 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+          <h2 className="text-2xl md:text-3xl font-bold mb-2" style={{ color: '#181259' }}>
             גישת הדרכה
           </h2>
         </div>

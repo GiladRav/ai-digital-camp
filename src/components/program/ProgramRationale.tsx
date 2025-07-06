@@ -35,7 +35,7 @@ const ProgramRationale = () => {
         <div className="max-w-4xl mx-auto">
           {/* הערכים שלנו */}
           <div className="mb-10">
-            <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">הערכים שלנו</h2>
+            <h2 className="text-3xl font-bold text-center mb-8" style={{ color: '#181259' }}>הערכים שלנו</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {values.map((value, index) => <Card key={index} className={`${value.bgColor} border-2 ${value.borderColor} hover:shadow-lg transition-all duration-300`}>
                   <CardHeader className="pb-3">
@@ -61,7 +61,7 @@ const ProgramRationale = () => {
 
           {/* למה נוצרה התכנית */}
           <div>
-            <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">הצורך בידע רלוונטי</h2>
+            <h2 className="text-3xl font-bold text-center mb-8" style={{ color: '#181259' }}>הצורך בידע רלוונטי</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <Card className="bg-red-50 border-2 border-red-200">
                 <CardHeader>

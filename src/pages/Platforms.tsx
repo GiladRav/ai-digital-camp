@@ -84,8 +84,8 @@ const Platforms = () => {
   }];
   return <Layout>
       {/* Hero Section */}
-      <section className="relative text-white py-20 px-4" style={{ 
-        backgroundImage: 'linear-gradient(rgba(24, 18, 89, 0.4), rgba(24, 18, 89, 0.4)), url("/visuals/1.png")',
+      <section className="relative text-white py-16 px-4" style={{ 
+        backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%), url("/visuals/1.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -127,7 +127,7 @@ const Platforms = () => {
               style={{ 
                 backgroundColor: '#FFD84C',
                 color: '#181259',
-                border: 'none'
+                border: '0.5px solid #181259'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = '#EAB100';
@@ -146,7 +146,7 @@ const Platforms = () => {
               style={{ 
                 backgroundColor: '#FFD84C',
                 color: '#181259',
-                border: 'none'
+                border: '0.5px solid #181259'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = '#EAB100';
@@ -164,17 +164,17 @@ const Platforms = () => {
       </section>
 
       {/* Summary Table */}
-      <section className="py-16 bg-gradient-to-br from-blue-50 to-purple-50">
+      <section className="py-12 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 gradient-text">
+          <h2 className="text-3xl font-bold text-center mb-12" style={{ color: '#8B5CF6' }}>
             מה נלמד?
           </h2>
           <div className="max-w-4xl mx-auto">
             <Table>
               <TableHeader>
                 <TableRow className="bg-white">
-                  <TableHead className="text-right font-bold text-lg text-gray-800">קטגוריה</TableHead>
-                  <TableHead className="text-right font-bold text-lg text-gray-800">פלטפורמות</TableHead>
+                  <TableHead className="text-right font-bold text-lg text-[#181259]">קטגוריה</TableHead>
+                  <TableHead className="text-right font-bold text-lg text-[#181259]">פלטפורמות</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -189,7 +189,7 @@ const Platforms = () => {
                     </TableCell>
                     <TableCell>
                       <div className="flex flex-wrap gap-2">
-                        {category.platforms.map((platform, platformIndex) => <span key={platformIndex} className={`px-4 py-2 rounded-full text-sm font-medium bg-${category.bgColor} ${category.textColor} shadow-sm`}>
+                        {category.platforms.map((platform, platformIndex) => <span key={platformIndex} className={`px-4 py-2 rounded-full text-sm font-medium bg-[#181259] text-white shadow-sm`}>
                             {platform.name}
                           </span>)}
                       </div>
@@ -202,7 +202,7 @@ const Platforms = () => {
       </section>
 
       {/* Platform Categories */}
-      <section className="py-16">
+      <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="space-y-16">
             {platformCategories.map((category, categoryIndex) => <div key={categoryIndex} className={`bg-${category.bgColor} rounded-3xl p-8`}>
@@ -243,8 +243,8 @@ const Platforms = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="relative text-white py-20 px-4" style={{ 
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/visuals/2.png")',
+      <section className="relative text-white py-16 px-4" style={{ 
+        backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%), url("/visuals/2.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -261,7 +261,7 @@ const Platforms = () => {
               <Button className="font-semibold text-lg px-8 py-3" style={{
               backgroundColor: '#FFD84C',
                color: '#181259',
-              border: 'none'
+              border: '0.5px solid #181259'
             }} onMouseEnter={e => {
               e.currentTarget.style.backgroundColor = '#EAB100';
             }} onMouseLeave={e => {
@@ -274,7 +274,7 @@ const Platforms = () => {
               <Button className="font-semibold text-lg px-8 py-3" style={{
               backgroundColor: '#FFD84C',
               color: '#181259',
-              border: 'none'
+              border: '0.5px solid #181259'
             }} onMouseEnter={e => {
               e.currentTarget.style.backgroundColor = '#EAB100';
             }} onMouseLeave={e => {

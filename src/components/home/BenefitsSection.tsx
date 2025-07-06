@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Zap, Users, Brain, Code } from "lucide-react";
 
@@ -38,7 +37,7 @@ const BenefitsSection = () => {
     <section className="py-8 bg-gradient-to-br from-indigo-50 to-purple-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#181259' }}>
             למה להרשם?
           </h2>
         </div>

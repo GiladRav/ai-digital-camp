@@ -1,14 +1,13 @@
-
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
 const ProgramCTA = () => {
   return (
-    <section className="relative text-white py-20 px-4" style={{ 
-      backgroundImage: 'linear-gradient(rgba(24, 18, 89, 0.4), rgba(24, 18, 89, 0.4)), url("/visuals/2.png")',
+    <section className="relative text-white py-16 px-4" style={{ 
+      backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%), url("/visuals/2.png")',
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      backgroundRepeat: 'no-none'
+      backgroundRepeat: 'no-repeat'
     }}>
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#FFD84C' }}>
