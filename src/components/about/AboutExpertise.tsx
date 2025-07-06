@@ -58,22 +58,21 @@ const AboutExpertise = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {expertiseItems.map((item, index) => (
-            <Card key={index} className={`${getCardClasses(item.variant)} hover:scale-105 hover:-translate-y-3 transition-all duration-500 animate-fade-in group relative overflow-hidden`} style={{ animationDelay: `${index * 0.15}s` }}>
-              <CardHeader className="pb-6 relative">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                <div className="flex items-center gap-4 pt-2">
-                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center ${getIconClasses(item.variant)} shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
-                    <item.icon className="w-8 h-8" />
+            <Card key={index} className={`${getCardClasses(item.variant)} hover:scale-105 transition-all duration-300`}>
+              <CardHeader className="pb-4">
+                <div className="flex items-center gap-3">
+                  <div className={`w-12 h-12 rounded-full flex items-center justify-center ${getIconClasses(item.variant)}`}>
+                    <item.icon className="w-6 h-6" />
                   </div>
-                  <CardTitle className="text-primary text-xl font-bold group-hover:text-secondary transition-colors duration-300 flex-1">
+                  <CardTitle className="text-primary text-lg">
                     {item.title}
                   </CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground leading-relaxed text-base group-hover:text-foreground transition-colors duration-300">
+                <p className="text-muted-foreground leading-relaxed">
                   {item.content}
                 </p>
               </CardContent>

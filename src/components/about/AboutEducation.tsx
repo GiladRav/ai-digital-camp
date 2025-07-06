@@ -58,27 +58,26 @@ const AboutEducation = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {educationItems.map((item, index) => (
-            <Card key={index} className={`${getCardClasses(item.variant)} hover:scale-105 hover:-translate-y-4 transition-all duration-500 animate-fade-in group relative overflow-hidden border-l-4 border-l-primary/20 hover:border-l-primary`} style={{ animationDelay: `${index * 0.2}s` }}>
-              <CardHeader className="pb-6 relative">
-                <div className="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full opacity-30 group-hover:opacity-100 group-hover:scale-150 transition-all duration-300"></div>
-                <div className="flex items-start gap-4">
-                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center ${getIconClasses(item.variant)} shadow-xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 mt-1`}>
-                    <item.icon className="w-7 h-7" />
+            <Card key={index} className={`${getCardClasses(item.variant)} hover:scale-105 transition-all duration-300`}>
+              <CardHeader className="pb-4">
+                <div className="flex items-center gap-3">
+                  <div className={`w-12 h-12 rounded-full flex items-center justify-center ${getIconClasses(item.variant)}`}>
+                    <item.icon className="w-6 h-6" />
                   </div>
-                  <div className="flex-1">
-                    <CardTitle className="text-primary text-xl font-bold group-hover:text-secondary transition-colors duration-300 leading-tight mb-2">
-                      {item.title}
-                    </CardTitle>
-                    {item.content && (
-                      <p className="text-muted-foreground leading-relaxed text-base group-hover:text-foreground transition-colors duration-300 font-medium">
-                        {item.content}
-                      </p>
-                    )}
-                  </div>
+                  <CardTitle className="text-primary text-lg">
+                    {item.title}
+                  </CardTitle>
                 </div>
               </CardHeader>
+              <CardContent>
+                {item.content && (
+                  <p className="text-muted-foreground leading-relaxed">
+                    {item.content}
+                  </p>
+                )}
+              </CardContent>
             </Card>
           ))}
         </div>
