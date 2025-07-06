@@ -72,21 +72,22 @@ const AboutLectures = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {lectureItems.map((item, index) => (
-            <Card key={index} className={`${getCardClasses(item.variant)} hover:scale-105 transition-all duration-300`}>
-              <CardHeader className="pb-4">
-                <div className="flex items-center gap-3">
-                  <div className={`w-12 h-12 rounded-full flex items-center justify-center ${getIconClasses(item.variant)}`}>
+            <Card key={index} className={`${getCardClasses(item.variant)} hover:scale-105 hover:-translate-y-2 hover:rotate-1 transition-all duration-500 animate-fade-in group relative overflow-hidden`} style={{ animationDelay: `${index * 0.1}s` }}>
+              <CardHeader className="pb-4 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-t-lg"></div>
+                <div className="flex flex-col gap-3 relative z-10">
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${getIconClasses(item.variant)} shadow-lg group-hover:scale-125 group-hover:-rotate-12 transition-all duration-300 self-start`}>
                     <item.icon className="w-6 h-6" />
                   </div>
-                  <CardTitle className="text-primary text-lg">
+                  <CardTitle className="text-primary text-lg font-bold group-hover:text-secondary transition-colors duration-300 leading-tight">
                     {item.title}
                   </CardTitle>
                 </div>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
+              <CardContent className="pt-0">
+                <p className="text-muted-foreground leading-relaxed text-sm group-hover:text-foreground transition-colors duration-300">
                   {item.content}
                 </p>
               </CardContent>
