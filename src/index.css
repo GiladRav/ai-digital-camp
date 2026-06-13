@@ -1,253 +1,140 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Rubik:wght@400;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
-
 @layer base {
   :root {
-    /* Base Colors */
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 240 50% 6%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 240 40% 10%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 240 40% 10%;
+    --popover-foreground: 0 0% 98%;
 
-    /* Brand Colors - Updated 2025 */
-    --primary-navy-purple: 240 72% 22%; /* #181259 */
-    --light-purple: 258 92% 65%; /* #8B5CF6 */
-    --soft-lavender: 259 79% 78%; /* #A78BFA */
-    --sunny-yellow: 49 100% 64%; /* #FFD84C */
-    --sunny-yellow-hover: 40 100% 46%; /* #EAB100 */
+    --primary: 258 92% 65%;
+    --primary-foreground: 240 72% 12%;
 
-    /* Primary Brand */
-    --primary: 240 72% 22%; /* Primary Navy Purple */
-    --primary-foreground: 210 40% 98%;
+    --secondary: 240 40% 14%;
+    --secondary-foreground: 0 0% 98%;
 
-    /* Secondary with Light Purple */
-    --secondary: 258 92% 65%; /* Light Purple */
-    --secondary-foreground: 0 0% 100%;
+    --muted: 240 30% 16%;
+    --muted-foreground: 240 10% 70%;
 
-    /* Form States */
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 259 79% 78%; /* Soft Lavender */
-    --accent-foreground: 240 72% 22%;
+    --accent: 49 100% 64%;
+    --accent-foreground: 240 72% 12%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 240 72% 22%; /* Primary Navy Purple for focus */
+    --border: 258 40% 20%;
+    --input: 258 40% 18%;
+    --ring: 258 92% 65%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary-navy-purple)), hsl(var(--light-purple)));
-    --gradient-logo: linear-gradient(135deg, hsl(271 91% 65%), hsl(244 58% 51%));
-    --gradient-page: linear-gradient(135deg, hsl(210 20% 98%), hsl(220 13% 96%));
+    /* Brand */
+    --brand-navy: 240 72% 22%;
+    --brand-purple: 258 92% 65%;
+    --brand-lavender: 259 79% 78%;
+    --brand-yellow: 49 100% 64%;
+    --brand-yellow-hover: 40 100% 46%;
 
-    /* Card Colors */
-    --card-purple-bg: 259 100% 97%; /* #F3E8FF */
-    --card-purple-border: 259 87% 91%; /* #E9D5FF */
-    --card-purple-icon-bg: 259 87% 84%; /* #DDD6FE */
-
-    --card-blue-bg: 213 100% 97%; /* #EFF6FF */
-    --card-blue-border: 213 94% 88%; /* #BFDBFE */
-    --card-blue-icon-bg: 213 94% 78%; /* #93C5FD */
-
-    --card-green-bg: 138 76% 97%; /* #F0FDF4 */
-    --card-green-border: 142 76% 84%; /* #BBF7D0 */
-    --card-green-icon-bg: 142 69% 73%; /* #86EFAC */
-
-    --card-orange-bg: 33 100% 97%; /* #FFF7ED */
-    --card-orange-border: 32 98% 83%; /* #FED7AA */
-    --card-orange-icon-bg: 32 97% 72%; /* #FDBA74 */
-
-    --card-teal-bg: 166 76% 97%; /* #F0FDFA */
-    --card-teal-border: 168 84% 78%; /* #99F6E4 */
-    --card-teal-icon-bg: 166 77% 72%; /* #5EEAD4 */
-
-    /* Shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary-navy-purple) / 0.3);
-    --shadow-glow: 0 0 40px hsl(var(--light-purple) / 0.4);
-
-    /* Sidebar */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 258 92% 65%; /* Light Purple for dark mode */
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 259 79% 78%; /* Soft Lavender */
-    --accent-foreground: 240 72% 22%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --gradient-hero: linear-gradient(135deg, #0B0820 0%, #1A0F4E 50%, #2D1B7A 100%);
+    --gradient-card: linear-gradient(145deg, rgba(139,92,246,0.10) 0%, rgba(24,18,89,0.4) 100%);
+    --shadow-glow: 0 0 60px rgba(139, 92, 246, 0.35);
+    --shadow-yellow-glow: 0 0 40px rgba(255, 216, 76, 0.35);
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
   body {
-    @apply bg-gradient-to-br from-gray-50 to-slate-50 text-foreground font-sans;
+    @apply text-foreground font-sans antialiased;
+    background: #08061A;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139, 92, 246, 0.25), transparent),
+      radial-gradient(ellipse 60% 60% at 80% 110%, rgba(255, 216, 76, 0.10), transparent),
+      linear-gradient(180deg, #08061A 0%, #0E0A2A 100%);
+    background-attachment: fixed;
+    font-family: 'Heebo', 'Rubik', system-ui, sans-serif;
   }
+  h1, h2, h3, h4 { font-family: 'Rubik', 'Heebo', sans-serif; letter-spacing: -0.01em; }
 }
 
 @layer components {
-  /* Updated Gradient Backgrounds */
-  .gradient-bg {
-    background: hsl(var(--gradient-logo));
+  .hero-bg {
+    background-image:
+      linear-gradient(180deg, rgba(8,6,26,0.55) 0%, rgba(8,6,26,0.85) 100%),
+      url('/visuals/1.png');
+    background-size: cover;
+    background-position: center;
   }
-  
+  .cta-bg {
+    background-image:
+      linear-gradient(180deg, rgba(8,6,26,0.65) 0%, rgba(8,6,26,0.9) 100%),
+      url('/visuals/2.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .glass-card {
+    background: linear-gradient(145deg, rgba(139,92,246,0.10) 0%, rgba(24,18,89,0.55) 100%);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(167, 139, 250, 0.18);
+    border-radius: 1.25rem;
+  }
+  .glass-card-hover {
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+  }
+  .glass-card-hover:hover {
+    transform: translateY(-4px);
+    border-color: rgba(167, 139, 250, 0.45);
+    box-shadow: 0 12px 40px rgba(139,92,246,0.25);
+  }
+
+  .btn-primary {
+    background: #FFD84C;
+    color: #181259;
+    font-weight: 700;
+    transition: all .25s ease;
+    box-shadow: 0 8px 24px rgba(255,216,76,0.25);
+  }
+  .btn-primary:hover { background: #EAB100; transform: translateY(-1px); box-shadow: var(--shadow-yellow-glow); }
+
+  .btn-ghost {
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+    font-weight: 600;
+    border: 1px solid rgba(167,139,250,0.4);
+    transition: all .25s ease;
+  }
+  .btn-ghost:hover { background: rgba(139,92,246,0.18); border-color: #A78BFA; }
+
+  .neon-text { color: #FFD84C; text-shadow: 0 0 24px rgba(255,216,76,0.35); }
+  .purple-text { color: #A78BFA; }
+
+  .tag-chip {
+    @apply inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium;
+    background: rgba(139,92,246,0.15);
+    border: 1px solid rgba(167,139,250,0.3);
+    color: #E9D5FF;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-5xl font-extrabold mb-4 text-white;
+  }
+  .section-subtitle {
+    @apply text-base md:text-lg text-purple-200/80 max-w-2xl mx-auto;
+  }
+
   .gradient-text {
-    background: hsl(var(--gradient-primary));
+    background: linear-gradient(90deg, #FFD84C 0%, #A78BFA 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-  
-  .glass-effect {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
-  /* Button System */
-  .btn-primary {
-    @apply bg-[#FFD84C] text-[#181259] hover:bg-[#EAB100] font-semibold transition-all;
-  }
-
-  .btn-secondary {
-    @apply bg-[#181259] text-white hover:bg-[#8B5CF6] font-semibold transition-all;
-  }
-
-  .btn-outline {
-    @apply bg-transparent text-[#181259] border-2 border-[#181259] hover:bg-[#181259] hover:text-white font-semibold transition-all;
-  }
-
-  /* Card Variants */
-  .card-purple {
-    @apply bg-white border-[#E9D5FF] shadow-sm hover:shadow-md transition-shadow;
-  }
-
-  .card-blue {
-    @apply bg-white border-[#BFDBFE] shadow-sm hover:shadow-md transition-shadow;
-  }
-
-  .card-green {
-    @apply bg-white border-[#BBF7D0] shadow-sm hover:shadow-md transition-shadow;
-  }
-
-  .card-orange {
-    @apply bg-white border-[#FED7AA] shadow-sm hover:shadow-md transition-shadow;
-  }
-
-  .card-teal {
-    @apply bg-white border-[#99F6E4] shadow-sm hover:shadow-md transition-shadow;
-  }
-
-  /* Icon Backgrounds */
-  .icon-purple {
-    @apply bg-[#DDD6FE] text-[#181259];
-  }
-
-  .icon-blue {
-    @apply bg-[#BFDBFE] text-[#2563EB];
-  }
-
-  .icon-green {
-    @apply bg-[#86EFAC] text-[#16A34A];
-  }
-
-  .icon-orange {
-    @apply bg-[#FDBA74] text-[#EA580C];
-  }
-
-  .icon-teal {
-    @apply bg-[#5EEAD4] text-[#0D9488];
-  }
-
-  /* Platform Categories */
-  .platform-language {
-    @apply bg-[#F0FDF4] text-[#15803D];
-  }
-
-  .platform-visual {
-    @apply bg-[#FEF3C7] text-[#D97706];
-  }
-
-  .platform-development {
-    @apply bg-[#EFF6FF] text-[#1D4ED8];
-  }
-
-  .platform-learning {
-    @apply bg-[#F3E8FF] text-[#181259];
-  }
-
-  /* Tag System */
-  .tag-hero {
-    @apply bg-black/40 text-[#D1D5DB] rounded-full px-4 py-2;
-  }
-
-  .tag-date .lucide {
-    @apply text-[#059669];
-  }
-
-  .tag-age .lucide {
-    @apply text-[#DC2626];
-  }
-
-  .tag-online .lucide {
-    @apply text-[#181259];
-  }
-
-  .tag-time .lucide {
-    @apply text-[#0891B2];
   }
 }
